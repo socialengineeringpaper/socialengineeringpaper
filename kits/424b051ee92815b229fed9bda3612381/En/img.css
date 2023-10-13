@@ -1,0 +1,471 @@
+/*CSS Reset adapted from Eric Meyer's CSS reset http://meyerweb.com */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/*CSS after reset*/
+html{
+height:100%;
+}
+
+body{
+height: 100%;
+line-height:1;
+color:black;
+background:#eff9fe url(../img/cont_bg.gif) top center repeat-y;
+font-family:Trebuchet MS, Verdana, Tahoma;
+}
+
+/*Structure*/
+#nonfooter{
+position:relative;
+min-height:100%;
+width:100%;
+margin:0;
+padding:0;
+background:url(../img/nonfoot_bg.gif) top left repeat-x;
+}
+
+#content{
+width:100%;
+margin:0 auto;
+padding:0 0 110px 0;
+}
+
+#header{
+height:335px;
+width:100%;
+margin:0;
+background:url(../img/head_bg.jpg) top center no-repeat;
+}
+
+#footer{
+position:relative;
+width:100%;
+height:110px;
+margin-top:-110px;
+background:url(../img/foot_bg.gif) top left repeat-x;
+}
+
+/*Page Elements*/
+#top{
+width:900px;
+height:270px;
+margin:0 auto;
+padding:0;
+}
+
+#bottom{
+width:100%;
+height:110px;
+margin:0 auto;
+padding:0;
+background:url(../img/bottom_bg.jpg) top center no-repeat;
+text-align:center;
+}
+
+#navbar{
+width:100%;
+height:35px;
+background:url(../img/nav_bg.gif) top left repeat-x;
+}
+
+#nav, #nav ul{
+padding:10px 0 0 20px;
+margin:0;
+list-style:none;
+}
+
+#nav a{
+display:block;
+padding:2px 5px;
+font-size:12px;
+color:#fff;
+text-decoration:none;
+}
+
+#nav a:hover{
+color:#0ff;
+}
+
+#nav li{
+float:left;
+width:110px;
+}
+
+#nav li ul{
+position:absolute;
+padding:5px 3px 3px;
+width:110px;
+left:-999em;
+border-top:8px solid #100551;
+background:url(../img/ulbg.png) bottom center no-repeat;
+}
+
+#nav li ul li{
+padding:3px 5px 3px 0;
+}
+
+#nav li ul li a{
+color:#0f0450;
+}
+
+#nav li ul li a:hover{
+color:#090a28;
+background:#e4eff5;
+border-left:1px solid #a9afc2;
+border-right:1px solid #a9afc2;
+}
+
+#nav li:hover ul, #nav li.sfhover ul{
+left:auto;
+}
+
+#page{
+width:900px;
+margin:-45px auto 0 auto;
+padding:0;
+}
+
+#page h1{
+font-size:1.4em;
+font-weight:bold;
+color:#fff;
+line-height:1.5em;
+padding:0 20px;
+margin:0;
+}
+
+#page h2{
+font-size:1.1em;
+font-weight:bold;
+color:#9594b6;
+margin:5px;
+padding:5px;
+border-bottom:1px dotted #9594b6;
+}
+
+h2 img{
+float:right;
+position:relative;
+top:-27px;
+}
+
+#page p{
+font-size:.75em;
+line-height:1.3em;
+text-align:justify;
+margin:0;
+padding:5px 20px;
+}
+
+#page ul{
+list-style-type:disc;
+color:#00f;
+font-size:.7em;
+line-height:1.2em;
+padding:10px 0 10px 30px;
+}
+
+#page dl{
+font-size:.7em;
+}
+
+#page dt{
+font-size:1.1em;
+padding:3px 10px;
+}
+
+#page dd{
+padding:3px 10px;
+text-align:justify;
+}
+
+#page a{
+color:#0ff;
+text-decoration:none;
+}
+
+#page a:hover{
+color:#00f;
+}
+
+#page table{
+	font-size:.8em;
+	padding:10px 0 0 10px;
+}
+#page table td{
+	padding:3px 0 3px 15px;
+}
+#page table td.desc{
+	border-bottom:1px dotted #9594b6;
+	padding:3px 20px 3px 5px;
+}
+
+#page label{
+width:200px;
+padding:3px 5px;
+margin:0 2px;
+display:block;
+float:left;
+}
+
+#page input{
+width:270px;
+padding:2px;
+border:1px solid #9594b6;
+}
+
+#page textarea{
+width:488px;
+border:1px solid #9594b6;
+overflow:hidden;
+}
+
+#recaptcha_widget_div {
+padding:10px;
+}
+
+#bottom p{
+color:#fff;
+text-decoration:none;
+font-size:.7em;
+padding:25px 10px;
+}
+
+#bottom a{
+color:#0ff;
+text-decoration:none;
+}
+
+#bottom a:hover{
+color:#00f;
+}
+
+#feeds a{
+text-decoration:none;
+color:#9594b6;
+}
+
+#feeds a:hover{
+color:#00f;
+}
+
+#feeds ul{
+color:black;
+list-style:none;
+margin:0;
+padding:0 10px;
+}
+
+#feeds ul li{
+padding-bottom:5px;
+line-height:1.3em;
+}
+
+/* Classes */
+
+.third{
+width:275px;
+margin-left:3px;
+padding:10px;
+float:left;
+}
+
+.twothirds{
+width:573px;
+margin-left:3px;
+padding:10px;
+float:left;
+}
+
+.full{
+width:871px;
+margin-left:3px;
+padding:10px;
+}
+
+.third p, .twothirds p, .full p{
+margin:0;
+padding:5px 10px !important;
+}
+
+.browserpic{
+padding:3px;
+}
+
+.frontsite{
+margin:3px 0 3px 12px;
+padding:0;
+border:2px solid #9594b6;
+}
+
+.previews{
+margin:0 1px;
+padding:1px;
+width:200px;
+height:149px;
+float:left;
+color:#9594b6;
+font-size:1.3em;
+background:#eff9fe;
+border:1px solid #9594b6;
+}
+
+.previews p{
+margin:0;
+padding:0 3px !important;
+}
+
+.previews a{
+color:#9594b6 !important;
+font-weight:bold;
+text-decoration:none;
+}
+
+.clr{
+clear:both;
+}
+
+#talkgadget{
+	padding:5px 20px;
+}
+
+/* Easy Slider */
+
+#slider{ 
+width:830px;
+height:160px;
+margin:10px auto;
+padding-top:20px;
+overflow:hidden;
+}
+
+#slider ul, #slider li{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+#slider li{
+width:830px;
+height:200px;
+overflow:hidden;
+}
+
+#prevBtn{
+float:left;
+width:18px;
+height:155px;
+position:relative;
+top:-170px;
+left:16px;
+overflow:hidden;
+}
+
+#prevBtn a{
+display:block;
+width:0;
+height:153px;
+padding-left:18px;
+background:url(../img/prev_bg.gif) top left no-repeat;
+}
+
+#prevBtn a:hover{
+background-position:bottom left;
+}
+
+#nextBtn{
+float:right;
+width:18px;
+height:155px;
+position:relative;
+top:-170px;
+right:22px;
+overflow:hidden;
+}					
+
+#nextBtn a{
+display:block;
+width:0;
+height:153px;
+padding-left:18px;
+background:url(../img/next_bg.gif) top right no-repeat;
+}
+
+#nextBtn a:hover{
+background-position:bottom right;
+}
+
+.reader-publisher-module li{
+font-size:1.2em;
+line-height:1.2em;
+}
+
+/* Sitemap */
+
+dt.lhead{
+margin:5px;
+background:#ebebeb;
+border-bottom:1px dotted #9594b6;
+font-weight:bold;
+}
+span.lcount{
+margin-left:10px;
+font-weight:normal;
+}
+dd.lpage{
+margin-left:20px;
+}
+dd.lpage a{
+color:#afafaf !important;
+}
+dd.lpage a:hover{
+color:#cfcfcf !important;
+}
+p#copyright{
+border-top:1px dotted #9594b6;
+margin-top:10px;
+text-align:center;
+}
+.date{
+font-size:.7em !important;
+}

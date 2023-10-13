@@ -1,0 +1,1 @@
+[29-Jun-2017 22:03:18 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/alfaidhali/public_html/ara/Frias-pamel/show_msg.php on line 44

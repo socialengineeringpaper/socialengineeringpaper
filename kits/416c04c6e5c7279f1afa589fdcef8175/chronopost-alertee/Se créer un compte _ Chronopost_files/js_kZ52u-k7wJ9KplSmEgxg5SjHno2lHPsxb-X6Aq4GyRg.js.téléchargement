@@ -1,0 +1,129 @@
+/**
+ * @author : Serigne Sow , serigne.sow.externe@chronopost.fr
+ * Quand l'utilisateur se balade dans les sous page des faqs(aide/faq, aide/nos-documents ...)
+ * l'onglets Aides/FAQ doit être en surbrillance
+ *
+ */
+// Ticket 1336
+(function ($) {
+
+    Drupal.behaviors.highlight_faq_subpage = {
+        attach: function (context) {
+            if(window.location.href.indexOf("aide/") > -1){
+               $('.menu.nav a[href$=aide]').addClass('active-trail active')
+                   .parent('li').addClass('active-trail');
+            }
+        }
+    };
+     
+    Drupal.behaviors.tab_parcours_activation = {
+         attach: function (context) {
+
+            if($(window).width() <= 935){
+                
+                $tabs = $('.ch-navbar .navbar-login nav [id^=block-menu-menu-chronopost-parcours-utili] li a, .ch-navbar .navbar-login nav [id^=block-menu-menu-chronopost-parcours-utili] li:last-child a');
+                var tab_pro = $tabs[1],
+                tab_part = $tabs[0];
+                var parcoursId = readCookie('parcoursId') || 2;
+                if(parcoursId == 4){
+                    $(tab_pro).css('background-color','#0198e1');
+                    $(tab_part).css({
+                       'background-color' : 'gray',
+                       'color' : '#ffffff'
+                   });
+                }else{
+                   $(tab_pro).css({
+                       'background-color' : 'gray',
+                       'color' : '#ffffff'
+                   });
+                }
+                //$('.first.leaf.active-trail').css('border-top','1px solid #e6e7e8');
+            }
+            
+        }
+    };
+    
+    function readCookie(name){
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+})(jQuery);
+;
+/**
+ * @author : Serigne Sow , serigne.sow.externe@chronopost.fr
+ *
+ */
+
+(function ($) {       
+   // Preselct creation de compte tab
+    Drupal.behaviors.preselect_create_account_tab = {
+        attach: function (context) {
+            if($('#page_creation_account').length === 1){
+                var parcoursNamer = new ParcoursNamer(Drupal.settings.pathPrefix.slice(0,2));
+                $('.ch-block-panels-title > h2').each(function(index){
+                    $title = $(this);
+                    if($title.length == 1){
+                         $onglet_tab = $title.closest('div.ch-block-panel');
+                         $onglet_content = $onglet_tab.next();
+                        if($title.text() == parcoursNamer.getName()){              
+                            $onglet_tab.addClass('active').next().addClass('active');
+                        }else{
+                            $onglet_tab.removeClass('active').next().removeClass('active');
+                        }
+
+                    }
+               });
+            }
+        }
+    };
+    
+  /*
+   * Constructor function
+   * @param {type} lang
+   * @returns {preselect_tab_create_account_L6.ParcoursNamer}
+  */   
+    function ParcoursNamer(lang){
+       this.lang = lang || 'fr';
+    }
+    
+    /*
+     * Resolve the name of the profile based on the profile id and the language
+     */
+    ParcoursNamer.prototype.getName = function(){
+       var names = {
+          2 : {
+               'fr' : 'Particulier',
+               'en' : 'Private'
+          },
+          4: {
+               'fr' : 'Professionnel',
+               'en' : 'Professional'
+           }
+       };
+       var parcoursId = this.readCookie('parcoursId') || 2;
+       return names[parcoursId][this.lang];
+    };
+    
+    /*
+     * Helper function for reading the cookie of the parcours id
+     */
+    ParcoursNamer.prototype.readCookie = function(name){
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    };
+
+})(jQuery);
+;

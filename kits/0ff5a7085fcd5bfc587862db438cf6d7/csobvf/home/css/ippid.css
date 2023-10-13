@@ -1,0 +1,57 @@
+.ippid {
+    background-color: #f1f2f3;
+    position: relative;
+    min-width: 400px;
+}
+
+.secured>aside {
+    float: left;
+}
+
+.ippid .aside-left::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: -15px;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0099cc;
+}
+
+.ippid .aside-right {
+    font-size: 15px;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.ippid .aside-left {
+    background-color: #09c;
+    color: #fff;
+    padding: 2% 0 2% 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.ippid h1 {
+    font-size: 24px;
+	margin: 0;
+}
+
+.ippid h2 {
+    font-size: 18px;
+	margin: 0;
+}
+
+.ippid-box{
+	padding: 5% 0 5% 0 !important;
+	align-self: center;
+}
+
+@media only screen and (max-width: 576px) {
+    .ippid .aside-left::after {
+        right: 49.5%;
+        top: 100%;
+        border-color: #0099CC transparent transparent transparent;
+    }
+}

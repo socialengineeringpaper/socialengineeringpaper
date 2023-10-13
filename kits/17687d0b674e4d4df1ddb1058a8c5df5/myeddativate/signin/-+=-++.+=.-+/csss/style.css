@@ -1,0 +1,1247 @@
+/*
+State of California 2012 master template
+Version 2013.xx.xx
+*/
+
+/* 
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+.ie7 audio, .ie7 canvas, .ie7 video { display: inline; min-width: 1px; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 0.9em; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: Arial, Helvetica, sans-serif; color: #222; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+/* x::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+x::selection { background: #fe57a1; color: #fff; text-shadow: none; } */
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #1f70a7; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; padding: 0; }
+.ie7 legend { margin-left: -7px; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
+.ie7 button, .ie7 input, .ie7 select, .ie7 textarea { vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; }
+.ie7 button, .ie7 input { overflow: visible; }
+
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+
+.ie7 table button, .ie7 table input { overflow: auto; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+/* input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; } */
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.ie7 .clearfix { min-width: 1px; }
+.ie8 .clearfix:before, .ie8 .clearfix:after { display:inline; } /* fix for extra space in IE8 */
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+
+
+header, #main_content, footer {
+	min-width:320px;
+}
+
+header {
+	background-size: cover;
+	background-color: #fff;
+	position:relative;
+	z-index:10;
+}
+.home header {
+	min-height:0;
+	background-position:40% 40%;
+}
+header a, header a:link,  header a:visited, header a:hover, .submit_container input {
+	color: #fff; /* needed when images are turned off */
+}
+
+.logo_and_banner {
+	margin:0 118px 0 59px; /* make room for buttons on left and right */
+}
+.head_cagov_logo { /* 94 x 74 */
+	display:none;
+}
+.head_organization_banner { /* 269 x 39 */
+	position:relative;
+	/* margin:0 auto;
+	top:0px;
+	width:100%; */
+	height:69px;
+	line-height:69px; /* vertically centers the image */
+	text-align:center;
+}
+.head_organization_banner img {
+	max-width:100%;
+	max-height:100%;
+}
+.phone_hdr {
+	height:69px;
+	margin-bottom:2px;
+}
+
+/* Search */
+
+#head_search {
+	position:relative;
+	padding:5px 0% 5px 2%;
+	display:none;
+}
+.home #head_search {
+	padding:12px 0% 12px 4%;
+}
+#head_search.phone_show_search {
+	display:block;
+}
+
+.textfield_container {
+	margin-right:54px;
+}
+.home .textfield_container {
+	margin-right:120px;
+}
+#search_local_textfield {
+	width:100%;
+	padding:2px;
+	background-color: rgba(255, 255, 255, 0.8);
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 1.1em;
+	border:2px solid transparent;
+}
+.home #search_local_textfield {
+	padding:16px;
+}
+.submit_container {
+	position:absolute;
+	top:-3px;
+	right:4px;
+	width:40px;
+	height:40px;
+}
+.submit_container:hover {
+	background-position:0 100%;
+}
+.home .submit_container {
+	top:8px;
+	right:8px;
+	width:60px;
+	height:60px;
+}
+.submit_container input {
+	width:40px;
+	height:40px;
+	border: none;
+	background-color: transparent;
+	font-size:1.8em;
+	color:#fff;
+	padding:0;
+}
+.home .submit_container input {
+	width:60px;
+	height:60px;
+	font-size:2.6em;
+}
+.submit_container input:hover {
+	text-shadow: 0 0 0.2em #ce770e, 0 0 0.2em #ce770e;
+}
+
+/* Navigation */
+
+#navigation {
+	width:100%;
+	z-index:20;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+}
+.ie7 #navigation {
+	height:auto;
+	overflow:visible;
+}
+#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#navigation li {
+	padding:0;
+	margin-bottom:2px;
+}
+
+#navigation li li {
+	width:auto;
+	margin-bottom:0;
+}
+
+#navigation a.nav_level1_link {
+	text-decoration:none;
+	display: block;
+	position:relative;
+	padding:13px 0;
+	color: #fff;
+	font-size: 1.21em;
+	font-weight:bold;
+	white-space:nowrap; /* fix IE8 comp mode issue where nav text wraps */
+	text-align:center;
+}
+
+.highlighted_nav_item a.nav_level1_link {
+	text-shadow: 0 0 0.2em #ce770e, 0 0 0.2em #ce770e;
+}
+#navigation #nav_list.unhighlight_nav_item a.nav_level1_link {
+	text-shadow:none;
+}
+header #navigation #nav_list li:hover a.nav_level1_link {
+	text-shadow: 0 0 0.2em #ce770e, 0 0 0.2em #ce770e;
+}
+
+#nav_home_container {
+	position:absolute;
+	top:2px;
+	left:50%;
+	margin-left:-20px;
+	height:40px;
+	width:40px;
+	font-size:30px;
+}
+#nav_home_container + img {
+	width:40px;
+	height:1px;
+}
+.nav_panel {
+	display:none;
+}
+
+#nav_list {
+	position:absolute;
+	width:100%;
+	bottom:0;
+}
+.ie7 #nav_list {
+	position:static;
+}
+
+.phone_hd_left {
+	position:relative;
+	float:left;
+	z-index:10;
+}
+
+.phone_hd_right {
+	top:0;
+	right:0;
+	position:absolute;
+	z-index:10;
+	width:118px; /* 6+47+6+6+47+6 = 118 */
+}
+.phone_hd_left a, .phone_hd_right a {
+	float:left;
+	cursor:pointer;
+}
+.p_h_button {
+	width:39px;
+	height:32px;
+	border-radius:3px;
+	border:1px solid rgba(255,255,255,0.2);
+	background-color:rgba(255,255,255,0.1);
+	text-align:center;
+	margin:16px 0 0 10px;
+	text-decoration:none;
+}
+.p_h_button .add_icon_font_normal {
+	font-size:28px;
+}
+.p_h_btn_highlight {
+	border:1px solid rgba(206,119,14,.5);
+	box-shadow: 0 0 0.2em #ce770e;
+}
+
+.hide_from_phones {
+	display:none;
+}
+
+/* content structure */
+
+#main_content {
+	background:#fff url(../images/template2013/nav_shadow.png) repeat-x;
+}
+.ie7 #main_content {
+	background:#fff;
+}
+
+.content_left_column {
+	min-height:100px;
+	background:transparent url(../images/template2013/nav_shadow.png) repeat-x;
+	margin:0;
+	padding:1px 0 20px 0;
+}
+.content_right_column {
+	min-height:100px;
+	padding:20px 0 20px 0;
+}
+
+/* Footer */
+
+footer {
+	color:#ffffff;
+	text-align:center;
+	padding-top:18px;
+	box-shadow: inset 0 10px 6px -6px rgba(0,0,0,.3);
+	line-height:2;
+}
+.rgba footer {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+footer a, footer a:hover, footer a:visited {
+	color:#fff;
+}
+footer div {
+	padding-bottom:0.8em;
+}
+footer a {
+	padding:2px 1%;                               /* Edit by EDD - changed from 2px 1.4% */
+/*	margin-right:8px;	                             Removed by EDD for spacing */
+/*	background-color: rgba(255, 255, 255, 0.15);     REMOVED BY EDD - REMOVE HIGHLIGHT UNDER FOOTER LINKS*/
+/*	-moz-border-radius: 4px;                       */
+/*	-webkit-border-radius: 4px;                    */
+/*	border-radius: 4px;                            */
+	white-space: nowrap;
+}
+
+#background_decorative {
+	display:none;
+}
+
+#skip_to_content a, #skip_to_content a:hover, #skip_to_content a:visited {
+	position:absolute;
+	left:0px;
+	top:-500px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+#skip_to_content a:active, #skip_to_content a:focus {
+	top:0px;
+	width:auto;
+	height:auto;
+	color:#00f;
+	background:#fff;
+	padding:1px 2px;
+}
+
+/* ***** Content ***** */
+
+.add_padding {
+	padding:16px 4%;
+}
+.ie7 .add_padding {
+	padding:26px 4%;
+}
+.add_maincontent_padding {
+	padding:16px 1% 16px 1%;
+}
+.add_side_padding {
+	padding:0 4%;
+}
+.add_topbottom_padding {
+	padding:16px 0;
+}
+
+h1 {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#c60;
+	font-size:2em;
+}
+h2 {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#666;
+	font-size:1.8em;
+}
+h3 {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#333;
+	font-size:1.6em;
+	border-bottom:2px solid #bcbcbc;
+}
+h4 {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#333;
+	font-size:1.4em;
+	border-bottom:2px dotted #cccccc;
+}
+
+h5 {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#fff;
+	font-size:1.3em;
+	background:#473723;
+	text-align:center;
+	padding:6px 0;
+}
+
+.add_icon_blue_arrow_down {
+	background:transparent url(../images/template2013/icon_blue_arrow_down.png) no-repeat top left;
+	padding-left:40px;
+}
+.add_icon_blue_arrow_right {
+	background:transparent url(../images/template2013/icon_blue_arrow_right.png) no-repeat top left;
+	padding-left:40px;
+}
+.add_icon_blue_star {
+	background:transparent url(../images/template2013/icon_blue_star.png) no-repeat top left;
+	padding-left:40px;
+}
+
+.add_icon_brown_road, .add_icon_brown_arrow_right, .add_icon_brown_arrow_up, .add_icon_brown_i, .add_icon_brown_links, .add_icon_brown_rss,
+.add_icon_black_asterisk,
+.add_icon_orange_arrow_right, .add_icon_orange_rss, .add_icon_orange_star, .add_icon_orange_i, .add_icon_orange_links, .add_icon_orange_onlineforms,
+.add_icon_orange_onlineservices, .add_icon_orange_road {
+	background-repeat:no-repeat;
+	background-position:20px 50%;
+	padding-left:50px;
+	padding-right:50px;
+	min-height:30px;
+}
+
+.add_icon_brown_road {
+	background-image:url(../images/template2013/icon_brown_road.png);
+}
+.add_icon_brown_arrow_right {
+	background-image:url(../images/template2013/icon_brown_arrow_right.png);
+}
+.add_icon_brown_arrow_up {
+	background-image:url(../images/template2013/icon_brown_arrow_up.png);
+}
+.add_icon_brown_i {
+	background-image:url(../images/template2013/icon_brown_i.png);
+}
+.add_icon_brown_links {
+	background-image:url(../images/template2013/icon_brown_links.png);
+}
+.add_icon_brown_rss {
+	background-image:url(../images/template2013/icon_brown_rss.png);
+}
+
+.add_icon_black_asterisk {
+	background-image:url(../images/template2013/icon_black_asterisk.png);
+}
+
+.add_icon_orange_arrow_right {
+	background-image:url(../images/template2013/icon_orange_arrow_right.png);
+}
+.add_icon_orange_rss {
+	background-image:url(../images/template2013/icon_orange_rss.png);
+}
+.add_icon_orange_star {
+	background-image:url(../images/template2013/icon_orange_star.png);
+}
+.add_icon_orange_i {
+	background-image:url(../images/template2013/icon_orange_i.png);
+}
+.add_icon_orange_links {
+	background-image:url(../images/template2013/icon_orange_links.png);
+}
+.add_icon_orange_onlineforms {
+	background-image:url(../images/template2013/icon_orange_onlineforms.png);
+}
+.add_icon_orange_onlineservices {
+	background-image:url(../images/template2013/icon_orange_onlineservices.png);
+}
+.add_icon_orange_road {
+	background-image:url(../images/template2013/icon_orange_road.png);
+}
+
+
+.container_style_a {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow:hidden;
+	margin-bottom:1em;
+}
+.container_style_a h4 {
+	color:white;
+	font-weight:bold;
+	margin:0 0 .8em 0;
+	padding:4px 12px;
+}
+
+.container_style_b {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow:hidden;
+	margin-bottom:1em;
+}
+.container_style_b h4 {
+	color:#473f2c;
+	font-weight:bold;
+	margin:0 0 .8em 0;
+	padding:4px 12px 6px 12px;
+}
+
+.container_style_c {
+	border:1px solid #ccc;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow:hidden;
+}
+.container_style_c h4 {
+	color:#473f2c;
+	font-weight:bold;
+	margin:0 0 .8em 0;
+	padding:4px 12px;
+}
+
+.container_style_d h5 {
+	position:relative;
+	-moz-box-shadow:    0px 3px 3px #aaa;
+	-webkit-box-shadow: 0px 3px 3px #aaa;
+	box-shadow:         0px 3px 3px #aaa;
+	margin:0 0 .8em 0;
+}
+.style_d_triangle {
+	width:32px;
+	height:21px;
+	position:absolute;
+	bottom:-21px;
+	left:50%;
+	margin-left:-16px;
+}
+
+.container_style_e h5 {
+	color:#333333;
+	-moz-box-shadow:    0px 3px 3px #aaa;
+	-webkit-box-shadow: 0px 3px 3px #aaa;
+	box-shadow:         0px 3px 3px #aaa;
+	margin:0 0 .8em 0;
+}
+
+div.container_style_a .add_padding, div.container_style_b .add_padding, div.container_style_c .add_padding, div.container_style_d .add_padding, div.container_style_e .add_padding {
+	padding:0 12px;
+}
+
+/* Blue disc for bullets, bold links */
+.list_style_1 {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_1 li {
+	background:transparent url(../images/template2013/bullet_blue_disc.png) no-repeat 0px 2px;
+	padding:0 0 14px 18px;
+}
+.list_style_1 a {
+	font-weight:bold;
+}
+.list_style_1 div {
+	margin:.4em 0 0 0;
+}
+
+/* Blue disc for bullets, normal links */
+.list_style_2, .list_style_2 ul {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_2 li {
+	background:transparent url(../images/template2013/bullet_blue_disc.png) no-repeat 0px 2px;
+	padding:0 0 16px 18px;
+}
+.list_style_2 li li {
+	margin:6px 0 0 0;
+	padding:0 0 0 18px;
+}
+
+/* Gray arrow for bullets */
+.list_style_3 {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_3 li {
+	background:transparent url(../images/template2013/bullet_gray_arrow.png) no-repeat 0px 0px;
+	padding:4px 0 14px 18px;
+}
+
+.featured_narrative {
+	width:90%;
+	margin:0 auto;
+	padding:.5em;
+	border-top:1px solid #d6d6d6;
+	border-bottom:1px solid #d6d6d6;
+	font-style:italic;
+	line-height:1.5;
+}
+
+.media_caption {
+	border:1px solid #d6d6d6;
+	font-size:.8em;
+}
+.media_caption img {
+	width:100%;
+}
+.media_caption div {
+	padding:.5em;
+}
+
+.cleaner { /* Needed for Dreamweaver wysiwyg editor. Otherwise use clearfix. */
+	clear:both;
+	height:2px;
+	font-size:1px;
+	border:none;
+	margin:0;
+	padding:0;
+	width:auto;
+	float:none;
+}
+
+/* Google Custom Search */
+.gs-image-box {
+	display:none; /* The thumbnails that Google displays are usually irrelevent, so just hide them */
+}
+
+/*--------------------------------------- Executive banners --------------------------------------*/
+
+.container_style_banner {
+	border:1px solid rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow:hidden;	
+	margin:0em 1em 1em 1em;
+}
+
+.container_banner_image {
+	background: url(../images/banner/banner-guy.png) no-repeat bottom right;
+}
+
+.container_banner_image2 {
+	background: url(../images/banner/banner-gal.png) no-repeat bottom right;
+}
+
+.banner_subtitle {
+	color:#473f2c;
+	font-size:.9em;
+	margin:0 30px .2em 0;
+	padding:4px 35px 2px 10px;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#20000000,endColorStr=#00000000, GradientType=1);
+}
+
+.banner_subtitle2 {
+	color:#473f2c;
+	font-size:.9em;
+	margin:0 0px .2em 0;
+	padding:4px 0px 2px 10px;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#20000000,endColorStr=#00000000, GradientType=1);
+}
+
+.banner_link {
+	font-weight:100;
+	color:#473f2c;
+	font-size:.7em;
+	margin:0;
+	padding-left:12px;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.banner_title {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:bold;
+	color: #5A5A5A;
+	font-size:1.2em;
+	padding-right:70px;
+	padding-left:10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* ---- Icon fonts - start ---- */
+
+@font-face {
+	font-family: 'CaGov';
+	src: url('/fonts/CaGov.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/CaGov.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('/fonts/CaGov.woff') format('woff'), /* Modern Browsers */
+		url('/fonts/CaGov.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/fonts/CaGov.svg') format('svg'); /* Legacy iOS */
+}
+
+.add_icon_font_normal, .add_icon_font_heading {
+	font-family: 'CaGov';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.add_icon_font_heading {
+	float:left;
+	width:0;
+	text-transform: none;
+	line-height: 1;
+}
+.add_icon_font_heading { /* add icon to h1/2/3/4 */
+	margin-left:-40px;
+	padding:0 35px 0 0;
+	font-size:34px;
+}
+
+.container_style_a .add_icon_font_heading, .container_style_b .add_icon_font_heading, .container_style_c .add_icon_font_heading { /* add icon to container_style_a/b/c */
+	margin:-3px 35px 0 0;
+	padding:1px 0 0 0;
+	font-size:28px;
+}
+
+.container_style_d .add_icon_font_heading, .container_style_e .add_icon_font_heading { /* add icon to container_style_d/e */
+	margin:-4px 0 0 0;
+	padding:0 0 0 19px;
+	font-size:29px;
+}
+.container_style_e .add_icon_font_heading {
+	font-size:30px;
+}
+
+.ca-gov-icon-Ca-Gov-Logo:before {
+	content: "\e600";
+}
+.ca-gov-icon-Ca-Gov-Home:before {
+	content: "\e601";
+}
+.ca-gov-icon-Ca-Gov-Menu:before {
+	content: "\e602";
+}
+.ca-gov-icon-Ca-Gov-Apps:before {
+	content: "\e603";
+}
+.ca-gov-icon-Ca-Gov-Search:before {
+	content: "\e604";
+}
+.ca-gov-icon-Ca-Gov-Chat:before {
+	content: "\e605";
+}
+.ca-gov-icon-Ca-Gov-Capitol:before {
+	content: "\e606";
+}
+.ca-gov-icon-Ca-Gov-State:before {
+	content: "\e607";
+}
+.ca-gov-icon-Ca-Gov-Phone:before {
+	content: "\e608";
+}
+.ca-gov-icon-Ca-Gov-eMail:before {
+	content: "\e609";
+}
+.ca-gov-icon-Ca-Gov-Calendar:before {
+	content: "\e60a";
+}
+.ca-gov-icon-Ca-Gov-Bear:before {
+	content: "\e60b";
+}
+.ca-gov-icon-Law-Enforcement:before {
+	content: "\e60c";
+}
+.ca-gov-icon-Justice-Legal:before {
+	content: "\e60d";
+}
+.ca-gov-icon-At-Sign:before {
+	content: "\e60e";
+}
+.ca-gov-icon-Attachment:before {
+	content: "\e60f";
+}
+.ca-gov-icon-Zipped-File:before {
+	content: "\e610";
+}
+.ca-gov-icon-PowerPoint:before {
+	content: "\e611";
+}
+.ca-gov-icon-Excel:before {
+	content: "\e612";
+}
+.ca-gov-icon-Word:before {
+	content: "\e613";
+}
+.ca-gov-icon-PDF:before {
+	content: "\e614";
+}
+.ca-gov-icon-Share:before {
+	content: "\e615";
+}
+.ca-gov-icon-Facebook:before {
+	content: "\e616";
+}
+.ca-gov-icon-LinkedIn:before {
+	content: "\e617";
+}
+.ca-gov-icon-YouTube:before {
+	content: "\e618";
+}
+.ca-gov-icon-Twitter:before {
+	content: "\e619";
+}
+.ca-gov-icon-Pinterest:before {
+	content: "\e61a";
+}
+.ca-gov-icon-Vimeo:before {
+	content: "\e61b";
+}
+.ca-gov-icon-Instagram:before {
+	content: "\e61c";
+}
+.ca-gov-icon-Flickr:before {
+	content: "\e61d";
+}
+.ca-gov-icon-Microsoft:before {
+	content: "\e61e";
+}
+.ca-gov-icon-Apple:before {
+	content: "\e61f";
+}
+.ca-gov-icon-Android:before {
+	content: "\e620";
+}
+.ca-gov-icon-Computer:before {
+	content: "\e621";
+}
+.ca-gov-icon-Tablet:before {
+	content: "\e622";
+}
+.ca-gov-icon-Smartphone:before {
+	content: "\e623";
+}
+.ca-gov-icon-Roadways:before {
+	content: "\e624";
+}
+.ca-gov-icon-Travel-Car:before {
+	content: "\e625";
+}
+.ca-gov-icon-Travel-Air:before {
+	content: "\e626";
+}
+.ca-gov-icon-Truck-Delivery:before {
+	content: "\e627";
+}
+.ca-gov-icon-Construction:before {
+	content: "\e628";
+}
+.ca-gov-icon-Bar-Chart:before {
+	content: "\e629";
+}
+.ca-gov-icon-Pie-Chart:before {
+	content: "\e62a";
+}
+.ca-gov-icon-Graph:before {
+	content: "\e62b";
+}
+.ca-gov-icon-Server:before {
+	content: "\e62c";
+}
+.ca-gov-icon-Download:before {
+	content: "\e62d";
+}
+.ca-gov-icon-Cloud-Download:before {
+	content: "\e62e";
+}
+.ca-gov-icon-Cloud-Upload:before {
+	content: "\e62f";
+}
+.ca-gov-icon-Shield:before {
+	content: "\e630";
+}
+.ca-gov-icon-Fire:before {
+	content: "\e631";
+}
+.ca-gov-icon-Binoculars:before {
+	content: "\e632";
+}
+.ca-gov-icon-Compass:before {
+	content: "\e633";
+}
+.ca-gov-icon-SOS:before {
+	content: "\e634";
+}
+.ca-gov-icon-Shopping-Cart:before {
+	content: "\e635";
+}
+.ca-gov-icon-Video-Camera:before {
+	content: "\e636";
+}
+.ca-gov-icon-Camera:before {
+	content: "\e637";
+}
+.ca-gov-icon-Green:before {
+	content: "\e638";
+}
+.ca-gov-icon-Loud-Speaker:before {
+	content: "\e639";
+}
+.ca-gov-icon-Audio:before {
+	content: "\e63a";
+}
+.ca-gov-icon-Print:before {
+	content: "\e63b";
+}
+.ca-gov-icon-Medical:before {
+	content: "\e63c";
+}
+.ca-gov-icon-Zoom-Out:before {
+	content: "\e63d";
+}
+.ca-gov-icon-Zoom-In:before {
+	content: "\e63e";
+}
+.ca-gov-icon-Important:before {
+	content: "\e63f";
+}
+.ca-gov-icon-Chat-Bubbles:before {
+	content: "\e640";
+}
+.ca-gov-icon-Phone:before {
+	content: "\e641";
+}
+.ca-gov-icon-People:before {
+	content: "\e642";
+}
+.ca-gov-icon-Person:before {
+	content: "\e643";
+}
+.ca-gov-icon-User-Id:before {
+	content: "\e644";
+}
+.ca-gov-icon-Payment-Card:before {
+	content: "\e645";
+}
+.ca-gov-icon-Skip-Backwards:before {
+	content: "\e646";
+}
+.ca-gov-icon-Play:before {
+	content: "\e647";
+}
+.ca-gov-icon-Pause:before {
+	content: "\e648";
+}
+.ca-gov-icon-Skip-Forward:before {
+	content: "\e649";
+}
+.ca-gov-icon-Mail:before {
+	content: "\e64a";
+}
+.ca-gov-icon-Image:before {
+	content: "\e64b";
+}
+.ca-gov-icon-Home:before {
+	content: "\e64c";
+}
+.ca-gov-icon-Gear:before {
+	content: "\e64d";
+}
+.ca-gov-icon-Tool:before {
+	content: "\e64e";
+}
+.ca-gov-icon-Time:before {
+	content: "\e64f";
+}
+.ca-gov-icon-Calendar:before {
+	content: "\e650";
+}
+.ca-gov-icon-Check-List:before {
+	content: "\e651";
+}
+.ca-gov-icon-Document:before {
+	content: "\e652";
+}
+.ca-gov-icon-Clipboard:before {
+	content: "\e653";
+}
+.ca-gov-icon-Page:before {
+	content: "\e654";
+}
+.ca-gov-icon-Read-Book:before {
+	content: "\e655";
+}
+.ca-gov-icon-CC-Copyright:before {
+	content: "\e656";
+}
+.ca-gov-icon-Ca-Capitol:before {
+	content: "\e657";
+}
+.ca-gov-icon-Ca-State:before {
+	content: "\e658";
+}
+.ca-gov-icon-Favorite:before {
+	content: "\e659";
+}
+.ca-gov-icon-RSS:before {
+	content: "\e65a";
+}
+.ca-gov-icon-Road-Pin:before {
+	content: "\e65b";
+}
+.ca-gov-icon-Online-Services:before {
+	content: "\e65c";
+}
+.ca-gov-icon-Link:before {
+	content: "\e65d";
+}
+.ca-gov-icon-Magnify-Glass:before {
+	content: "\e65e";
+}
+.ca-gov-icon-Key:before {
+	content: "\e65f";
+}
+.ca-gov-icon-Lock:before {
+	content: "\e660";
+}
+.ca-gov-icon-Info:before {
+	content: "\e661";
+}
+.ca-gov-icon-Arrow-Up:before {
+	content: "\e662";
+}
+.ca-gov-icon-Arrow-Down:before {
+	content: "\e663";
+}
+.ca-gov-icon-Arrow-Left:before {
+	content: "\e664";
+}
+.ca-gov-icon-Arrow-Right:before {
+	content: "\e665";
+}
+
+/* ---- Icon fonts - end ---- */

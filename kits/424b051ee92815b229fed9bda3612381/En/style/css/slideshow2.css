@@ -1,0 +1,90 @@
+﻿/* All Rights Reserved For FARESSOFT.ORG */
+
+#slider {
+	position:relative;
+	margin: 0 auto;
+	height:250px;
+	width:700px;
+	border:1px #8D8C8D solid;
+}
+
+#ImgsWrapper {
+	position:relative;
+	height:250px;
+	width:700px;
+	overflow:hidden;
+}
+
+#description {
+	position:absolute;
+	width:100%;
+	bottom:0;
+	color: #FFFFFF;
+	text-align:right;
+	font-weight:bold;
+	background: rgba(0, 0, 0, 0.5);
+	font-family: newb;
+	font-size: 20px;
+	text-shadow: 1px 1px 3px #000;
+}
+
+#description #desContent {
+	margin:10px;
+}
+
+#slider a {
+	display:block;
+	height:250px;
+	width:700px;
+}
+
+#slider img {
+	border:0;
+}
+
+#slider #sliderNextImg, #slider #sliderPreviousImg {
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+}
+
+#slider #sliderNextImg, #slider #sliderPreviousImg {
+	position:absolute;
+	background-color:white;
+	text-align:center;
+	height:24px;
+	width:50px;
+	top:50%;
+	margin-top:-12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	color:black;
+	cursor:pointer;
+	padding-top:5px;
+	visibility:hidden;
+	z-index:9999;
+	-moz-border-radius: 5px;  
+	-khtml-border-radius: 5px;  
+	-webkit-border-radius: 5px;
+}
+
+#slider #sliderNextImg {
+	left:20px;
+}
+
+#slider #sliderPreviousImg {
+	right:20px;
+}
+
+#slider #sliderNextImg:hover, #slider #sliderPreviousImg:hover {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+
+#slider ul {
+	display:none;
+}

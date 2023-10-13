@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from rcffoodind.ga/f1fbb484143d55a366393b6c2fc46133/signin_files/cartcount.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 May 2018 17:27:52 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <script>
+        function getCartItemCountFromCookie() {
+            var name = 'cartItemCount=';
+            var allCookies = document.cookie.split(';');
+            for (var i = 0; i < allCookies.length; i++) {
+                var c = allCookies[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return 0;
+        }
+
+        var count = getCartItemCountFromCookie();
+        parent.postMessage('DR_Cart_Count=' + count, '*');
+    </script>
+
+
+
+</body>
+<!-- Mirrored from rcffoodind.ga/f1fbb484143d55a366393b6c2fc46133/signin_files/cartcount.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 May 2018 17:27:52 GMT -->
+</html>

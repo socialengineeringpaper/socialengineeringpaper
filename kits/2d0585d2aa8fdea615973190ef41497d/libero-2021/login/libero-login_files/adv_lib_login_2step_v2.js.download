@@ -1,0 +1,156 @@
+// 17 Apr 2019 - Aggiunto GeoEdge
+console.log('ADV LIBRARY Login : 08 Apr 2020');
+if (typeof iol_adv_config == 'object' && typeof iol_adv_config.sito != 'undefined' && (iol_adv_config.sito == 'libero'  || iol_adv_config.sito == 'virgilio')) {
+	var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		
+	try {
+		amznads.getAdsCallback('3204', function () { var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; amznads.setTargetingForGPTAsync('amznslots'); });
+	} catch(e) { /*ignore*/}
+	
+	var adv_pagewidth = document.documentElement.clientWidth || window.innerWidth;
+	var adv_pageheight = document.documentElement.clientHeight || window.innerHeight;
+	
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+	
+	// Geo.edge object injection
+	(function() {
+		if (adv_pagewidth <= 640) {
+			
+			window.grumi = {
+				cfg: {
+					advs: {},
+					pubIds: {}
+				},
+				key: '4415fe16-b37d-46de-ac5c-69d63c72d5ee'
+			};
+
+			var ge_script = document.createElement('script');
+			ge_script.async = true;
+			ge_script.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			ge_script.src = (useSSL ? 'https:' : 'http:') + '//rumcdn.geoedge.be/grumi-ip.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(ge_script, node);
+		}
+	})();
+	
+	function adv_getParameterByName(name) {
+		var res = new RegExp('[\?&]'+name.replace(/\[/g, '\\\[').replace(/\]/g, '\\\]')+'(?:=([^&#]*))?(?:[&#]|$)').exec(window.location.search);
+		return res ? (res[1] ? decodeURIComponent(res[1].replace(/\+/g, ' ')) : '') : null;
+	}
+	
+	function adv_setCookie(cname, cvalue, minuts) {
+		var d = new Date();
+		d.setTime(d.getTime() + (minuts*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + "; Path=/;" + expires;
+	}
+
+	function adv_getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') { c = c.substring(1); }
+			if (c.indexOf(name) === 0) { return c.substring(name.length, c.length); }
+		}
+		return null;
+	}
+	
+	var adv_adunit1 = '/5180/'+iol_adv_config.sito+'/webmail/login';
+	var adv_adunit2 = '';
+	var adv_adunit3 = '';
+	var adv_adunit4 = '';
+	
+	var adv_testnum = adv_getParameterByName('dctestAdv');
+	if (adv_testnum !== null && adv_testnum === '0') {
+		document.cookie = "IOL_ADV_TEST=; Path=/; expires=Thu, 01 Jan 1970 00:00:01 UTC";
+		adv_testnum = null;
+	}
+	
+	if (adv_testnum !== null) {
+		adv_setCookie('IOL_ADV_TEST', adv_testnum, 10);
+	}
+	
+	if ((adv_testnum = adv_getCookie('IOL_ADV_TEST')) !== null) {
+		adv_adunit1 = '/5180/testiol/'+iol_adv_config.sito+'/login/test'+adv_testnum;
+	}
+
+	if (typeof iol_adv_config.login_step != 'undefined' && (iol_adv_config.login_step == 'step1'  || iol_adv_config.login_step == 'step2')) {
+		adv_adunit2 = '/'+iol_adv_config.login_step;
+	}
+
+	var adv_slots = {};
+	googletag.cmd.push(function() {
+		if (typeof(adv_profile)!="undefined"){ googletag.pubads().setCookieOptions(adv_profile); }
+		googletag.pubads().setTargeting("adv_st_active","");
+						
+		if ((typeof iol_adv_config.login_step != 'undefined') && typeof(sessionStorage)=='object') {
+			if (iol_adv_config.login_step == 'step1') {
+				sessionStorage.removeItem('adv_st_active');
+				sessionStorage.removeItem('adv_st_storyid');
+			}
+			
+			if ((iol_adv_config.login_step == 'step2') && (typeof(sessionStorage.getItem('adv_st_active'))=='string') && (sessionStorage.getItem('adv_st_active')=='yes')) {
+				googletag.pubads().setTargeting("adv_st_active","yes");
+				googletag.pubads().setTargeting("adv_st_storyid",sessionStorage.getItem('adv_st_storyid'));
+			}
+		}
+
+		if (adv_pagewidth > 980) {
+			if (typeof iol_adv_config.section != 'undefined' && iol_adv_config.section == 'community') {
+				adv_adunit3 = '/community';
+			}
+			
+			var adsplash_sizes = [[1540, 1024]];
+			//if ((typeof iol_adv_config.login_step != 'undefined') && (iol_adv_config.login_step == 'step2') && ((typeof(sessionStorage.getItem('adv_st_active'))!=='string') || (sessionStorage.getItem('adv_st_active')!=='yes'))) {
+			if ((typeof iol_adv_config.login_step != 'undefined') && ((typeof(sessionStorage.getItem('adv_st_active'))!=='string') || (sessionStorage.getItem('adv_st_active')!=='yes'))) {
+				//googletag.pubads().setTargeting("adv_st_active","yes");
+				//googletag.pubads().setTargeting("adv_st_storyid",sessionStorage.getItem('adv_st_storyid'));
+				adsplash_sizes = [[1540, 1024],[300, 600]];
+			}
+			
+			adv_slots['adsplash'] = googletag.defineSlot(adv_adunit1+adv_adunit2+adv_adunit3+adv_adunit4, adsplash_sizes, 'adsplash').
+				//setCollapseEmptyDiv(true, true). //IMPORTANTE!!!!! altrimenti il frame vuoto abbassa il box di login
+				addService(googletag.pubads());
+				
+		} else if (adv_pagewidth > 730) {
+			adv_slots['adleaderboard'] = googletag.defineSlot(adv_adunit1+adv_adunit2+adv_adunit3+adv_adunit4, [[728, 90]], 'adleaderboard').
+				setCollapseEmptyDiv(true, true).
+				addService(googletag.pubads());
+				
+		} else if (adv_pagewidth >= 320) {
+			adv_slots['admpu'] = googletag.defineSlot(adv_adunit1+adv_adunit2+adv_adunit3+adv_adunit4, [[300, 250],[600, 800]], 'admpu').
+				addService(googletag.pubads());
+		}
+
+		if(typeof(adv_liberotest)=="undefined"){var adv_liberotest=false;}
+		IOLAdv.Adv.advlib.setTarget(googletag, 0);
+		
+		//googletag.pubads().setTargeting("swidth",adv_adunit3.slice(1));
+		googletag.pubads().enableSingleRequest();
+		
+		// Event Listener per gestione del 1540x1024
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+			if (event.slot === adv_slots['adsplash']) {
+				if(event.size[0] == '300'){
+					try {
+						//Function da richiamare
+						get_editorial();
+					} catch(e) {}
+				}
+			}	
+		});
+
+		googletag.enableServices();
+	});
+} 

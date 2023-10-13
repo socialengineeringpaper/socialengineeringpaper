@@ -1,0 +1,2471 @@
+/*!
+ * Durandal 2.1.0 Copyright (c) 2012 Blue Spire Consulting, Inc. All Rights Reserved.
+ * Available via the MIT license.
+ * see: http://durandaljs.com or https://github.com/BlueSpire/Durandal for details
+ */
+
+.modalBlockout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+
+    pointer-events: auto;
+
+    -webkit-backface-visibility: hidden;
+
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.modalHost {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    opacity: 0;
+
+    -webkit-backface-visibility: hidden;
+
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.messageBox {
+    min-width: 300px;
+}
+
+.durandal-view-404 {
+    color: red;
+    margin: 8px 0;
+    padding: 8px;
+
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.entrance-out {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.1s;
+    -moz-animation-duration: 0.1s;
+    -ms-animation-duration: 0.1s;
+    -o-animation-duration: 0.1s;
+    animation-duration: 0.1s;
+    -webkit-animation-name: fadeOut;
+    -moz-animation-name: fadeOut;
+    -o-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes slideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideInRight {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes slideInRight {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.entrance-in {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-name: slideInRight;
+    -moz-animation-name: slideInRight;
+    -o-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.entrance-in-fade {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.modal-content {
+    border: 1px solid #aaa;
+    background: #fff;
+    min-width: 410px
+}
+
+.modal-content.confirm {
+    background: #eee
+}
+
+.modal-content.confirm .modal-body {
+    margin: 20px 20px 0;
+    line-height: 18px
+}
+
+.modal-content.confirm .modal-body label {
+    display: block;
+    padding-top: 15px;
+    font-size: 12px
+}
+
+.modal-header {
+    background: #eee;
+    padding: 12px 40px 15px 20px;
+    line-height: 26px;
+    position: relative
+}
+
+.modal-header h3 {
+    font-size: 24px;
+    color: #333333;
+    margin: 0;
+    font-weight: 100;
+    font-style: normal;
+    padding-top: 15px
+}
+
+.modal-header h4 {
+    font-size: 12px;
+    margin: 15px 0 0 0;
+    font-weight: normal;
+    line-height: 16px
+}
+
+.modal-header .modal-close {
+    cursor: pointer;
+    line-height: 0;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.modal-header .modal-close:hover .close-x-light {
+    background-image: url(../img/sprites.png);
+    background-position: -251px -46px;
+    width: 10px;
+    height: 10px
+}
+
+.modal-body {
+    margin: 20px;
+    color: #333;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.modal-body select {
+    max-width: 400px
+}
+
+.modal-footer {
+    padding: 20px;
+    background: #eee
+}
+
+.modal-footer button {
+    min-width: 60px
+}
+
+.message-dialog {
+    max-width: 410px
+}
+
+.message-dialog img {
+    margin: 0 25px 0 0;
+    float: left
+}
+
+.message-dialog ul {
+    list-style: none
+}
+
+@media only screen and (max-device-width: 959px) {
+    .enable-media-queries .modalHost .modal-content .modal-header h3 {
+        padding-top: 5px
+    }
+
+    .enable-media-queries .modalHost .modal-content .modal-footer {
+        padding: 10px
+    }
+}
+
+@media only screen and (max-device-width: 415px) {
+    .enable-media-queries .modalHost {
+        left: 0 !important;
+        width: 100% !important
+    }
+
+    .enable-media-queries .modal-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        min-width: 100% !important
+    }
+}
+
+.tip {
+    outline: none;
+    position: relative;
+    background-image: url('../img/tooltip.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat
+}
+
+.tip > .tipText {
+    visibility: hidden;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    color: #000;
+    overflow: hidden;
+    padding: 8px;
+    position: absolute;
+    text-align: left;
+    white-space: normal;
+    z-index: 10;
+    width: 300px
+}
+
+.tip:hover > .tipText {
+    text-decoration: none;
+    visibility: visible
+}
+
+@media only screen and (max-device-width: 959px) {
+    .enable-media-queries .tip {
+        display: none
+    }
+}
+
+#step-container .request-new-activation-link-message {
+    margin: 57px 0;
+    width: 100%
+}
+
+#step-container #confirm {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 5px
+}
+
+#step-container #confirm .personal-info .phoneField {
+    display: flex;
+    width: 100%
+}
+
+#step-container #confirm .personal-info .phoneInput {
+    flex-grow: 2;
+    display: flex
+}
+
+#step-container #confirm .personal-info .phoneInput .phone-local-number {
+    flex-grow: 2
+}
+
+#step-container #confirm .personal-info .phoneInput .phone-local-number .user-input-column {
+    display: flex;
+    justify-content: space-between
+}
+
+#step-container #confirm .personal-info .phone-country-code {
+    flex-grow: 0
+}
+
+#step-container #confirm .personal-info #phone-input {
+    padding-left: 4px;
+    width: 100%
+}
+
+#step-container #confirm .personal-info .validation-message {
+    display: inline
+}
+
+#step-container #confirm .personal-info .verticalInput {
+    display: flex;
+    flex-direction: column
+}
+
+#step-container #confirm .personal-info .country-select {
+    display: inline-block;
+    max-width: 185px;
+    width: 100%;
+    margin-right: 25px
+}
+
+#step-container #confirm .personal-info .country-code {
+    align-items: center;
+    display: inline-flex;
+    margin: 10px 5px;
+    padding-top: 24px
+}
+
+#step-container #confirm .personal-info .info-row .send-type {
+    font-size: 12px
+}
+
+#step-container #confirm .personal-info .info-row .send-type input {
+    width: 15px;
+    height: 15px
+}
+
+#step-container #confirm .step-index {
+    text-align: center;
+    display: inline-block
+}
+
+#step-container #confirm .step-index .step-index-icon {
+    border-radius: 50%;
+    background-color: #e2f3fc;
+    border: 1px solid #259ed9;
+    color: #259ed9;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    opacity: .5;
+    float: left;
+    margin-right: 10px
+}
+
+#step-container #confirm .step-index .step-index-icon .icon {
+    background: url(../img/valid-step-icon.png) no-repeat;
+    width: 12px;
+    height: 10px;
+    display: inline-block
+}
+
+#step-container #confirm .step-index .step-index-icon.current-step {
+    opacity: 1
+}
+
+#step-container #confirm .username {
+    text-align: center;
+    margin-bottom: 15px
+}
+
+#step-container #confirm .username .email {
+    font-weight: 500
+}
+
+#step-container #confirm .username .input-title {
+    max-width: 400px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#step-container #confirm .sign-in-url {
+    text-align: center;
+    margin: 10px 0
+}
+
+#step-container #confirm .personal-info {
+    text-align: left
+}
+
+#step-container #confirm .personal-info .desc {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color: #666666;
+    font-size: 14px
+}
+
+#step-container #confirm .personal-info input, #step-container #confirm .personal-info select {
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid #e9e9e8
+}
+
+#step-container #confirm .personal-info .required {
+    color: red
+}
+
+#step-container #confirm .personal-info .required-message {
+    float: right;
+    color: red
+}
+
+#step-container #confirm .date-time-block .timezone-title {
+    margin: 10px 0
+}
+
+#step-container #confirm .date-time-block .date-time-row .date-time-title {
+    display: none
+}
+
+#step-container #confirm .navigate.first {
+    margin-top: 20px
+}
+
+#step-container #confirm .navigate .fwdlink {
+    width: 50%;
+    margin: 10px 0 0
+}
+
+#step-container #confirm .navigate .fwdlink2 {
+    width: 50%;
+    margin: 10px 0 0
+}
+
+#step-container #confirm .navigate .fwdlink.disabled {
+    background-color: #676767;
+    opacity: .6
+}
+
+#step-container #confirm .navigate .fwdlink2.disabled {
+    background-color: #676767;
+    opacity: .6
+}
+
+#step-container #confirm .navigate .backlink {
+    display: inline-block;
+    width: 50%;
+    margin: 10px 0 0;
+    float: left
+}
+
+#step-container #confirm .navigate.first button {
+    width: 100%
+}
+
+#step-container #confirm .create-password-title, #step-container #reset-password .create-password-title {
+    margin-bottom: 15px;
+    text-align: center
+}
+
+#step-container #confirm .password, #step-container #reset-password .password {
+    text-align: left
+}
+
+#step-container #confirm .password .input-title, #step-container #reset-password .password .input-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 14px;
+    padding-left: 5px
+}
+
+#step-container #confirm .password .input-title.show-password, #step-container #reset-password .password .input-title.show-password {
+    float: right;
+    padding-right: 5px
+}
+
+#step-container #confirm .password .input-title.show-password .text, #step-container #reset-password .password .input-title.show-password .text {
+    margin-left: 5px
+}
+
+#step-container #confirm .password.confirm-password, #step-container #reset-password .password.confirm-password {
+    margin-top: 20px
+}
+
+#step-container #confirm #password, #step-container #reset-password #password, #step-container #confirm #confirm-password, #step-container #reset-password #confirm-password {
+    height: 36px;
+    color: #8c8c8b;
+    padding: 0 16px;
+    background-color: transparent;
+    border: 2px solid #e9e9e8;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 0
+}
+
+#step-container #confirm #password-validation, #step-container #reset-password #password-validation {
+    text-align: center;
+    background-color: #e2f3fc;
+    border: 1px solid #239dd8;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    margin-top: 10px
+}
+
+#step-container #confirm #password-validation .title, #step-container #reset-password #password-validation .title {
+    color: #222222;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0
+}
+
+#step-container #confirm #password-validation .info, #step-container #reset-password #password-validation .info {
+    color: #222222;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0
+}
+
+#step-container #confirm #password-validation .info .info-tip, #step-container #reset-password #password-validation .info .info-tip {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#step-container #confirm #password-validation .validation-messages, #step-container #reset-password #password-validation .validation-messages {
+    text-align: left;
+    margin: 10px 0;
+    color: #666666
+}
+
+#step-container #confirm #password-validation .validation-messages span, #step-container #reset-password #password-validation .validation-messages span {
+    display: inline-block
+}
+
+#step-container #confirm #password-validation .validation-messages span.title-icon, #step-container #reset-password #password-validation .validation-messages span.title-icon {
+    background: url(../img/password-info.png) no-repeat;
+    width: 16px;
+    height: 17px;
+    margin-right: 4px
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message .message, #step-container #reset-password #password-validation .validation-messages .validation-message .message {
+    width: 94%;
+    vertical-align: top
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message .message.valid, #step-container #reset-password #password-validation .validation-messages .validation-message .message.valid {
+    font-weight: 500;
+    color: #222222
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message .message.invalid-char, #step-container #reset-password #password-validation .validation-messages .validation-message .message.invalid-char {
+    color: red;
+    font-weight: 500
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message span, #step-container #reset-password #password-validation .validation-messages .validation-message span {
+    display: inline-block;
+    font-weight: normal
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message span.valid-message-icon, #step-container #reset-password #password-validation .validation-messages .validation-message span.valid-message-icon {
+    width: 4%
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message span.valid-message-icon .icon, #step-container #reset-password #password-validation .validation-messages .validation-message span.valid-message-icon .icon {
+    background: url(../img/valid-password-check.png) no-repeat;
+    width: 12px;
+    height: 10px
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message span.invalid-message-icon, #step-container #reset-password #password-validation .validation-messages .validation-message span.invalid-message-icon {
+    width: 4%
+}
+
+#step-container #confirm #password-validation .validation-messages .validation-message span.invalid-message-icon .icon, #step-container #reset-password #password-validation .validation-messages .validation-message span.invalid-message-icon .icon {
+    background: url(../img/invalid-password-x.png) no-repeat;
+    width: 12px;
+    height: 10px
+}
+
+#step-container #confirm .error-message, #step-container .security-question-required .error-message {
+    text-align: center;
+    background-color: #fdefef;
+    border: 1px solid #ed2d26;
+    padding: 0 10px
+}
+
+#step-container #confirm select, #step-container .security-question-required select {
+    width: 100%;
+    height: 36px;
+    margin: 2px 0;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 20px;
+    font-size: 16px
+}
+
+#step-container #confirm .hint, #step-container .security-question-required .hint {
+    text-align: center;
+    color: #333333
+}
+
+#step-container #confirm .security-question .question .field, #step-container .security-question-required .security-question .question .field {
+    display: none
+}
+
+#step-container #confirm .security-question .answer, #step-container .security-question-required .security-question .answer {
+    padding-bottom: 20px
+}
+
+#step-container #confirm .security-question .answer .field, #step-container .security-question-required .security-question .answer .field {
+    width: 30%;
+    display: inline-block;
+    padding-left: 20px
+}
+
+#step-container .folder-invite-notification-sent {
+    text-align: left
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-Light.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-LightItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CitrixSans';
+    src: url('../font/CitrixSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic
+}
+
+#phone {
+    color: #333;
+    margin: 0 auto;
+    max-width: 400px
+}
+
+#phone button {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 40px;
+    background-color: #2071c5;
+    color: #fff;
+    font-size: 16px
+}
+
+#phone select {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-color: #ccc;
+    padding-left: 10px
+}
+
+#phone .top {
+    text-align: center
+}
+
+#phone .top h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px
+}
+
+#phone .top p {
+    font-size: 14px;
+    margin-bottom: 20px
+}
+
+#phone .charges {
+    font-size: 12px;
+    margin-bottom: 40px
+}
+
+#phone .desc {
+    margin-bottom: 5px
+}
+
+#phone .required {
+    color: red
+}
+
+#phone .country {
+    margin-bottom: 3px;
+    color: #666;
+    text-align: left
+}
+
+#phone .phone-number {
+    color: #666;
+    text-align: left
+}
+
+#phone .phoneNumber {
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+    max-width: 400px;
+    padding: 0 10px;
+    width: 100%
+}
+
+#phone .phoneNumber__input {
+    background-color: transparent;
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 5px;
+    text-align: left;
+    width: 100%
+}
+
+#phone .send-type {
+    margin: 10px 0
+}
+
+#phone .info-row {
+    text-align: left
+}
+
+body, button, a, span, label {
+    font-family: 'CitrixSans', Arial, Helvetica, Sans-Serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.25
+}
+
+/*input, textarea, keygen, select, button {*/
+/*    font-family: inherit;*/
+/*    font-weight: inherit*/
+/*}*/
+
+html {
+    background: #2f2f2f
+}
+
+body {
+    margin: 0;
+    color: #cccccc
+}
+
+a {
+    color: inherit;
+    outline: none
+}
+
+u {
+    text-decoration: none
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none
+}
+
+button.grey {
+    padding: 10px;
+    background-color: grey;
+    color: #fff;
+    font-size: 14px
+}
+
+button.grey:hover {
+    background-color: #b3b3b3
+}
+
+.header {
+    margin: 0 auto
+}
+
+.header + .img {
+    margin: 0 auto
+}
+
+.sign-in {
+    display: none
+}
+
+.watermark-logo {
+    background-image: url(../img/sprites.png);
+    background-position: -230px 0px;
+    width: 118px;
+    height: 45px;
+    margin: 0 auto
+}
+
+.fixed-footer {
+    text-align: center
+}
+
+.hidden {
+    display: none
+}
+
+.vhidden {
+    visibility: hidden
+}
+
+.text-center {
+    text-align: center
+}
+
+.txt {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    float: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #a4a4a4;
+    text-decoration: underline;
+    font-size: 14px
+}
+
+.clear-block {
+    clear: both
+}
+
+.fwdlink, .backlink {
+    display: inline-block;
+    width: 145px;
+    height: 60px;
+    font-size: 17px;
+    margin-top: 34px;
+    cursor: pointer
+}
+
+.fwdlink2, .backlink {
+    display: inline-block;
+    width: 145px;
+    height: 60px;
+    font-size: 17px;
+    margin-top: 34px;
+    cursor: pointer
+}
+
+.fwdlink .btn-text, .backlink .btn-text {
+    display: inline-block;
+    line-height: 60px;
+    transition: opacity ease .15s
+}
+
+.fwdlink2 .btn-text, .backlink .btn-text {
+    display: inline-block;
+    line-height: 60px;
+    transition: opacity ease .15s
+}
+
+.fwdlink.active, .backlink.active {
+    background-image: url(../img/ws_loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.fwdlink2.active, .backlink.active {
+    background-image: url(../img/ws_loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.fwdlink.active .btn-text, .backlink.active .btn-text {
+    opacity: .2
+}
+
+.fwdlink2.active .btn-text, .backlink.active .btn-text {
+    opacity: .2
+}
+
+.fwdlink:active .btn-text, .backlink:active .btn-text {
+    opacity: .5
+}
+
+.fwdlink2:active .btn-text, .backlink:active .btn-text {
+    opacity: .5
+}
+
+.fwdlink:active.disabled .btn-text, .backlink:active.disabled .btn-text {
+    opacity: initial
+}
+
+.fwdlink2:active.disabled .btn-text, .backlink:active.disabled .btn-text {
+    opacity: initial
+}
+
+.loginText::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+     margin: 0
+}
+
+.loginText {
+    color: #cccccc;
+    width: 80%;
+    padding: 14px 10% 15px;
+    border: 0;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 17px;
+    border-radius: 0
+}
+
+.loginText:focus {
+    outline: 0
+}
+
+.nav.no-back .fwdlink {
+    width: 300px
+}
+
+.nav.no-back .fwdlink2 {
+    width: 300px
+}
+
+.fwdlink.hidden {
+    display: none
+}
+
+.fwdlink2.hidden {
+    display: none
+}
+
+.fwdlink {
+    background: #98c748;
+    color: white
+}
+
+.fwdlink2 {
+    background: #98c748;
+    color: white
+}
+
+.fwdlink.disabled {
+    background: rgba(0, 0, 0, 0.25);
+    color: inherit
+}
+
+.fwdlink2.disabled {
+    background: rgba(0, 0, 0, 0.25);
+    color: inherit
+}
+
+.backlink {
+    background: rgba(0, 0, 0, 0.25);
+    margin-right: 10px
+}
+
+.validation-message {
+    text-align: center;
+    margin: .5em 0;
+    color: #e0742b
+}
+
+.validation-messages .validation-message {
+    text-align: left;
+    color: #7c7c7c
+}
+
+.credentials .welcome {
+    display: none
+}
+
+.credentials .password {
+    margin-top: 4px
+}
+
+.credentials .username {
+    padding-right: 10px
+}
+
+.credentials .backlink {
+    display: none
+}
+
+.credentials .app-icon img {
+    float: left;
+    margin: 0 0 4px 0
+}
+
+.credentials .cookie-preferences {
+    margin-top: 5px
+}
+
+.credentials .login-options {
+    margin: -10px 0 10px
+}
+
+.company-credentials {
+    margin-top: 34px
+}
+
+#link-company-credentials {
+    display: inline-block;
+    padding: 7px;
+    text-decoration: none
+}
+
+#link-forgot-password {
+    display: inline-block;
+    padding: 7px
+}
+
+#forgot-password {
+    display: none
+}
+
+.login-text {
+    display: none
+}
+
+.verify .inputs input[type='number'] {
+    margin-top: 10px
+}
+
+.verify .text-content {
+    margin-left: 0
+}
+
+.verify .text-content.title {
+    text-align: left;
+    margin: 20px 0 5px 0
+}
+
+.verify .navlink {
+    margin-bottom: 40px
+}
+
+.verify .auth-app-instructions {
+    margin-top: 0;
+    margin-bottom: 20px
+}
+
+.verify .auth-app-instructions.text-content {
+    text-align: left
+}
+
+.verify .auth-app-instructions .tertiary-action-link {
+    text-decoration: none
+}
+
+.subdomain-manual .instructions, .subdomain-start .instructions {
+    font-size: 12px;
+    margin-bottom: -25px
+}
+
+.subdomain-manual .check-email-msg, .subdomain-start .check-email-msg {
+    display: none
+}
+
+.subdomain-manual p, .subdomain-start p {
+    margin: 24px 0
+}
+
+.subdomain-manual .navlink, .subdomain-start .navlink {
+    margin: 19px 5px
+}
+
+.subdomain-manual .buttonContainer--fullWidth, .subdomain-start .buttonContainer--fullWidth {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px
+}
+
+.subdomain-manual .buttonContainer--fullWidth .backlink, .subdomain-start .buttonContainer--fullWidth .backlink {
+    display: inline-block
+}
+
+.user-upgrade .instructions {
+    margin-bottom: 20px
+}
+
+.subdomain-list .accountPickerHeader {
+    display: none
+}
+
+.subdomain-list .accountlist {
+    list-style: none;
+    margin: 28px 0 50px;
+    padding: 0
+}
+
+.subdomain-list .accountlist li {
+    width: 95%;
+    margin: 0 auto 4px;
+    background: rgba(0, 0, 0, 0.25);
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    cursor: pointer
+}
+
+.subdomain-list .accountlist li a {
+    text-decoration: none
+}
+
+.subdomain-list .accountlist li strong {
+    font-size: 18px;
+    font-weight: normal;
+    color: #b2b2b2;
+    display: inline-block;
+    padding-top: 15px
+}
+
+.subdomain-list .accountlist li .account-url {
+    color: #8e8d8c;
+    display: inline-block;
+    padding: 15px
+}
+
+.subdomain-list .watermark-logo {
+    margin: 25px auto 25px
+}
+
+.reset-password-email-sent .error-icon {
+    background-image: url(../img/sprites.png);
+    background-position: -230px -46px;
+    width: 20px;
+    height: 20px;
+    display: inline-block
+}
+
+.reset-password-email-sent .error-icon + span {
+    vertical-align: top;
+    margin-left: 10px
+}
+
+.reset-password-email-sent .auth-required-message {
+    color: #e0742b
+}
+
+.subdomain-not-in-list p {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.resend-code .backlink {
+    background: #333
+}
+
+.resend-code #backup-options {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.resend-code li {
+    text-align: center
+}
+
+.resend-code .title {
+    font-size: 16px;
+    line-height: 25px;
+    color: #cbcbcb
+}
+
+.resend-code .subtitle {
+    font-size: 14px;
+    line-height: 15px;
+    color: #cbcbcb
+}
+
+.resend-code input[type='radio'] {
+    display: none
+}
+
+.resend-code .text-content {
+    margin-top: 86px
+}
+
+.resend-code .navlink {
+    margin-top: 27px
+}
+
+.resend-code .link-no-code {
+    margin-bottom: 20px
+}
+
+.resend-code ul#backup-options {
+    margin-top: 40px
+}
+
+.resend-code ul#backup-options.text-left {
+    text-align: left
+}
+
+.resend-code ul#backup-options li {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin: 23px 0
+}
+
+.resend-code ul#backup-options li label {
+    padding: 11.5px 0
+}
+
+.resend-code ul#backup-options li label span {
+    padding-right: 40px
+}
+
+.resend-code ul#backup-options li.selected {
+    color: #fff
+}
+
+.resend-code ul#backup-options li.selected .check {
+    background: url(../img/valid-icon-check.png) no-repeat right
+}
+
+.resend-code .verification-options {
+    list-style: none;
+    margin: 28px 0 50px;
+    padding: 0;
+    margin: 40px 0
+}
+
+.resend-code .verification-options li {
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    margin: 0 0 4px 0;
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    cursor: pointer
+}
+
+.resend-code .verification-options li a {
+    text-decoration: none
+}
+
+.resend-code .verification-options li strong {
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block
+}
+
+.resend-code .verification-options li .verification-option {
+    color: #333333;
+    font-size: 14px;
+    display: inline-block;
+    padding: 15px
+}
+
+.resend-code .verification-options .phone-type {
+    line-height: inherit
+}
+
+.resend-code .verification-options .phone-type strong {
+    padding-top: 15px
+}
+
+.step {
+    transform: translate3d(0, 0, 0);
+    -ms-transform: none
+}
+
+.step.animated {
+    transition: transform ease .3s
+}
+
+.step.left {
+    transform: translate3d(-100%, 0, 0);
+    -ms-transform: none
+}
+
+.step.right {
+    transform: translate3d(100%, 0, 0);
+    -ms-transform: none
+}
+
+#page {
+    overflow-x: hidden
+}
+
+#content {
+    position: relative;
+    overflow-x: hidden
+}
+
+#step-container {
+    min-height: 343px
+}
+
+.step {
+    width: 100%;
+    float: left
+}
+
+.welcome.text-content h1 {
+    display: none
+}
+
+.error {
+    color: #e0742b;
+    font-size: 14px
+}
+
+.error-container {
+    text-align: center;
+    margin-top: .5em
+}
+
+.error-container.message {
+    margin-bottom: .5em
+}
+
+.text-content {
+    width: 95%;
+    margin: 0 auto
+}
+
+.terms h2 {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    color: #666666
+}
+
+.terms .terms-body-text {
+    width: 600px;
+    margin: 0 auto
+}
+
+.terms .terms-body-iframe {
+    width: 100%
+}
+
+.terms .terms-body-iframe iframe {
+    width: 100%;
+    border: none
+}
+
+.baa-terms {
+    color: #666666
+}
+
+.baa-terms .baa-body-text {
+    text-align: center;
+    padding-top: 250px;
+    width: 400px;
+    margin: auto
+}
+
+@media (max-width: 750px) {
+    .baa-terms .baa-body-text {
+        width: 320px
+    }
+}
+
+.baa-terms .baa-body-text .title {
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 50px
+}
+
+.baa-terms .baa-body-text .description, .baa-terms .baa-body-text .view-and-print {
+    font-size: 16px;
+    margin-bottom: 30px
+}
+
+.baa-terms .baa-body-text .view-and-print {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.baa-terms .baa-body-text .agree-terms {
+    font-size: 12px
+}
+
+.modal-footer {
+    text-align: center
+}
+
+.activation-code-desc, .resend-activation-code {
+    margin-top: 20px
+}
+
+#confirm input[type='text'], #confirm input[type='password'] {
+    width: 100%
+}
+
+#confirm .fwdlink.disabled {
+    background: rgba(0, 0, 0, 0.25)
+}
+
+#confirm .fwdlink2.disabled {
+    background: rgba(0, 0, 0, 0.25)
+}
+
+#g-recaptcha {
+    margin: 40px auto;
+    display: table
+}
+
+html, body {
+    min-width: 320px
+}
+
+html, body, #outer {
+    width: 100%;
+    height: 100%
+}
+
+#page, #applicationHost {
+    height: 100%
+}
+
+h1, .text-content, p {
+    color: #333333
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #FFFFFF
+}
+
+#content.marketing-tips {
+    background-color: #2071C5;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+#content.marketing-tips.credentials .card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content.marketing-tips.credentials .card-wrapper {
+        background-color: #FFFFFF;
+        width: 88%;
+        height: 100%;
+        border-radius: 0
+    }
+}
+
+#content.marketing-tips.credentials .card-wrapper .card-container {
+    width: 400px;
+    margin: 0
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content.marketing-tips.credentials .card-wrapper .card-container {
+        width: 100%
+    }
+}
+
+#content.credentials {
+    background-color: #2071C5
+}
+
+#content.credentials:before {
+    content: '';
+    width: 120vh;
+    height: 120vh;
+    min-width: 1040px;
+    min-height: 1040px;
+    background: #ffffff;
+    display: block;
+    position: fixed;
+    text-align: center;
+    transform: translateX(50%);
+    right: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+    top: -70px
+}
+
+#content.credentials .card-wrapper {
+    position: relative;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#content.credentials .card-wrapper .card-container {
+    width: 400px;
+    height: 100%;
+    margin: auto
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content.credentials .card-wrapper .card-container {
+        width: 88%;
+        height: 100%
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content.credentials .card-wrapper {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content.credentials {
+        background-color: #FFFFFF
+    }
+}
+
+#content .card-wrapper {
+    display: block;
+    width: 480px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
+    #content .card-wrapper {
+        width: 100%
+    }
+}
+
+#content .card-wrapper .card-container {
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%
+}
+
+#content .card-wrapper .card-container .card {
+    display: table-cell;
+    vertical-align: middle
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    #content .card-wrapper .card-container {
+        max-width: 520px
+    }
+}
+
+#content .marketing-tips {
+    display: block;
+    z-index: 0
+}
+
+@media (min-width: 320px) and (max-width: 1000px),(max-height: 800px) {
+    #content .marketing-tips {
+        display: none
+    }
+}
+
+#content #step-container {
+    min-height: 285px
+}
+
+#content #step-container #confirm {
+    width: auto
+}
+
+@media (max-height: 400px) {
+    #content #step-container {
+        min-height: 275px
+    }
+}
+
+#content.step {
+    float: none
+}
+
+#content .header {
+    background-image: none;
+    background: url('../img/sharefile-logo-with-icon.png');
+    background: url('../img/sharefile-logo-with-icon.svg'), linear-gradient(transparent, transparent);
+    width: 220px;
+    height: 108px;
+    margin-bottom: 40px;
+    cursor: default
+}
+
+#content .header.trial-link {
+    cursor: pointer
+}
+
+#content .header + .img {
+    display: none
+}
+
+#content .password-input {
+    margin: 1px auto 0 auto;
+    font-family: Arial
+}
+
+#content .password-input input {
+    background: transparent;
+    text-align: left;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+
+#content .password-input .password-input-inner label {
+    position: absolute;
+    color: #333333;
+    font-weight: 100;
+    line-height: 55px
+}
+
+#content .auth-required-container {
+    background-color: #FFF2E4;
+    width: 100%;
+    border: 1px solid #F9A628
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    #content .auth-required-container {
+        padding: 0
+    }
+}
+
+#content .auth-required-message {
+    color: black
+}
+
+.inputs ::-webkit-input-placeholder {
+    color: #333333
+}
+
+.inputs input:-webkit-autofill, .inputs input[type="email"]:disabled {
+    -webkit-box-shadow: 0 0 0 1000px #EBEBEB inset;
+    -webkit-text-fill-color: #333333 !important
+}
+
+.inputs ::-moz-placeholder {
+    color: #333333
+}
+
+.inputs :-ms-input-placeholder {
+    color: #333333
+}
+
+.inputs input[type="text"], .inputs input[type="email"], .inputs input[type="number"], .inputs .password-input, .inputs .reset-new-password, .inputs .reset-confirm-password, .inputs .password {
+    text-align: left;
+    font-family: inherit;
+    padding-left: 30px;
+    height: 50px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333333;
+    background: #EBEBEB;
+    font-weight: 100
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .inputs input[type="text"], .inputs input[type="email"], .inputs input[type="number"], .inputs .password-input, .inputs .reset-new-password, .inputs .reset-confirm-password, .inputs .password {
+        height: 50px
+    }
+}
+
+.inputs input[type="text"].valid-icon, .inputs input[type="email"].valid-icon, .inputs input[type="number"].valid-icon, .inputs .password-input.valid-icon, .inputs .reset-new-password.valid-icon, .inputs .reset-confirm-password.valid-icon, .inputs .password.valid-icon {
+    background: url(../img/valid-icon-check.png) no-repeat right;
+    background-position: 95% 50%;
+    padding-right: 0;
+    background-color: #EBEBEB
+}
+
+.inputs input[type="text"].invalid-icon, .inputs input[type="email"].invalid-icon, .inputs input[type="number"].invalid-icon, .inputs .password-input.invalid-icon, .inputs .reset-new-password.invalid-icon, .inputs .reset-confirm-password.invalid-icon, .inputs .password.invalid-icon {
+    background: url(../img/invalid-icon-x.png) no-repeat right;
+    background-position: 95% 50%;
+    padding-right: 0;
+    background-color: #EBEBEB
+}
+
+.error {
+    color: #464646;
+    font-size: 12px;
+    background-color: #FFF2E4;
+    margin: 0 0 5px;
+    padding: 10px;
+    border: 1px solid #F9A628
+}
+
+.error a {
+    font-size: 12px
+}
+
+.error-container {
+    margin-top: 0
+}
+
+.text-content {
+    color: #333333;
+    text-align: center
+}
+
+.text-content.extra-link {
+    margin-top: 20px
+}
+
+.tertiary-action-link {
+    color: #1879B9;
+    font-size: 12px;
+    text-decoration: underline
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .tertiary-action-link {
+        font-size: 14px
+    }
+}
+
+#link-subdomain-not-in-list {
+    display: block
+}
+
+.step.credentials .fwdlink {
+    margin-top: 10px
+}
+
+.step.credentials .fwdlink2 {
+    margin-top: 10px
+}
+
+.step.credentials .password {
+    margin-top: 4px
+}
+
+.step.credentials .login-text {
+    display: block;
+    margin-top: 65px;
+    max-height: 200px;
+    padding: 20px 40px;
+    color: #666;
+    background-color: #f2f2f2;
+    font-size: 14px
+}
+
+.step.subdomain-list .inputs {
+    padding: 0
+}
+
+.step.subdomain-list #link-change-login {
+    color: #1879B9;
+    font-size: 14px
+}
+
+.step.subdomain-list .accountlist {
+    margin: 40px 0
+}
+
+.step.subdomain-list .accountlist li {
+    width: 100%;
+    margin: 0 0 2px 0;
+    background: #eeeeee;
+    background: #eee
+}
+
+.step.subdomain-list .accountlist li strong {
+    color: #333333;
+    font-weight: 400;
+    font-size: 20px
+}
+
+.step.subdomain-list .accountlist li .account-url {
+    color: #333333;
+    font-size: 14px
+}
+
+.step.subdomain-list .accountlist li.selected {
+    background-color: rgba(48, 75, 48, 0.1)
+}
+
+.step.subdomain-manual .fwdlink, .step .subdomain-start .fwdlink {
+    margin-left: 0
+}
+
+.step.reset-password #reset-confirm-password {
+    margin-top: 2px
+}
+
+.step.reset-password .fwdlink {
+    margin-top: 10px
+}
+
+.step.reset-password .fwdlink.disabled, .step.reset-password .fwdlink.disabled:hover {
+    opacity: .5;
+    cursor: default;
+    background-color: #2071C5
+}
+
+.step.forgot-password #tooltip-explanation {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px
+}
+
+.step.resend-code input[type="radio"] {
+    display: inline-block
+}
+
+.step.resend-code .text-content {
+    margin-top: 0
+}
+
+.step.resend-code .title, .step.resend-code .subtitle {
+    color: #333333
+}
+
+.step.resend-code .title {
+    font-size: 16px
+}
+
+.step.resend-code ul#backup-options li {
+    font-size: 16px;
+    color: #333333
+}
+
+.step.verify .trust-this-computer {
+    float: left;
+    margin: 20px 0 30px 10px;
+    font-size: 12px;
+    color: #333333
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    .step.verify .trust-this-computer {
+        display: none
+    }
+}
+
+.step.verify .link-no-code {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    float: right;
+    margin-right: 20px
+}
+
+@media (min-width: 320px) and (max-width: 800px),(max-height: 710px) {
+    .step.verify .link-no-code {
+        float: none;
+        margin-right: 0
+    }
+}
+
+.step.forgot-password .navlink, .step.forgot-subdomain .navlink, .step.resend-code .navlink, .step.subdomain-manual .navlink, .step.verify .navlink {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 0;
+    float: left
+}
+
+.step.forgot-password .fwdlink, .step.forgot-subdomain .fwdlink, .step.resend-code .fwdlink, .step.subdomain-manual .fwdlink, .step.verify .fwdlink {
+    margin-top: 10px
+}
+
+.step .nav {
+    overflow: hidden
+}
+
+.step .nav.no-back .navlink {
+    width: 100%
+}
+
+.step .navlink {
+    border-radius: 2px;
+    font-size: 16px;
+    width: 100%
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .step .navlink {
+        height: 60px
+    }
+}
+
+.step .navlink.fwdlink {
+    background-color: #2071C5;
+    color: #ffffff;
+    margin-bottom: 0
+}
+
+.step .navlink.fwdlink2 {
+    background-color: #ffffff;
+    border-color: #000000;
+    border: 0.5px solid #000000;
+    color: #000000;
+    margin-bottom: 0
+}
+
+.step .navlink.fwdlink:hover {
+    background-color: #055B94
+}
+
+.step .navlink.fwdlink2:hover {
+    background-color: #055B94;
+    color: #FFFFFF
+}
+
+.step .navlink.rightsignature {
+    background-color: #ffffff;
+    color: #2071C5;
+    border: 1px solid #2071C5;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.step .navlink.rightsignature .rightsignature3-logo {
+    margin-right: 16px;
+    height: 28px
+}
+
+.step .navlink.backlink {
+    background-color: #D8D8D8;
+    margin: 10px 0 0;
+    color: #333333;
+    margin-right: 4%
+}
+
+.step .navlink.backlink:hover {
+    background-color: #b3b3b3
+}
+
+.step .navlink.active {
+    background-image: url(../img/ws_loading.gif);
+    color: transparent
+}
+
+.step .navlink .btn-text {
+    line-height: 60px
+}
+
+.step #link-company-credentials {
+    text-decoration: underline
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .step .extra-link {
+        font-size: 14px
+    }
+}
+
+.footer {
+    margin-top: 40px;
+    display: block
+}
+
+.footer .watermark-logo {
+    background-image: none;
+    background: url('../img/citrix-logo-black.png');
+    background: url('../img/citrix-logo-black.svg'), linear-gradient(transparent, transparent);
+    width: 100px;
+    height: 38px
+}
+
+.remember-me-and-forgot-password {
+    padding: 0;
+    text-align: center
+}
+
+.remember-me-and-forgot-password .remember-me {
+    margin-top: 10px;
+    font-size: 12px;
+    float: left;
+    color: #333333
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .remember-me-and-forgot-password .remember-me {
+        display: none
+    }
+}
+
+.remember-me-and-forgot-password .remember-me .checkbox {
+    margin-right: 10px
+}
+
+.remember-me-and-forgot-password #forgot-password {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px;
+    color: #1879B9
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    .remember-me-and-forgot-password #forgot-password {
+        display: none
+    }
+}
+
+#link-forgot-password {
+    color: #1879B9
+}
+
+#link-forgot-password.has-remember-me {
+    display: none
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    #link-forgot-password.has-remember-me {
+        display: inline-block
+    }
+}
+
+.privacy-policy {
+    margin-top: 8px
+}
+
+.different-account {
+    font-size: 12px;
+    margin-top: 16px;
+    color: #1879B9;
+    text-decoration: none
+}
+
+.sign-in-citrix-workspace, .forgot-account-url {
+    font-size: 12px;
+    margin-top: 32px;
+    color: #1879B9;
+    text-decoration: none
+}
+
+#step-container #confirm .step-index-container {
+    text-align: center
+}
+
+#step-container #confirm .username {
+    margin-bottom: 10px
+}
+
+#step-container #confirm .title {
+    color: #222222
+}
+
+#step-container #confirm .create-password-title {
+    text-align: center;
+    color: #222222
+}
+
+#step-container #confirm .input-row {
+    font-size: 16px;
+    color: #333333
+}
+
+#step-container #confirm .input-row .input-title {
+    max-width: 400px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    margin-bottom: 5px
+}
+
+#step-container #confirm .input-row .input-title.show-password {
+    margin-right: 5px
+}
+
+#step-container #confirm .password input[type="text"], #step-container #confirm .password input[type="password"] {
+    margin-top: 3px;
+    text-align: left;
+    width: 100%
+}
+
+#step-container #confirm .personal-info .info-row {
+    color: #333333;
+    margin: 5px 0
+}
+
+#step-container #confirm .personal-info .info-row .desc {
+    display: inline-block;
+    width: 95%;
+    margin-bottom: 5px
+}
+
+#step-container #confirm .personal-info .info-row input {
+    color: #333333;
+    background-color: transparent;
+    margin-top: 0;
+    width: 95%;
+    text-align: left;
+    padding: 0 0 0 4%
+}
+
+#step-container #confirm .date-time-setting .timezone-title {
+    padding: 30px 0 5px 25px;
+    color: #333333
+}
+
+#step-container #confirm .date-time-setting .date-time-title {
+    display: none
+}
+
+#step-container #confirm .sign-in-url {
+    margin: 22px 0 25px 0;
+    color: #333333;
+    font-size: 16px
+}
+
+#step-container #confirm .navigate .fwdlink {
+    width: 48%;
+    float: left;
+    margin: 10px 0 0;
+    border-radius: 2px
+}
+
+#step-container #confirm .navigate .fwdlink2 {
+    width: 48%;
+    float: left;
+    margin: 10px 0 0;
+    border-radius: 2px
+}
+
+#step-container #confirm .navigate .fwdlink.disabled {
+    background-color: #2071C5
+}
+
+#step-container #confirm .navigate .fwdlink2.disabled {
+    background-color: #2071C5
+}
+
+#step-container #confirm .navigate .backlink {
+    width: 48%;
+    border-radius: 2px;
+    float: left;
+    margin-right: 4%
+}
+
+#step-container #confirm .navigate.first .fwdlink {
+    width: 100%
+}
+
+#step-container #confirm .navigate.first .fwdlink2 {
+    width: 100%
+}
+
+#step-container #confirm .error-message, #step-container .security-question-required .error-message, #step-container #confirm .validation-message, #step-container .security-question-required .validation-message {
+    color: #666666;
+    font-size: 14px;
+    margin: 0 0 5px;
+    text-align: left
+}
+
+#step-container #confirm .error-message .error-message-line, #step-container .security-question-required .error-message .error-message-line, #step-container #confirm .validation-message .error-message-line, #step-container .security-question-required .validation-message .error-message-line {
+    line-height: 27px
+}
+
+#step-container #confirm .hint, #step-container .security-question-required .hint {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222222;
+    font-size: 16px
+}
+
+#step-container #confirm select, #step-container .security-question-required select {
+    width: 100%;
+    margin: 2px 0;
+    background-color: transparent;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #333333;
+    border: none
+}
+
+#step-container #confirm select option, #step-container .security-question-required select option {
+    background-color: #EBEBEB
+}
+
+@media (min-width: 320px) and (max-width: 520px),(max-height: 710px) {
+    #step-container #confirm .security-question, #step-container .security-question-required .security-question {
+        width: inherit
+    }
+}
+
+#step-container #confirm .security-question .input-row, #step-container .security-question-required .security-question .input-row {
+    text-align: left;
+    color: #333333
+}
+
+#step-container #confirm .security-question .input-row input, #step-container .security-question-required .security-question .input-row input {
+    width: 55%;
+    margin-top: 0;
+    background-color: #EBEBEB;
+    color: #333333;
+    text-align: left;
+    padding-left: 10px
+}
+
+#step-container #confirm .security-question .input-row.question .input-title, #step-container .security-question-required .security-question .input-row.question .input-title {
+    display: none
+}
+
+#step-container #confirm .security-question .input-row.answer, #step-container .security-question-required .security-question .input-row.answer {
+    background-color: #EBEBEB;
+    padding-bottom: 0
+}
+
+#step-container #confirm .security-question .input-row.answer .input-title, #step-container .security-question-required .security-question .input-row.answer .input-title {
+    display: inline-block;
+    padding-left: 25px;
+    color: #333333
+}
+
+#step-container #confirm .security-question .input-row.answer .field, #step-container .security-question-required .security-question .input-row.answer .field {
+    width: inherit
+}
+
+.marketing-content {
+    display: flex;
+    justify-content: center;
+    background: white;
+    color: #333333;
+    padding: 30px;
+    height: 130px
+}
+
+.marketing-content .marketing_link {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px
+}
+
+.marketing-content .centered {
+    margin: 0 auto
+}
+
+.marketing-content h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0
+}
+
+.marketing-content p {
+    font-size: 12px;
+    line-height: 18px;
+    width: 245px
+}
+
+.marketing-content a {
+    color: #1879B9;
+    font-size: 14px
+}
+
+.marketing-content .tips-and-tricks, .marketing-content .contact-support {
+    float: left;
+    display: inline-flex;
+    margin-right: 60px
+}
+
+.marketing-content .tips-and-tricks .text, .marketing-content .contact-support .text {
+    margin-left: 10px
+}
+
+.marketing-content .tips-and-tricks .image-container {
+    background-image: none;
+    background: url('../img/i-tips.svg'), linear-gradient(transparent, transparent);
+    width: 38px;
+    height: 50px;
+    margin-right: 10px
+}
+
+.marketing-content .contact-support .image-container {
+    background-image: none;
+    background: url('../img/i-help.svg'), linear-gradient(transparent, transparent);
+    width: 53px;
+    height: 50px;
+    margin-right: 10px
+}

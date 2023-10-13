@@ -1,0 +1,57 @@
+﻿.checkbox-description {
+    padding-left: 24px;
+}
+.login-option__image__svg {
+    align-items: stretch !important; /*override default css*/
+}
+
+.login-wrapper.login-wrapper.login-wrapper {
+    overflow: visible;
+}
+
+.login-option {
+    border-radius: 20px;
+}
+.login-option img {
+    max-height: 100px;
+    max-width: 200px;
+    vertical-align: middle;
+    margin-top: auto;
+}
+
+.birthdate {
+    height: 46px;
+    white-space: nowrap;
+}
+
+.birthdate #BirthDate {
+    padding: 14px 12px 12px;
+    width: 0;
+    background-color: inherit;
+    border: none;
+}
+
+.birthdate-textbox {
+    display: inline-block;
+    position: relative;
+    top: -46px;
+    margin-right: 10px;
+    max-width: 48px;
+}
+
+.birthdate-textbox.year {
+    max-width: 62px;
+}
+
+input.input-validation-error {
+    padding-right: 0;
+    background-image: none;
+}
+
+.prefix+input {
+padding-left: 70px !important;
+}
+
+.btn-default {
+    line-height: 22px;
+}

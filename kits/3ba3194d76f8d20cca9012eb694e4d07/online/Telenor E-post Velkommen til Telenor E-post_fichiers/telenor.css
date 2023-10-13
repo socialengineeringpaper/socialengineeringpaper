@@ -1,0 +1,98 @@
+.select-wrapper{
+		float: left;
+		display: inline-block;
+		border: 1px solid #d8d8d8;            
+		background: url("images/downArrowGrey.png") no-repeat 235px center;
+		cursor: pointer;
+		border-radius:4px;
+	}
+	.select-wrapper, .select-wrapper select{
+		width: 250px;
+		height: 26px;
+		line-height: 26px;
+		color: #767676;
+	}
+	
+	
+	
+	
+	.select-html-wrapper{
+		float: left;
+		display: inline-block;
+		border: 1px solid #d8d8d8;            
+		background: url("images/downArrowGrey.png") no-repeat 125px center;
+		cursor: pointer;
+		border-radius:4px;
+	}
+	.select-html-wrapper, .select-html-wrapper select{
+		width: 140px;
+		height: 26px;
+		line-height: 26px;
+		color: #767676;
+	}
+	
+	.select-font-wrapper{
+		float: left;
+		display: inline-block;
+		border: 1px solid #d8d8d8;            
+		background: url("images/downArrowGrey.png") no-repeat 83px center;
+		cursor: pointer;
+		border-radius:4px;
+	}
+	.select-font-wrapper, .select-font-wrapper select{
+		width: 98px;
+		height: 26px;
+		line-height: 26px;
+		color: #767676;
+	}
+	
+	
+	
+	div.blockaddreclass table.blockaddressess tr td span.select-wrapper,
+	span.select-wrapper select#blockaddrsFromSubect{
+		float: left;
+		display: inline-block;
+		border: 1px solid #d8d8d8;            
+		background: url("images/downArrowGrey.png") no-repeat 105px center;
+		cursor: pointer;
+		width: 120px;
+		height: 26px;
+		line-height: 26px;
+		color: #767676;
+		border-radius:4px;
+	}
+	
+
+	
+/*	div.blockaddreclass table.blockaddressess tr td span.select-wrapper:hover {
+		background: url("images/downArrow.png") no-repeat 105px center;
+		border-color: #239fdb;
+	}
+	
+	.select-wrapper:hover{
+		background: url("images/downArrow.png") no-repeat 205px center;
+		border-color: #239fdb;
+	}*/
+	.select-wrapper .holder, .select-html-wrapper .html-holder, .select-font-wrapper .htmlfont-holder{
+		display: block;
+		margin: 0 35px 0 5px;
+		white-space: nowrap;            
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+		z-index: -1;
+	}
+	.select-wrapper select, .select-html-wrapper select, .select-font-wrapper select{
+		margin: 0;
+		position: absolute;
+		z-index: 2;            
+		cursor: pointer;
+		outline: none;
+		opacity: 0;
+		/* CSS hacks for older browsers */
+		_noFocusLine: expression(this.hideFocus=true); 
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		-khtml-opacity: 0;
+		-moz-opacity: 0;
+	}

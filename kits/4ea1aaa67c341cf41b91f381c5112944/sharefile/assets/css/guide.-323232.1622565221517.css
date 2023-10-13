@@ -1,0 +1,493 @@
+/* ------------------------------
+ * -- Main Global Styling -------
+ * ------------------------------ */
+
+.\_pendo-guide\_ {
+  /* -- Overarching settings for all guides -- */
+}
+
+.\_pendo-guide-container\_ {
+  -moz-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+  /*padding: 40px 20px;*/
+  font-family: "citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-header {
+    font-size: 24px;
+  	line-height: 31px;
+    color: #485164;
+    text-align: center;
+  	font-family: "citrixsans-semibold","citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+  font-weight:600;
+  	margin-bottom: 16px;
+  	padding: 0;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-subheader {
+    font-size: 16px;
+  	line-height: normal;
+    color: #485264;
+    text-align: center;
+  	font-family: "citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+    font-weight: 600;
+  	margin-bottom: 40px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-button{
+	text-decoration: none !important;
+    color: #FFFFFF;
+    padding: 8px 25px;
+    background-color: #0090dd;
+    border-radius: 2px;
+    cursor: pointer;
+  	border-style: initial;
+  	border: 1px solid #0090dd;
+  	font-size: 14px;
+  	font-family: "citrixsans-semibold","citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+  	margin-left: 6px;
+    width: initial;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-button:hover{
+	background-color: #0075c4;
+  	border-color: #0075c4;
+  text-decoration: none;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ a {
+  color: #1471a4;
+  text-decoration: underline;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ a:hover {
+  text-decoration: none;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-button:focus{
+	outline: none;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-button.secondary{
+	color: #0090dd;
+  	background-color: #fff;
+  	margin-left: 0;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-button.secondary:hover{
+	color: #0075c4;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-modal-buttons .pendo-button{
+  	width: 160px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-tooltip-text {
+	font-size: 16px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-left {
+	text-align: left;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-center {
+	text-align: center;
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ .pendo-right {
+	text-align: right;
+}
+/* ------------------------------
+ * -- Lightbox Specific Styling -
+ * ------------------------------ */
+
+.\_pendo-guide-lb\_ {
+  /* -- Overarching settings for Lightbox -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-backdrop\_ {
+  background-color:#39404D; 
+  /* The backdrop displayed behind lightboxes */
+}
+
+
+/* ------------------------------
+ * -- Tooltip Specific Styling --
+ * ------------------------------ */
+
+.\_pendo-guide-tt\_ {
+  /* Overarching settings for tooltip */
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+.\_pendo-guide-tt-region-block\_{
+  background-color: #39404D;
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* -- Pointer on the edge of the tooltip -- */
+.\_pendo-guide-arrow\_ {
+}
+
+.\_pendo-guide-arrow-top\_ {
+}
+
+.\_pendo-guide-arrow-left\_ {
+}
+
+.\_pendo-guide-arrow-right\_ {
+}
+
+.\_pendo-guide-arrow-bottom\_ {
+}
+
+.\_pendo-guide-arrow-border-top\_ {
+}
+
+.\_pendo-guide-arrow-border-left\_ {
+}
+
+.\_pendo-guide-arrow-border-right\_ {
+}
+
+.\_pendo-guide-arrow-border-bottom\_ {
+}
+
+
+/* ------------------------------
+ * -- Mobile Lightbox Styling ---
+ * ------------------------------ */
+
+.\_pendo-guide-mobile-lb\_ {
+  /* Overarching settings for Mobile Lightbox */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Mobile Tooltip Styling ---
+ * ------------------------------ */
+ .\_pendo-guide-mobile-tt\_ {
+  /* Overarching settings for mobile tooltip */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+
+/* ------------------------------
+ * -- Launcher Styling ----------
+ * ------------------------------ */
+
+.\_pendo-launcher\_ {
+  /* Overarching settings for Launcher */
+}
+
+.\_pendo-launcher\_ .\_pendo-guide-container\_ {
+  /* -- Launcher border, shadow, background, etc. -- */
+  /* -- (uses tooltip styles by default) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ {
+  /* -- Launcher header area -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ img {
+  /* -- Launcher header area image styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-title\_ {
+  /* -- Launcher header area text styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ {
+  /* -- Launcher search area (if enabled) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ input[type='text'] {
+  /* -- Launcher search area text box -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ {
+  /* -- Launcher guide listing area -- */
+  height:238px;
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ .\_pendo-launcher-item\_ {
+  /* -- An individual item in the launcher guide listing -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-footer\_ {
+  /* -- Launcher footer area -- */
+}
+
+.\_pendo-launcher-badge\_ {
+  /* -- Styles for the launcher badge -- */
+  background: #1879B9;
+  border-radius: 50%;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  opacity: 1;
+  -moz-box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+	box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+}
+
+.\_pendo-launcher-badge\_:hover {
+  opacity: 0.6;
+}
+
+.\_pendo-launcher-badge\_ .\_pendo-launcher-whatsnew-count\_ {
+  display: none;
+}
+
+/* -- Styles for launcher badge orientations -- */
+.\_pendo-launcher-badge-bottom-right\_ {
+  right: 25px;
+}
+
+.\_pendo-launcher-badge-bottom-left\_ {
+}
+
+.\_pendo-launcher-badge-top-right\_ {
+}
+
+.\_pendo-launcher-badge-top-left\_ {
+}
+
+/* -- Styles for launcher orientations -- */
+.\_pendo-launcher-bottom-right\_ {
+}
+
+.\_pendo-launcher-bottom-left\_ {
+}
+
+.\_pendo-launcher-top-right\_ {
+}
+
+.\_pendo-launcher-top-left\_ {
+}
+
+/* ------------------------------
+ * -- Poll Styling --------------
+ * ------------------------------ */
+ 
+.\_pendo-guide-container\_ .\_pendo-poll\_ {
+ /* -- Poll container -- */
+padding: 0;
+}
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ {
+ /* -- Question and answer container (everything but the submit button) -- */
+padding: 0;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question-prompt\_ {
+ /* -- Question text -- */
+color: #39404d;
+font-size: 16px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ label {
+ /* -- Number Scale Poll positioning and styles for radio button text and inputs -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ select {
+ /* -- Dropdown styling -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ {
+ /* -- NPS Poll ratings container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label {
+ /* -- NPS Poll individual rating - the number scale items -- */
+color: #0090DD;
+font-weight: 600;
+border-color: #0090DD;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label:hover {
+background-color: #0090dd;
+border-color: #0090dd;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll\_ .\_pendo-poll-npsrating\_ .\_pendo-poll-npsrating-choices\_ .\_pendo-poll-selected\_{
+background-color: #0090dd;
+border-color: #0090dd;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label span {
+  /* -- NPS Poll individual rating - accompanying text for number scale items -- */
+color: #39404d !important;
+font-weight: 400;
+font-size: 15px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ {
+border-top-color: transparent;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ textarea {
+ /* -- NPS Poll optional user-provided explanation container -- */
+font-family: "citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+width: 550px;
+height: 50px;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ .\_pendo-poll-question-prompt\_ {
+ /* -- NPS Poll optional user-provided explanation text -- */
+font-family: "citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ button {
+  /* -- Yes/No Poll buttons styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-submit\_ {text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px 25px;
+    background-color: #0090dd;
+    border-radius: 2px;
+    cursor: pointer;
+  	border-style: initial;
+  	border: 1px solid #0090dd;
+  	font-size: 14px;
+  	font-family: "citrixsans-semibold","citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+  	font-weight: 600;
+  	margin-left: 6px;
+ /* -- Submit button styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-submit\_:hover {
+    background-color: #0075c4;
+  border: 1px solid #0075c4;
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-message\_ {
+ /* -- "Success message" styles -- */
+}
+
+
+/* ------------------------------
+ * -- Additional Global Styling -
+ * ------------------------------ */
+
+.\_pendo-close-guide\_ {
+  /* -- The dismiss guide button displayed in the corner of every guide -- */
+  /* font-size override for Gateway service */
+display: inline;
+font-size: 32px !important;
+font-weight: 400;
+font-family: "citrixsans-regular","CitrixSans",CitrixSansRegular, Arial, sans-serif;
+top: 2px;
+right: 13px;
+color: #485164;
+width: auto;
+width: initial;
+}
+
+.\_pendo-close-guide\_:hover {
+color: #39404d;
+}
+
+.\_pendo-badge\_ {
+  /* -- Styles for badges -- */
+z-index:100;
+}
+
+.\_pendo-guide-container\_ h1 {
+  line-height:140% !important;
+}
+
+
+/* ------------------------------
+ * -- Your Custom Classes/IDs ---
+ * ------------------------------ */
+
+/* XAXD Landing Tiles */
+@media screen and (min-width: 1280px) {
+    .xa-xd .overview-container-multi-connector-content .start-setting-content .start-step-info .step,
+    .xa-xd .overview-container-multi-connector-content .continue-configuration-content .continue-steps-info .step,
+    .xa-xd .overview-container-no-multi-connector-content .continue-configuration-content .continue-steps-info .step {
+        -webkit-box-shadow: 2px 2px 6px 1px #dddddd;
+        -moz-box-shadow: 2px 2px 6px 1px #dddddd;
+        box-shadow: 2px 2px 6px 1px #dddddd;
+        cursor: pointer;
+        min-height: 260px;
+        padding: 15px 10px;
+    }
+    .xa-xd .overview-container-no-multi-connector-content .start-setting-content .start-step-info .step {
+        cursor: pointer;
+    }
+    .xa-xd .overview-container-multi-connector-content .start-setting-content .start-step-info .step {
+    	margin-right: 15px !important;
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .xa-xd .overview-container-multi-connector-content .start-setting-content .start-step-info .step,
+    .xa-xd .overview-container-multi-connector-content .continue-configuration-content .continue-steps-info .step,
+    .xa-xd .overview-container-no-multi-connector-content .continue-configuration-content .continue-steps-info .step {
+        -webkit-box-shadow: 2px 2px 6px 1px #dddddd;
+        -moz-box-shadow: 2px 2px 6px 1px #dddddd;
+        box-shadow: 2px 2px 6px 1px #dddddd;
+        cursor: pointer;
+        padding: 15px 10px;
+    }
+    .xa-xd .overview-container-no-multi-connector-content .start-setting-content .start-step-info .step {
+        cursor: pointer;
+    }
+    .xa-xd .overview-container-multi-connector-content .start-setting-content .start-step-info .step {
+    	margin-right: 15px !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* SF Badge alignment in Manage Users section */
+#\_pendo-badge\_89vk3MmZ3jZaRRG3XaT76qSkXR8 input,
+#\_pendo-badge\_jotbZm5UkCATVE4eU7J7hGd\_15s input,
+#\_pendo-badge\_kOP3RHkLsIpBrkLgvktt2WsBWKU input,
+#\_pendo-badge\_HMd4KnsHfLiKA3vGC5AFfmr5mus input,
+#\_pendo-badge\_zo9KvzunliVa7pF\_4tKmDMoQCXc input,
+#pendo-badge\_QKeEuAwvza8cX6lzOvsfxZw\_4Y input,
+#\_pendo-badge\_cPyTFsz-iFjlbB35QKU3dmYeovQ input {
+	margin-top:-2px !important;
+}
+.\_pendo-resource-center-home-list .\_pendo-resource-center-module-list-item .\_pendo-resource-center-module-list-item-text:hover {
+  cursor: pointer !important;
+}

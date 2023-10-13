@@ -1,0 +1,654 @@
+/*
+EDD Custom Styles - additons/overrides to style.css
+*/
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { 
+	text-decoration: none;     /* to remove underline from links */
+}
+a:visited {
+	text-decoration: none;     /* to remove underline from links */
+}
+a:hover { 
+    text-decoration: underline;     /* show underline on hover */
+}
+a:focus {
+    text-decoration: underline;     /* show underline on focus */
+}
+
+/* primary styles */
+
+.logo_and_banner_apps {
+	margin:0 0 0 59px; /* make room for button on left */
+}
+
+.logo_and_banner_apps_noNav {
+	margin:0 0 0 10px; /* position organiztion title correctly */
+}
+
+.head_organization_banner { /* 269 x 39 */
+	display:none;
+}
+
+/* added to have alternative banner show in phone view */
+/* was head_organization_banner - changed to head_organization_banner_phone */
+.head_organization_banner_phone { /* 269 x 39 */
+	position:relative;
+	/* margin:0 auto;
+	top:0px;
+	width:100%; */
+	height:69px;
+	line-height:69px; /* vertically centers the image */
+	text-align:center;
+}
+.head_organization_banner_phone img {
+	max-width:100%;
+	max-height:100%;
+}
+
+#head_apps_content {
+	display:none;
+}
+
+.phone_hd_apps a {
+	font-size:.8em;
+	padding-top:3px;
+	padding-right:3px;
+	float:right;
+}
+
+/* Footer */
+
+footer {
+	color:#222;    /* changed from #ffffff */
+}
+.rgba footer {
+	color: rgba(34, 34, 34, 0.85);    /* changed from  rgba(255, 255, 255, 0.85);  */
+}
+
+footer a, footer a:hover, footer a:visited {
+	color:#003466;     /* changed from #fff */
+}
+/*--------------------------------------- Executive banners --------------------------------------*/
+
+.banner_half_width {
+	width:165px;
+}
+
+.container_banner_image_blank {
+	background: url(../images/banner/banner-blank.png) no-repeat bottom right;
+}
+
+.container_banner_image_director {
+	background: url(../images/banner/banner-director.png) no-repeat bottom right;
+}
+
+.container_banner_image_secretary {
+	background: url(../images/banner/banner-secretary.png) no-repeat bottom right;
+}
+
+.container_banner_image_governor {
+	background: url(../images/banner/banner-governor.png) no-repeat bottom right;
+}
+
+/* ---- Icon fonts - start ---- */
+
+.add_icon_font_heading_sierra, .add_icon_font_heading_santa_barbara, .add_icon_font_heading_orange_county, .add_icon_font_heading_paso_robles {
+	font-family: 'CaGov';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.add_icon_font_heading_sierra, .add_icon_font_heading_santa_barbara, .add_icon_font_heading_orange_county,  .add_icon_font_heading_paso_robles {
+	float:left;
+	width:0;
+	text-transform: none;
+	line-height: 1;
+}
+.add_icon_font_heading_sierra, .add_icon_font_heading_santa_barbara, .add_icon_font_heading_orange_county,  .add_icon_font_heading_paso_robles { /* add icon to h1/2/3/4 */
+	margin-left:-40px;
+	padding:0 35px 0 0;
+	font-size:34px;
+}
+
+/* ---- Icon fonts - end ---- */
+
+/*
+Tabpanel
+Version 2014.05.16
+*/
+
+ul.tabpanel_list {
+	padding:0;
+	margin:0 0 1em 1;
+	list-style: none;
+	height:15em;  /*Changed from 22em in original, used 18em in previous template*/
+	position:relative;
+}
+.ie7 ul.tabpanel_list {
+	margin-bottom:2em;
+}
+.tabpanel_tab.add_icon_blue_star {
+	padding: 4px 0 4px 40px;
+	background-color:transparent;
+}
+.ie7 .tabpanel_tab.add_icon_blue_star {
+	background-image:none; /* IE7 can't position image correctly */
+}
+
+.tabpanel_list li {
+	float: left;
+	padding:2px 20px 0 0;  /* changes in 768.css for wider displays*/
+}
+
+.tabpanel_tab {
+	color:#505050;
+	background-color:#fff;
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+  	font-size: 1.4em;
+  	position:relative;
+  	z-index:2; /* needed if tabs wrap to new line */
+  	cursor:pointer;
+}
+.ie7 .tabpanel_tab {
+	white-space:nowrap;
+}
+
+.tabpanel_list li:first-child .tabpanel_tab {
+	color:#069; /* highlighted */
+}
+.tabpanel_panel {
+	position:absolute;
+	left:0;
+	padding:0;
+	background:#fff;
+	height:13em;  /*changed from 16em*/
+	width:100%;
+	overflow:auto;
+	display:none;
+}
+.ie7 .tabpanel_panel {
+	margin-top:2em;
+}
+
+.tabpanel_list li:first-child .tabpanel_panel {
+	display:block;
+}
+.no-js .tabpanel_list li:hover .tabpanel_panel {
+	display:block;
+}
+.no-js .tabpanel_list li:hover .tabpanel_tab {
+	color:#069;
+}
+.tabpanel_panel div.add_padding {
+	margin:0;
+	padding:0;
+	width:auto;
+}
+.tabpanel_line_and_arrow {
+	width:100%;
+	height:16px;
+	position:relative;
+}
+.tabpanel_d_arrow_container {
+	background:transparent url(/images/template2013/nav_down_arrow.png) no-repeat;
+	width:44px;
+	height:16px;
+	position:absolute;
+	top:-2px;
+	margin-left:-22px;
+	left:80px;
+}
+.tabpanel_line_container {
+	width:95%;
+	height:2px;
+	position:absolute;
+	top:0;
+	background:#ccc;
+	background: -moz-linear-gradient(left,  #fff 0%, #ccc 15%, #ccc 85%, #fff 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(left,  #fff 0%,#ccc 15%,#ccc 85%,#fff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fff 0%,#ccc 15%,#ccc 85%,#fff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fff 0%,#ccc 15%,#ccc 85%,#fff 100%); /* IE10+ */
+	background: linear-gradient(left,  #fff 0%,#ccc 15%,#ccc 85%,#fff 100%); /* W3C */
+}
+
+/* Tabpanel content */
+
+.tabpanel_panel ul li {
+	float:none;
+/*	padding:0 0 16px 18px;       original */
+	padding:0 0 4px 18px;        /* modified to reduce space between list items 9/2/14 */
+}
+#main_content .tabpanel_panel .add_space_between_li li {
+	padding-bottom:18px;
+}
+
+
+/*used for "back to top" links to position link on right side*/
+.top {
+	float:right;
+	margin-right:6px;
+}
+
+/*used for "more" links on landing pages*/
+.more {
+	padding-left:5%;
+}
+
+/*added 9/4/14 to test spacing of container, used when there is no heading on the box*/
+div.container_style_b .add_singleline_padding {
+	padding:8px 12px;
+}
+
+.social_media_image {
+ padding:10px;
+ text-align:center;
+ display:inline;
+ width:32px;
+ height:54px;
+ width:auto;
+ overflow: hidden;
+}
+
+.lg_image, .med_image {
+	padding-left:5%;
+	padding-right:5%;
+	width:90%;
+	text-align:center;
+	overflow: hidden;
+}
+
+
+/* custom alert boxes */
+
+/* general alert, then separate classes for red, yellow, green */
+.container_style_alert {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow:hidden;
+	margin-bottom:1em;
+}
+.container_style_alert h4 {
+	color:white;
+	font-weight:bold;
+	margin:0 0 .8em 0;
+	padding:4px 12px 6px 12px;
+}
+div.container_style_alert .add_padding {
+	padding:0 12px;
+}
+.container_style_alert .add_icon_font_heading { /* add icon to container_style_alert */
+	margin:-3px 35px 0 0;
+	padding:1px 0 0 0;
+	font-size:28px;
+}
+
+.container_style_lg_button {
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	overflow:hidden;
+	margin-bottom:1em;
+	width:96%;
+}
+.container_style_lg_button div {
+	font-size:xx-large;
+	color:473f2c;
+	font-weight:bold;
+	padding-top:35px;
+	padding-bottom:35px;
+}
+.container_style_lg_button p {
+	font-size:xx-large;
+	color:473f2c;
+	font-weight:bold;
+}
+
+.container_style_lg_button a {
+	color: #473f2c;
+}
+
+.container_style_lg_button a:visited {
+	color: #473f2c;
+}
+
+.container_style_lg_button a:hover {
+	color: #686859;
+}
+
+/* Social Media Icons */
+a.socialIcons:hover {
+	opacity: .8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+
+/* override link color of h2 and h3 on hover and visited */
+h2 a:hover, h2 a:visited, h3 a:hover, h3 a:visited {
+	color:#1f70a7;
+}
+
+/* override underline of link on h3 on hover */
+h3 a:hover {
+	text-decoration: none;
+}
+
+/* begin jQuery expand/collapse behavior */
+.question, .collapseAll, .expandAll  {
+	cursor: pointer;
+}
+
+.question {
+	font-family: 'Arial Narrow', 'Helvetica Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
+	font-weight:normal;
+	color:#333;
+	font-size:1.6em;
+	line-height:1.5em;
+}
+
+.question a, .question a:hover, .question a:visited {
+	color:#333;
+}
+
+.answer {
+	padding-left:2.5%;
+}
+/* end jQuery expand/collapse behavior */
+
+.indent {
+	padding-left:5%;
+}
+
+.half_indent {
+	padding-left:2.5%;
+}
+
+/* begin text entry and button styles */
+.button {
+    -webkit-appearance:none !important; /* This is needed to make the iPhone render the button properly */
+    border-radius:5px !important;
+    background-color:LightGray;
+	min-width:70px;
+	height:30px;
+	margin:0px 5px 0px 5px;
+}
+
+.textEntry 
+{ 
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;  
+    -webkit-border-radius: 3px;  
+    border-radius: 3px;
+	height:30px;
+    padding: 0px 0px 0px 4px;
+    outline: 0;  
+    -webkit-appearance: none;
+} 
+
+.textEntry:focus {  
+     border-color: #2489ce;
+}
+
+@media only screen and (max-width: 767px) {
+	.button {
+		margin:0px;
+    }
+	.button, .textEntry {
+        width: 50%;
+        margin-bottom:.75em;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+	.button {
+        width: 100%;
+		margin:0px;
+    }
+	.textEntry {
+		width:98%;
+	}
+	.button, .textEntry {
+        margin-bottom:.75em;
+    }
+}
+/* end text entry and button styles */
+
+
+/* begin mobile link styles - currently being refined - intended for custom mobile phone pages */
+.mobile_link {
+	border-bottom:thin;
+	padding:5px 0px 5px 10px;
+	padding-left:5px;
+	border-radius:5px;	
+}
+
+.mobile_link a {
+	display: block;
+	font-weight: normal;
+	padding: 10px 15px;
+    background-image: url(../images/template2013/carat-r-black.png);
+    background-repeat: no-repeat;
+    background-position:right center;
+    margin-right: 5px;
+	color:#222;
+	font-size:1.1em;
+}
+
+.mobile_link a:hover {
+    text-decoration:none;
+}
+
+.mobile_link a:visited { color: #222; }
+/* end mobile link styles - currently being refined */
+
+.opener {
+	outline:0;
+	cursor:pointer;	
+}
+
+/* list with no bullet and no arrow */
+.list_style_none li {
+	list-style-type:none;
+	background:none;
+}
+
+.list_style_none li li {
+	list-style-type:none;
+	background:none;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+	width:95%;
+}
+
+table, td, th {
+	padding:5px;
+}
+
+caption {
+	font-size:1.1em;
+	padding-bottom:.2em;
+}
+
+.table_column_10 {
+	width:10%;
+}
+
+.table_column_15 {
+	width:15%;
+}
+
+.table_column_30 {
+	width:30%;
+}
+
+.table_column_sm {
+	width:20%;
+}
+
+.table_column_med {
+	width:40%;
+}
+
+.table_column_lg {
+	width:60%;
+}
+
+.table_column_qtr {
+	width:25%;
+}
+
+.table_column_half {
+	width:50%;
+}
+
+.table_column_3qtr {
+	width:75%;
+}
+
+.new_highlight {
+	color: #FF0000;	
+	font-size: 0.8em;
+}
+
+/*---------------------------------------------*/
+/*  benefitCalculator                          */
+/*---------------------------------------------*/
+
+.calculatorInput input {
+ font-family:Arial, Helvetica, sans-serif;
+}
+
+.calculatorResult input {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 0;
+	background: none;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.calculatorMessage input {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 0;
+	background: none;
+	font-weight: bolder;
+	color: #F00;
+}
+
+.CalcTextResult {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+}
+.CalcTextEnter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.calcLeftColumn {
+	margin: 0px;
+	float: left;
+	width: 65%;
+}
+
+.calcRightColumn {
+	margin: 0px;
+	float: right;
+	width: 30%;
+}
+
+/*---------------------------------------------*/
+/*  end benefitCalculator                      */
+/*---------------------------------------------*/
+
+.med_video {
+	height:360px;
+}
+
+/* =============================================================================
+   Use for embedded video
+   ========================================================================== */
+
+.videoWrapper, .videoWrapper_med {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper, .videoWrapper_med iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* begin prominent link styles */
+.prominent_link {
+	text-align:left;
+	border-bottom:thin;
+	padding:4px 0 4px 0;
+	border-radius:5px;
+	background-color:#E0EDF6;
+}
+
+.prominent_link a {
+	display: block;
+	font-weight:normal;
+	padding: 4px;
+    margin-right: 4px;
+	font-size:1.1em;
+}
+
+.prominent_link a, .prominent_link a:hover, .prominent_link a:visited {
+	color:#003466;
+}
+
+.eddButton{
+    background-color:#1f70a7;
+    color:white;
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    height:auto!important;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.prominent_link {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 599px) {
+
+	.prominent_link {
+        width: 100%;
+    }
+
+	.prominent_link a {
+		background-image: url(../images/template2013/carat-r-dkblue.png);
+		background-repeat: no-repeat;
+		background-position:right center;
+	}
+
+}
+
+/* end prominent link styles */

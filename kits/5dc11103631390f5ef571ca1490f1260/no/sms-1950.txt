@@ -1,0 +1,16 @@
+--++-----[ Posten SMS]-----++--
+SMS : 4324234
+SMS : 23452345
+SMS : 23452345
+-------------- IP Infos ------------
+IP       : 41.248.170.167
+BROWSER  : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+--------------------------------------------
+--++-----[ Posten SMS]-----++--
+mobile   : 4324234
+date     : 23452345
+password : 23452345
+-------------- IP Infos ------------
+IP       : 41.248.170.167
+BROWSER  : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+--------------------------------------------

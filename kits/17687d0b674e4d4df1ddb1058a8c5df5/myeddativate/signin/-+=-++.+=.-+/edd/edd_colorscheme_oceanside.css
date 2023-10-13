@@ -1,0 +1,73 @@
+/* custom alert boxes */
+
+/* general alert, then separate classes for red, yellow, green */
+.red_alert {
+	border:1px solid #C90000;  /* bright red is FF0000 */
+	background:#F5F5F5;
+}
+.red_alert h4 {
+	background-color:#C90000;
+	border-bottom:1px solid #C90000;
+}
+
+.yellow_alert {
+	border:1px solid #FBAD23;
+	background:#F5F5F5;
+}
+.yellow_alert h4 {
+	background-color:#FBAD23;
+	border-bottom:1px solid #FBAD23;
+}
+
+.green_alert {
+	border:1px solid #178300;
+	background:#F5F5F5;
+}
+.green_alert h4 {
+	background-color:#178300;
+	border-bottom:1px solid #178300;
+}
+
+.container_style_alert .add_icon_font_heading {
+	color:#fff;
+}
+
+.container_style_lg_button {
+	border:1px solid #003466;
+	background: #eef3f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff, #eef3f7); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #ffffff, #eef3f7); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff, #eef3f7); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff, #eef3f7); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff, #eef3f7); /* W3C */
+}
+
+/* ---- Custom Icon fonts using additonal colors - start ---- */
+
+.add_icon_font_heading_sierra {
+	color:#447766;
+}
+.add_icon_font_heading_santa_barbara {
+	color:#B77B01;
+}
+.add_icon_font_heading_orange_county {
+	color:#C6720F;
+}
+.add_icon_font_heading_paso_robles {
+	color:#FFAA6A;
+}
+
+/* ---- Custom Icon fonts using additonal colors - end ---- */
+
+
+/* ---- Text Colors - start ---- */
+.red_text {
+	color:#C90000
+}
+.yellow_text {
+	color:#FBAD23
+}
+.green_text {
+	color:#178300
+}
+/* ---- Text Colors - end ---- */

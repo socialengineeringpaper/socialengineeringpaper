@@ -1,0 +1,164 @@
+<!DOCTYPE html><html>
+
+<!-- Mirrored from sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Oct 2022 23:53:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title> - CAS &#8211; Central Authentication Service</title>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" href="webjars.fontawesomemin.html"/><link type="text/css" rel="stylesheet" href="webjars.latomin.html"/><link rel="stylesheet" href="css/cas.css"/><link rel="icon" href="favicon.ico" type="image/x-icon"/><script type="text/javascript" src="webjars.jquerymin.html"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/></head>
+
+<body class="login mdc-typography">
+<!--
+<div th:replace="fragments/header :: header">
+    <a href="fragments/header.html">Header</a> fragment will go here
+</div>
+--><main role="main" class="container mt-3 mb-3">
+    <div id="content" class="d-flex justify-content-center">
+
+    <div class="d-flex justify-content-center flex-md-row flex-column mdc-card mdc-card-content w-lg-25">
+        <section id="loginForm"
+                 class="login-section login-form">
+            <div class="card">
+              <!-- 
+                <div class="card-header text-center">
+                    <h2 th:text="#{cas.login.pagetitle}">Login</h2>
+                    <span class="fa-stack fa-2x hidden-xs">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                --><div class="card-body">
+                    <form method="post" id="fm1" action="https://sso.univ-pau.fr/cas/login">
+                        <img src="images/logo_uppa.svg" width="100%" height="100%"><!-- <h3
+                          th:utext="#{screen.welcome.instructions}">Enter your
+                          Username and Password</h3> --><section class="form-group">
+                            <label for="username"><span class="accesskey">U</span>sername:</label>
+                            <div>
+                                <input class="form-control required"
+                                       id="username"
+                                       size="25"
+                                       tabindex="1"
+                                       type="text"
+                                       accesskey="u"
+                                       autocomplete="off" name="username" value=""/></div>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="password"><span class="accesskey">P</span>assword:</label>
+                            <div>
+                                <input class="form-control required"
+                                       type="password"
+                                       id="password"
+                                       size="25"
+                                       tabindex="2"
+                                       accesskey="P"
+                                       autocomplete="off" name="password" value=""/><span id="capslock-on" style="display:none;">
+                                <p>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <span>CAPSLOCK key is turned on!</span>
+                                </p>
+                            </span>
+                            </div>
+                        </section>
+
+                        <input type="hidden" name="execution" value="1b40edb2-ab39-4db3-a3fd-0689dfe43f0d_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LkpXTTNGLVZEQWxfVTNJQm9XMEdfRlJPRTZnNVd0M29INjBGdlR0NlltOVRBNkZnZnJxMG9qMW1KZDlvMzFqSllHNFZvUE5ReDBPRDNMOHo2NUxmQ1ZxQXZHN3ZmaFh1MUgzSXpUbGNraTJiQ1BISzNUc25GaWxTdDQwNDRqRnRWMjRTZW1GMl85ZFRtaFlrX2xqWXR5M2o0TGhZWVY0RlIyTm5aRE9LYzZ3WUVoWmozeS1xMHlEZ2VGZmtrdVlTMWFxUkFwM0N0aE9WYllseDRLOVM5QTBlal96ZzMzNjVzcERyeW9tTVhpbHJETWJCNDBoMHROdnBhZ2pIdXB5dVhySVRJNU1fV3BGbVRvS2o3M3JYbjBjY2ZHcVNoeE16UExpYWQxWkhxeDR3RXRDQ1pXV0pCbTA0VGFXclFOWTJOUS02MFFPWmM1OExJNkxwMV9ZS3ZCM1JOaFFOQzFlNzBuUVpST0NRZzJzNlQzVVFQWGs3TVZINjNhV1VFQ3RvdzdDRDBTOUdvekViWlZqNVlSQWt2VWMzZzdrX3BqU2VoRmhQTHJkeW1Mek5VLWJkcDBSRk5UdlJfMEFtMU9XNjV0dHlaRF9yOUduUmtRRjVTa05lYkJibWc1UzFFLXVXaHFXYXdmOUZFQnhEbm80NVJ4ZTd6VHBlVmJiNmFsOGk5TzlEOHRNekQ1V2xkNGV5MThTcC15LWE0a0ZZVzkyeTJZRGtYaGEtWG1qUUd1VW4wdzNnWEFuZ25ObHRxYTdxQlJOSkRZcC1Kcy1DYnZnaFBLZ1pncHE3WWpFbFpFMkdlZ3BiaVN4cVdWTXFUZGVxbTZZWFVBdmQyM204dTFUQzdRc0ZDNUZHVGNydjdmM1llYTVTM2ZReHo1U0RIOURMVHdSWmtDWE5WNlJSVWpDaERzSnhsZTRteGdFb1dSYjRCdUk0OWJTemJhVnRuQl81cDRqY0FlMTd1TnN5QTJMM0lkYXNLT3hoM3hNamp5N3pQalo1cU9WMXliTmlLQS1tWkh6QUU1aGV6RW1pYUhBcVJ6SF9OWk1EV25JWUx2Q01JelVJdDhDTTBCbDVpNWJMUWZHT21KSHVqQ3lwNm1ka1I1d2poRnNNYVRzZ21HS1l2a3lWYXd3Wnh2Z3N4SHJCdGc4REdOUzQ1ZnRTR3NnUEJqY0ZTcFZpR3lTZlJMYjhfQXh5eXl1T0lpMkNtdVRTZDdWbTVUWHdhZnd2ei16ZTdCTVkxZ0R5c1V6ZzZOVjMtOHFUQjF4eXNmS1FmVmlncG9JTmk3dmNXMzU0dGVTRm5reDZvZ19jMVdncUozNEhMbUgwdFU0LXFqVXdDWTJ6X3NseU9OOHAxRmp5M0hILVByR3dzdkZ6VTRyOTZtVVZjNGx5NnJBSjhPOThLNDZuTkNVRTBvbTB6TTFlWGl5OVpwQk12N3hKeFdRaFVtZC14d3BxbFlUdlJwTmhsZUtUeW5RXzZiTDY3V0N0RERqN2xRNjdSS0VtY1p6MjFtQXFydFNpMzltLTlOQi1rV3lrbVhqSGlYTGFFVnkwVUdjMnlZbXNiM0M1RVREbUIzNmgtbUNXTXdpc2NRaXJHSW82eVVLOXpDNlUyVG1MQlNwcVRJcWY5b3FYaU9zYXJWak8wVk5yUFFsTlNRd2I0cGRjYXNxVU9RVWNpY0ZCNE01enZiampWYm55bjJqWDk3Q1VmcmZ2cWJOT1ZQdFFvQ0Jsd0E0alFtVmhTaU9lTE15M3R6TWdiaUdKZnRlZlkzTk9TaGh2YWdMREJtYVZvM1BjRzJwaEJkUS1mbUE4bDVaRVh2dFVKRXBkTE9rQXV4aWFKeE9kakRIY0RvbUdlaXJXUGRFNl9FdWFEanEzcEVwSm91LTVUdy1WTlpEZ2t4Zm85R3g0MFZwR1cxSC05ZXJYcFl6NTdsXzAxSXZTdkRid29BSGNGSXBlc0NRU3dHTEhFNmhYWWoxbm1obDhaWTBDeWdHN2NreHpCOFpybU95ZW5xZUh3V0lLS0xXdVZBeE1makgzT1N1aDdLT1BlaVh6NFA3Y0lHRlI5OHVKd2MwdXJ3aXIwREZQTF9Cd196Um1wQ0RjXzdzUWF6WHBYV19QTGpBWm52U0NXdzlsNFAtRWVOd1c4OWl6ajJzLVFBWFNiQmg1YU02YlV1dW5nSTJnMEkyYy1DdzVCZm5Bazk3bm1IOGt0TTE4eF95MEtMT3dKM3pnYmVrUTNvVWVDYzM3bUxSU2xMODJyOXkwY3JlS3FyV1NhRzV0QkZGUU9FSmRtVjB0QTFwU1pNZVlEeTkzSWJQYlNiX0ZQR2xpNDlBTGtoQ3dNRF9FVHdzR2JhcE00TXJ0TW5xN1NuNkw2WC1GX0JwVWdWQ3RnV1paV0wzTE1ISm14YktaM1NSY3Q2czZhdmFzUkdXaTZEUDZDWjBENmJrNDUtamJaOTNGYnFwVlNnNHZESmVfazVqQkhaWDcwd2w5T2VuWlFreWN4bS1KRVBRVHJKM1pfT0J4VUpxa3hCQlBDS1ZXajBwUU5icURzdXZLVll5MUhSQnRfY1FmX0RpbkQwWndiMVIxTUc2Tmp2dDN4V2JicUs2QkpuTTIwQU9Fd3hXVnlHVWtqV010bm1fVnktRDBuOHNlZ0praTl1cVdncGtQdkxkQ3dTNnBiWkRwS3daS0hQT0Y3OW9QdTZrZ09lbVZGZXBVTW5jZ2VLX2Y5X20yS0pVVlBTQTV2RkNzenE3TEJqaEprWXNFWDAxSVZ6ZE1CaWJBejRhQzB2bEYxcWVadnBET3RQN1hleWktbVdnZHBoVVJQdnFwTXliUEZGYkJ3NnhjbFhTdWQwODFPNEplN0ZxYkl1WVF5Y2J0QjRqczd6R2U2Ry0yaFFlRVY5Ym1aR1RIYlJZdTNVcXRFLXdhVk9JSlEtVnZjQUNDU1ptbElqNWFsWWdDMnpmSHhkYlRTZVBNMXZKVVQxTUNTSnplMUdFbGJfZFhjekhucm1SUVFqY3hoemttVU9icEZ1RFlRYkQyd1daN2RuTXlSMXNPRFlXLW51UFpYZlI3UGJLZUZzUmtzMXRTQ2Nqdms2ejFsVll6YXpkaUVXMUFjUTU1dGR1cHAxRFhXdFBOWl9YbUN5WEdXejEtZ3VOOTdGbUZhdW5zaHZ6TUs2ZFBhR0JVeFdsLXRlM1dVdTdJLTJlZkI1S053SGRmVDczdUNWZGNjdFRjZ3o5dVlKZGdhSmFjdWZyR2kxUzlEeHBZNWRRdXc1ZVY4di0zbVVuaGRaVjc2T19DYm1takFIeXYzd3BiYjAyU0pWQVhKZGhsUXlJWDNQNXhiWFU0OG5TaDdsRVN0b2dpekZXOUZiaUU1Q2owLVo1UUc3cE9VWHpRcWJ1NVNEMVNzblZhbVlIYUdKUkEyVjRjS0Z1Vm9hbXVGcnp0eVotWE0tNThOSmcxQUIwYWVxNHEyamJfTkNJdWI5YnUtYkc4Zi1rM2tKSF9SSmNlT2ZjRkdDZFdTQXNpb1o1QVVVZzJ5c2tRUUVPN1djeFNYMkc5bkd3dDZXZ280eW1LYnZ0T1Z2dmExcENaVS1qWVBhZVZBanhzZnpUTl9fVTJGYkt0b1dXSS0yLVdDc2NDNXJBc0dkVHNRbTRnVkROeTFrSnBPZzB5SDRkZDVFWVgxQWxfY1R3eWVnUExWNTBMYjNLNzJGZXpDOHlOVmsydnh0bDlVaDdMMU9TR3Y5OW5vSC1YcUZsNGNqS0NCek1OQ3Z2R3NxV0Z6LU5CVFlxYjZDd1l5LVdKdXBBbzFWaDk3TzhuS1lOU0ZfNTl5Ri1OQmZBWDZrei1YLVBLcm5XV1dFSWI5QnBNckk3cGctemRLYjhlMk5uNkM5Z1dxNjItUzFvMGZ4dkpjT0U2SmFQWVVfSGtWb1dpd3N1amtlOU5nc2lyR1U3aGN4TVBSaEVseWlMM1U0NzFnMHhOd3dKeGRUeUxyWThfcUZJMHJRc00wb2lUdmVJYTRSaVZ0SGdxLWEwRWJDX3VnOUpyOGJDTy1NMl9QN2NKbGt4cTdPd1BaRWxtUXlpODJOVVVCRlV6aXN4YS1Jb0NxTEl6WG1BQWdqMTFxYTN4WUdTMGJmQ0JtMkpzR1dSSzVtMlU2VF92ZnZESlVXb0Z1VDdMdk1YamNJWGhfYnZtT1hTMmtvZDl2RXpMQTdGNUlSTk1rTzlrMGhVUkxzUk9xdlFaaXJtYzB0TWtPRDJBVU50ajVIWVRzMWhfMXJEeVJ2Z1FLLWZjcTU4RTdNTlBZcE5fM3cxXzVWZGlacUlZcHEyZ2twRGM4VlJjbWRGWk5WUGNWZDlLaDF4OHQzU1JRNzlYUHpxb0N6QXo3RVlwVDVJcEZKbFVsaUU3NDFaRW1UdUFqbXZoWmZNSzN2bTcxcjc0T1VLM2FnOXRpa2pOZWVFaUxZWEZUWTZtWjIyWmdfNk9NelJId0R6enUweEFQTWItNE1DTlVLMEJORG5tUTA2V1Q5QXl3UHNGYTZOZmZHaXctbnZXZnNUemkwdFZUck1DbUNRQ094d2FMTW03WjRKSDlWOXp6WGREWXZVZW9BUlJNS2dXTlNnbXR4WmhHS1k3SUR1T3gxamNQcFJqelhuaWhPVGJKUGxBQ2tieU5meXA4S0JsQ2tWbUppeDRPUFhYcHk1aktLektJb0J4bm8yOXJuTklVSFhoSm9RNW02c2MwYTdwdWd0WkkzUzJSeDJ6M0VzYTJybTJKWXZnS0hiU2xlMzVLNGlmQ3JxTTg4VUdxMTd3aDRQZC0tcUJrLUpNRWc3TUFWSndGbjF0ZVhKOGFuTWlfcW9yQklnbWhSeEN2ckVPdEVka0FTTno0cjNqdzNaUnVncnA1MTc1V3RxVHEybUJzOFhjYVE4QzBYb1pIelFEVFoyVV9GanpCNm9GM29LR1NFTFA3dHVSdVpCWFpWUmZsR0J6dVBWd1I0enA3UnRmY3Y5dzJxcF9mam9qY2xldGRZcVJaT0QxWXlLNlhDcFVkTlFWZVBqV1ZtUXRVdFI3Mms4M2lVd1FZS0c3N2ZBTVlONUlfM1BHbnRFSEltUzdBYzBXenVZOUJEMVBoeExBSXkzcXFjSXRjblh6UjBKRl9WbEE3dlEucnRVVW5zUVdLZXppN0FpSDhTYUJJLTh6b3ZFUHh6cWU0b0dzLU9VY0RDS093TFAxM1NtQjRvRUdJcE1qaW1zRU8yZHNYajhTZWhFWkhWMS1RaGlFSWc="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input class="btn btn-block btn-submit"
+                               name="submit"
+                               accesskey="l"
+                               tabindex="6"
+                               type="submit"
+                               value="LOGIN"
+                        /></form>
+
+                    <div>
+			    <!-- <span class="fa fa-question-circle"></span> --><span><a href="%7b0%7d.html">Password dimenticata? </a></span>
+                        <p/></div>
+
+		    <div>
+			<span><a href="https://moncompte.univ-pau.fr/">Activate your account.</a></span>
+                        <p/></div>
+
+
+                    <script type="text/javascript">
+                        var i = "Un momento per favore..."
+                        $( document ).ready(function() {
+                            $("#fm1").submit(function () {
+                                $(":submit").attr("disabled", true);
+                                $(":submit").attr("value", i);
+                                console.log(i);
+                                return true;
+                            });
+                        });
+                    </script>
+
+		    <!-- <div th:replace="fragments/loginsidebar :: loginsidebar" /> --></div>
+            </div>
+        </section>
+        </div>
+</div>
+</main>
+
+<!--
+<div th:replace="fragments/footer :: footer">
+    <a href="fragments/footer.html">Footer</a> fragment will go here
+</div>
+--><script type="text/javascript" src="webjars/zxcvbn/dist/zxcvbn.js"></script>
+<script type="text/javascript" src="webjars.jqueryui.html"></script>
+<script type="text/javascript" src="webjars.jquerycookie.html"></script>
+<script src="webjars.bootstrapmin.html"></script>
+
+<script src="webjars/headjs/1.0.3/head.min.js"></script>
+<script src="webjars.storemin.html"></script>
+<script type="text/javascript" src="#"></script>
+
+<script>
+head.ready(document, function () {
+    if (!window.jQuery) {
+    	var jqueryUrl = "webjars.jquerymin.html"; 
+        head.load(jqueryUrl, loadjQueryUI);
+    } else {
+        notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+    }
+});
+
+function loadjQueryUI() {
+	var jqueryUrl = "webjars.jqueryui.html"; 
+	head.load(jqueryUrl, loadjQueryCookies);
+}
+
+function loadjQueryCookies() {
+	var jqueryUrl = "webjars.jquerycookie.html"; 
+	head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+}
+
+function notifyResourcesAreLoaded(callback) {
+    if (typeof callback === "function") {
+        callback();
+    }
+}
+</script>
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false;
+
+    var googleAnalyticsTrackingId = null;
+
+    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+
+</body>
+
+<!-- Mirrored from sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Oct 2022 23:53:29 GMT -->
+</html>

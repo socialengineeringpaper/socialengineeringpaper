@@ -1,0 +1,2151 @@
+/*
+Internet Banking skin CSS
+*/
+/*--------------------------------------------------------------------------------------
+=header
+--------------------------------------------------------------------------------------*/
+#header .master-logo {
+	background-position: 0 0
+}
+
+/*=autocomplete*/
+#header .ico-info {
+	background-position: -561px -385px
+}
+
+#header .ico-info:hover {
+	background-position: -529px -417px
+}
+
+.search input[type="text"] {
+	padding-right: 4.5%;
+	width: 130px
+}
+
+#headerSearch .ui-autocomplete {
+	background: #ebebeb;
+	color: #333;
+	box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+}
+
+#headerSearch .ui-autocomplete a {
+	color: #333
+}
+
+#headerSearchOccu .ui-autocomplete {
+	background: #ebebeb;
+	color: #333;
+	box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+}
+
+#headerSearchOccu .ui-autocomplete a {
+	color: #333
+}
+
+
+
+/*see =dropdown*/
+#header .top-nav .has-dropdown:hover>a,
+#header .top-nav .has-dropdown ul {
+	background: #f5f5f5;
+	color: #333
+}
+
+#header .top-nav .has-dropdown li,
+#header .top-nav .has-dropdown li a {
+	color: #333
+}
+
+#header .top-nav .has-dropdown li a:hover {
+	color: #fff
+}
+
+
+/*--------------------------------------------------------------------------------------
+=table
+--------------------------------------------------------------------------------------*/
+table {
+	background-color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px
+}
+
+caption {
+	background: #eee
+}
+
+td {
+	background: #fff
+}
+
+tr:nth-child(even) td {
+	background: #f5f5f5
+}
+
+tr:first-child th:first-child {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0
+}
+
+tr:first-child th:last-child {
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0
+}
+
+tr:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+	-webkit-border-radius: 0 0 0 5px;
+	-moz-border-radius: 0 0 0 5px
+}
+
+tr:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+	-webkit-border-radius: 0 0 5px 0;
+	-moz-border-radius: 0 0 5px 0
+}
+
+tr:first-child td.full {
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0
+}
+
+tr:last-child td.full {
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px
+}
+
+/*-------- IE8 fixes --------*/
+tr.even td {
+	background: #f5f5f5
+}
+
+tr.first .first {
+	border-radius: 5px 0 0 0
+}
+
+tr.first .last {
+	border-radius: 0 5px 0 0
+}
+
+tr.last .first {
+	border-radius: 0 0 0 5px
+}
+
+tr.last .last {
+	border-radius: 0 0 5px 0
+}
+
+tr.first .full {
+	border-radius: 5px 5px 0 0
+}
+
+tr.last .full {
+	border-radius: 0 0 5px 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=dropdown menu (generic style)
+--------------------------------------------------------------------------------------*/
+.has-dropdown ul {
+	border: 1px solid #bbb;
+	background: #dcdcdc
+}
+
+.has-dropdown .goto>li a:first-child {
+	color: #333;
+	background-position: -850px -536px
+}
+
+.has-dropdown .goto>li>a:hover {
+	background-color: #bf0e25;
+	color: #fff;
+	background-position: -786px -600px
+}
+
+.has-dropdown:hover>a {
+	border: 1px solid #bbb;
+	border-bottom: 0
+}
+
+.has-dropdown>a span {
+	background-position: right -189px
+}
+
+.has-dropdown:hover>a span {
+	background-position: right -125px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=navigation
+--------------------------------------------------------------------------------------*/
+nav>ul>li {
+	border-bottom: 1px solid #e5e5e5
+}
+
+nav>ul>li:first-child {
+	border-top: 1px solid #e5e5e5
+}
+
+nav>ul>li.selected {
+	border: 0
+}
+
+nav>ul>li.selected .ico-home {
+	background-position: -312px -256px
+}
+
+nav>ul .ico-home {
+	background-position: -312px -288px
+}
+
+nav>ul>li>a,
+nav>ul>li.selected>a {
+	color: #333;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px
+}
+
+.navigation .login-time,
+.navigation .lastlogin-time {
+	color: #999
+}
+
+
+/*--------------------------------------------------------------------------------------
+=btn-call-to-action
+--------------------------------------------------------------------------------------*/
+.btn-call-to-action>li>a,
+.btn-call-to-action>li>a span {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px
+}
+
+.btn-call-to-action>li>a {
+	background-color: #f5f5f5;
+	border: 1px solid #bbb
+}
+
+.btn-call-to-action>li>a span {
+	border-top: 1px solid #fff
+}
+
+.btn-call-to-action .has-dropdown>a span,
+.btn-call-to-action .has-dropdown:hover>a span {
+	background-position: right -120px
+}
+
+.btn-call-to-action .has-dropdown:hover>a,
+.btn-call-to-action .has-dropdown:hover>a span {
+	border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px
+}
+
+.btn-call-to-action>li:hover>a {
+	background-color: #dcdcdc
+}
+
+.btn-call-to-action>li:hover>a span {
+	border-top: 1px solid #dcdcdc
+}
+
+
+/*--------------------------------------------------------------------------------------
+=tabs
+- Do Not apply jqury UI tabs css here
+--------------------------------------------------------------------------------------*/
+.tabs {
+	background: none
+}
+
+.tabs .ui-tabs-nav {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0
+}
+
+.tabs .ui-tabs-nav li:first-child,
+.tabs .ui-tabs-nav li:first-child>a {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0
+}
+
+.tabs .ui-tabs-nav li:last-child,
+.tabs .ui-tabs-nav li:last-child>a {
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0
+}
+
+.tabs .ui-tabs-nav li a {
+	background: #7e7e7e;
+	color: #fff;
+	border-left: 1px solid #ccc
+}
+
+.tabs .ui-tabs-nav li:first-child a {
+	border-left: 0
+}
+
+.tabs .ui-tabs-nav .ui-tabs-selected a,
+.tabs .ui-tabs-nav .ui-tabs-selected a:hover {
+	background: #fff;
+	color: #333
+}
+
+.tabs .tab-content {
+	border: 1px solid #ccc;
+	border-radius: 0 5px 5px 5px;
+	-webkit-border-radius: 0 5px 5px 5px;
+	-moz-border-radius: 0 5px 5px 5px
+}
+
+.tabs .tab-content table th {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0
+}
+
+.tabs .tab-content table {
+	border-bottom: 0
+}
+
+/*-------- IE8 fixes --------*/
+/* 	.tabs .ui-tabs-nav .first {border-radius:5px 0 0 0}
+	.tabs .ui-tabs-nav .last {border-radius:0 5px 0 0} */
+
+
+/*--------------------------------------------------------------------------------------
+=pagination
+--------------------------------------------------------------------------------------*/
+.pagination .page-count a.selected {
+	color: #333;
+	border: 1px solid #333
+}
+
+
+/*--------------------------------------------------------------------------------------
+=login
+--------------------------------------------------------------------------------------*/
+.login .fieldset {
+	border: 1px solid #ccc;
+	background: #f4f4f4;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+.login .registration {
+	border: 1px solid #ccc;
+	border-top: 0;
+	background: #fbfbfb;
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=messages
+--------------------------------------------------------------------------------------*/
+
+/*=warning =error =success
+	----------------------------------------------------------------------------------*/
+.ico-error,
+.errorMessage {
+	color: #ff0000
+}
+
+
+/*--------------------------------------------------------------------------------------
+=account-messages
+--------------------------------------------------------------------------------------*/
+/*=msg count*/
+.msg-count {
+	color: #fff;
+	text-shadow: 0 -1px 0 #666;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.account-messages {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.account-messages .message-inbox {
+	border-right: 1px solid #ccc
+}
+
+.account-messages .message-inbox h2 {
+	border-bottom: 1px solid #ccc
+}
+
+.account-messages .last-transcation {
+	border-left: 0 solid #ccc;
+	color: #7e7e7e
+}
+
+
+/*--------------------------------------------------------------------------------------
+=manage-account
+--------------------------------------------------------------------------------------*/
+.main .manage-account .type h2 {
+	border-bottom: 1px solid #ccc
+}
+
+
+/*--------------------------------------------------------------------------------------
+=account-dashboard
+--------------------------------------------------------------------------------------*/
+.account-dashboard .list {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.account-dashboard .list li:nth-child(odd),
+.account-details .section dl:nth-child(odd) {
+	background-color: #f5f5f5
+}
+
+.account-dashboard .list li,
+.account-details .section dl {
+	border-top: 1px solid #ccc
+}
+
+.account-dashboard .list li:first-child,
+.account-dashboard .list li.first {
+	border-top: 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+.account-dashboard .list li:last-child {
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+
+/*-------- IE8 fixes --------*/
+.account-dashboard .list li.odd,
+.account-details .even {
+	background: #f5f5f5
+}
+
+.account-dashboard .list li.last {
+	border-radius: 0 0 5px 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=account-details
+--------------------------------------------------------------------------------------*/
+.account-details .body {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.account-details .section dl {
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+
+/*--14E1 IntRate--*/
+.account-details .section .row-infocolp,
+.account-details .section .row-colcolp,
+.account-details .section .row-info,
+.account-details .section .row-anchor,
+.account-details .section .row-errinfo,
+.account-details .section .row-col {
+	border-radius: 0 0 5px 5px;
+	border-bottom: 0px solid #999;
+	border-top: 0px solid #999;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+
+/*-------- IE8 fixes --------*/
+.account-details .section.last {
+	border-radius: 0 0 5px 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=message-centre
+--------------------------------------------------------------------------------------*/
+.message-centre .message-inbox td {
+	background: #fff;
+	border-top: 0
+}
+
+.message-centre .message-inbox td,
+.message-centre .message-inbox th {
+	border-bottom: 1px solid #ccc
+}
+
+.message-centre .message-inbox tr:last-child td {
+	border-bottom: 0
+}
+
+.message-centre .message-inbox tr.read td {
+	background: #f6f6f6;
+	color: #999;
+	border-top: #fff
+}
+
+.message-centre .message-inbox .subject a.ico {
+	color: #333
+}
+
+/*=message-details
+	----------------------------------------------------------------------------------*/
+.message-details .body dl {
+	border-bottom: 1px solid #ccc
+}
+
+.message-details .body {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+.message-centre .message-inbox tr .attachment {
+	background-image: url("../image/ico-clip.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	padding: 0
+}
+
+.message-centre .message-inbox tr .msg-attachment {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/*--------------------------------------------------------------------------------------
+=scheduled-payment
+--------------------------------------------------------------------------------------*/
+.scheduled-payment {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.scheduled-payment .list {
+	border-top: 1px solid #ccc
+}
+
+.scheduled-payment .list li {
+	border-top: 1px solid #ccc
+}
+
+.scheduled-payment .list li:first-child {
+	border-top: 0
+}
+
+.scheduled-payment .balance-details .from-account,
+.scheduled-payment .balance-details .from-account+dd {
+	color: #999
+}
+
+.scheduled-payment .header-with-action h2 a {
+	color: #333
+}
+
+.scheduled-payment .header-with-action .message {
+	color: #999
+}
+
+.scheduled-payment .header-with-action .message strong {
+	Color: #000
+}
+
+.scheduled-payment .btn-call-to-action,
+.transfer-payment .btn-call-to-action>li>a,
+.scheduled-payment .btn-call-to-action,
+.transfer-payment .btn-call-to-action>li>a span,
+.scheduled-payment .btn-call-to-action,
+.transfer-payment .btn-call-to-action>li>a:hover span {
+	background-color: transparent;
+	border: 0
+}
+
+.scheduled-payment .list>li:nth-child(even) {
+	background: #f5f5f5
+}
+
+/*-------- IE 8 fix --------*/
+.scheduled-payment .list>li.even {
+	background: #f5f5f5
+}
+
+.scheduled-payment .list li.last {
+	border-radius: 0 0 5px 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=account-number-details
+--------------------------------------------------------------------------------------*/
+.account-number-details dt,
+.balance-details dt {
+	color: #666
+}
+
+
+/*--------------------------------------------------------------------------------------
+=recommand-product
+--------------------------------------------------------------------------------------*/
+/*=on navigation
+	----------------------------------------------------------------------------------*/
+.navigation .recommand-product h3,
+aside .recommand-product h3 {
+	color: #7e7e7e
+}
+
+/*=on aside
+	----------------------------------------------------------------------------------*/
+
+aside .recommand-product li {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=product
+--------------------------------------------------------------------------------------*/
+.product .type .list {
+	border-top: 1px solid #e0e0e0
+}
+
+.product .list li {
+	border-bottom: 1px solid #e0e0e0
+}
+
+.product .list h3 a {
+	color: #333
+}
+
+.product .list li:nth-child(odd),
+.product .list li.odd {
+	background-color: #f6f6f6
+}
+
+/*=product-details
+	----------------------------------------------------------------------------------*/
+.product-details .list>li {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=view-estatement
+--------------------------------------------------------------------------------------*/
+.view-estatement .message,
+.view-estatement fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=foot-note
+--------------------------------------------------------------------------------------*/
+.foot-note {
+	color: #666
+}
+
+
+/*--------------------------------------------------------------------------------------
+=aside
+--------------------------------------------------------------------------------------*/
+aside section {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+aside section header,
+aside section>h2 {
+	border-bottom: 1px solid #ccc;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+aside ul.goto>li>a {
+	color: #333
+}
+
+aside section h2.ico {
+	background-color: #f5f5f5;
+	color: #333
+}
+
+
+/*--------------------------------------------------------------------------------------
+=easy-pay
+--------------------------------------------------------------------------------------*/
+.easy-pay .receipt-number,
+.easy-pay label .optional {
+	color: #999
+}
+
+.easy-pay #smplPayToAcct {
+	box-shadow: 0 1px 2px #ccc inset
+}
+
+/*=autocomplete*/
+ul.ui-autocomplete {
+	background: #efefef;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+}
+
+ul.ui-autocomplete .ui-menu-item a {
+	border: 0;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+ul.ui-autocomplete .ui-menu-item a.ui-state-hover {
+	background: #ccc;
+	text-decoration: none
+}
+
+/*=step 3*/
+.easy-pay .receipt-number {
+	color: #999
+}
+
+.smplpay-icon-exclamation-32 {
+	background-position: -928px -1440px;
+}
+
+.smplpay-icon-warning-32 {
+	background-position: -800px -1564px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=transaction
+--------------------------------------------------------------------------------------*/
+/*=transaction-history
+	----------------------------------------------------------------------------------*/
+.transaction-history table {
+	border-width: 1px 0 1px 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.transaction-history td {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+/*=search-transaction
+	----------------------------------------------------------------------------------*/
+.search-transaction .from-to label {
+	color: #666
+}
+
+/*=export-transaction
+	----------------------------------------------------------------------------------*/
+.export-transaction .fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px
+}
+
+.export-transaction .inline li select {
+	color: #666
+}
+
+/*--------------------------------------------------------------------------------------
+=quick-link
+--------------------------------------------------------------------------------------*/
+.main .quick-link h2 {
+	border-bottom: 1px solid #ccc
+}
+
+.main .quick-link-inline h2 {
+	border: 0
+}
+
+/*=quick-link-calculator
+	----------------------------------------------------------------------------------*/
+.quick-link-calculator li p {
+	color: #666
+}
+
+
+/*--------------------------------------------------------------------------------------
+=transfer-payment
+--------------------------------------------------------------------------------------*/
+.transfer-payment .fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.transfer-payment .fieldset .fieldset {
+	background: #f6f6f6
+}
+
+.transfer-payment h2,
+#receiptRow,
+#receiptSubRow {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f6f6f6
+}
+
+.transfer-payment h2:first-child,
+#receiptRow {
+	border-top: 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+/*-------- IE 8 fix --------*/
+.transfer-payment h2.first,
+#receiptRow {
+	border-radius: 5px 5px 0 0;
+	border-top: 0
+}
+
+/*=copy-receipt
+	----------------------------------------------------------------------------------*/
+.transfer-payment .copy-receipt strong {
+	color: #333
+}
+
+.transfer-payment .copy-receipt label,
+.transfer-payment .copy-receipt p {
+	color: #666
+}
+
+/*=schedule-transfer-payment
+	----------------------------------------------------------------------------------*/
+.schedule-transfer-payment .other {
+	border-bottom: 1px solid #ccc
+}
+
+.schedule-transfer-payment .other span {
+	background: #fff
+}
+
+/*=review-confirm-details
+	----------------------------------------------------------------------------------*/
+.transfer-payment .review-confirm-details {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+.offer-template h2 {
+	background: #f6f6f6;
+	border: none;
+	margin: 0px -20px 10px
+}
+
+
+/*--------------------------------------------------------------------------------------
+=calendar
+--------------------------------------------------------------------------------------*/
+.ui-datepicker {
+	border: 0;
+	background: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+	border: 1px solid #ccc
+}
+
+.ui-datepicker .ui-datepicker-calendar th {
+	background: none
+}
+
+.ui-datepicker .ui-datepicker-calendar td,
+.ui-datepicker .ui-datepicker-calendar td a {
+	background: none
+}
+
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default,
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight {
+	color: #999;
+	background: none;
+	background: #ccc;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #ffffff 0%, #cccccc 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cccccc', GradientType=0);
+	/* IE6-9 */
+}
+
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {
+	background: #ccc
+}
+
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight {
+	border: 1px solid #ccc;
+	box-shadow: inset 0 0 3px 0 #999;
+	-webkit-box-shadow: inset 0 0 3px 0 #999;
+	-moz-box-shadow: inset 0 0 3px 0 #999;
+}
+
+.ui-datepicker .ui-datepicker-calendar a.ui-state-active,
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-week-end a.ui-state-active {
+	color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 0 3px 0 #333;
+	-webkit-box-shadow: inset 0 0 3px 0 #333;
+	-moz-box-shadow: inset 0 0 3px 0 #333;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	background: #999;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #999999 0%, #666666 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #999999), color-stop(100%, #666666));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #999999 0%, #666666 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #999999 0%, #666666 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #999999 0%, #666666 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #999999 0%, #666666 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#666666', GradientType=0);
+	/* IE6-9 */
+}
+
+
+/*--------------------------------------------------------------------------------------
+=button, =goto links
+--------------------------------------------------------------------------------------*/
+.btn {
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn input,
+.btn a,
+.btn span,
+.btn button {
+	color: #fff;
+	background: none;
+	border: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	text-shadow: 0 -1px 1px #000;
+	font-weight: bold;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/* use join class name .btn prevent overwrite from Skin-Brand css */
+.btn.btn-logout,
+.btn.btn-cancel {
+	border-color: #999;
+	background: #fff;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
+	/* W3C */
+
+}
+
+.btn.btn-logout:hover {
+	background: #dfdfdf;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #dfdfdf 0%, #ffffff 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dfdfdf), color-stop(100%, #ffffff));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #dfdfdf 0%, #ffffff 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #dfdfdf 0%, #ffffff 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #dfdfdf 0%, #ffffff 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #dfdfdf 0%, #ffffff 100%);
+	/* W3C */
+
+}
+
+.btn.btn-logout:hover span {
+	color: #333
+}
+
+.btn.btn-logout input,
+.btn.btn-cancel input,
+.btn.btn-logout span,
+.btn.btn-cancel span {
+	text-shadow: 0 1px 1px #fff
+}
+
+.btn.btn-schedule,
+.btn.btn-previous {
+	border-color: #cacaca #888 #6a6a6a #888;
+	background: #9c9c9c;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #9c9c9c 0%, #606060 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9c9c9c), color-stop(100%, #606060));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #9c9c9c 0%, #606060 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #9c9c9c 0%, #606060 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #9c9c9c 0%, #606060 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #9c9c9c 0%, #606060 100%);
+	/* W3C */
+
+}
+
+.btn.btn-schedule input {
+	color: #fff
+}
+
+.btn.btn-schedule:hover,
+.btn.btn-previous:hover {
+	background: #606060;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #606060 0%, #9c9c9c 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #606060), color-stop(100%, #9c9c9c));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #606060 0%, #9c9c9c 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #606060 0%, #9c9c9c 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #606060 0%, #9c9c9c 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #606060 0%, #9c9c9c 100%);
+	/* W3C */
+
+}
+
+/*=button option
+	----------------------------------------------------------------------------------*/
+ul.btn-option li a {
+	border: 1px solid #ccc;
+	background-color: #fbfbfb;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: inset 0 1px 3px #fff, inset 0 -18px #f5f5f5, 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 1px 3px #fff, inset 0 -18px #f5f5f5, 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 1px 3px #fff, inset 0 -18px #f5f5f5, 0 0 3px #ccc;
+}
+
+ul.btn-option a span {
+	color: #333
+}
+
+ul.btn-option li a:hover {
+	background-color: #f5f5f5;
+	box-shadow: inset 0 1px 3px #fff, inset 0 -18px #fbfbfb, 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 1px 3px #fff, inset 0 -18px #fbfbfb, 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 1px 3px #fff, inset 0 -18px #fbfbfb, 0 0 3px #ccc;
+}
+
+
+/*--------------------------------------------------------------------------------------
+=Existing style modification
+	- this is transitional fix for apply new style to existing html
+--------------------------------------------------------------------------------------*/
+#InfoRollOverWithSecure {
+	background: transparent url("../../image/cs/legend.gif") no-repeat
+}
+
+/*=form*/
+#FormBorder {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#FormBorder h3:first-child {
+	background: #eee;
+	border-top: 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+#FormBorder h3 {
+	background: #eee
+}
+
+/*-------- IE 8 fix --------*/
+#FormBorder h3 {
+	border-radius: 5px 5px 0 0;
+	border-top: 0
+}
+
+/*=UserOptions*/
+#UserOptions {
+	/* border-top:1px solid #ccc;*/
+	color: #ccc
+}
+
+/*=rightnav*/
+#rightnav .right-header {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+#rightnav .right-header-background {
+	border: 1px solid #ccc;
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+
+#rightnav .rightlist a {
+	color: #333
+}
+
+/*=Button*/
+.Button,
+.Buttonl {
+	color: #fff;
+	border: 0;
+	text-shadow: 0 0 0 #000;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	background: #7e7e7e;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #7e7e7e 0%, #333333 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7e7e7e), color-stop(100%, #333333));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7e7e7e 0%, #333333 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7e7e7e 0%, #333333 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7e7e7e 0%, #333333 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #7e7e7e 0%, #333333 100%);
+	/* W3C */
+
+}
+
+/* LineBreak */
+hr {
+	border: 0;
+	height: 1px;
+	background: #ccc
+}
+
+/* table */
+.table .darkrow {
+	background: #f5f5f5
+}
+
+.table .lightrow {
+	background: #fff
+}
+
+#IconTableRight table {
+	background-color: #f5f5f5
+}
+
+/* openAcctNoBorderRightArea */
+#openAcctLeftArea,
+#openAcctRightArea {
+	border: 1px solid #ccc
+}
+
+.Mandatory {
+	color: red
+}
+
+
+/*--------------------------------------------------------------------------------------
+=icon
+--------------------------------------------------------------------------------------*/
+/*=header-with-action
+	----------------------------------------------------------------------------------*/
+.ico-security {
+	background-position: -939px 4px
+}
+
+.ico-security:hover {
+	background-position: -907px -28px
+}
+
+.ico-export {
+	background-position: -875px -60px
+}
+
+.ico-export:hover {
+	background-position: -843px -92px
+}
+
+.ico-dispute {
+	background-position: -811px -124px
+}
+
+.ico-dispute:hover {
+	background-position: -779px -156px
+}
+
+.ico-estatement {
+	background-position: -747px -188px
+}
+
+.ico-estatement:hover {
+	background-position: -715px -220px
+}
+
+.ico-scheduled {
+	background-position: -683px -252px
+}
+
+.ico-scheduled:hover {
+	background-position: -651px -284px
+}
+
+.ico-info {
+	background-position: -625px -321px
+}
+
+.ico-info:hover {
+	background-position: -593px -353px
+}
+
+.ico-view-payee-accounts {
+	background-position: -491px -442px
+}
+
+.ico-view-payee-accounts:hover {
+	background-position: -459px -476px
+}
+
+.ico-customise {
+	background-position: -459px 4px
+}
+
+.ico-customise:hover {
+	background-position: -427px -28px
+}
+
+.ico-add {
+	background-position: -395px -60px
+}
+
+.ico-add:hover {
+	background-position: -363px -92px
+}
+
+.ico-help {
+	background-position: -331px -124px
+}
+
+.ico-help:hover {
+	background-position: -299px -156px
+}
+
+.ico-read {
+	background-position: -267px -188px
+}
+
+.ico-read:hover {
+	background-position: -235px -220px
+}
+
+.ico-unread {
+	background-position: -203px -252px
+}
+
+.ico-unread:hover {
+	background-position: -171px -284px
+}
+
+.ico-delete {
+	background-position: -139px -316px
+}
+
+.ico-delete:hover {
+	background-position: -107px -348px
+}
+
+.ico-view-bpay {
+	background-position: -77px -379px
+}
+
+.ico-view-bpay:hover {
+	background-position: -45px -411px
+}
+
+.ico-print {
+	background-image: url(/InternetBankingResources/ibank2/image/print-icon.png);
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+/*14E1 -IntRate*/
+.ico-show {
+	background-position: -36px -1351px
+}
+
+.ico-hide {
+	background-position: -6px -1383px
+}
+
+
+.page-count .goto-next {
+	background-position: right -444px;
+	padding-right: 12px
+}
+
+.page-count .goto-prev {
+	background-position: -920px -476px;
+	padding-left: 12px
+}
+
+.goto-more,
+ul.goto>li a:first-child,
+.smplpayedit,
+.FooterContact a,
+.FooterFeedback a,
+.FooterTop a,
+#UserOptions a,
+#rightnav .rightlist a,
+#FormBorder h2+ul li a {
+	background-position: -860px -541px
+}
+
+.go-back .goto-more {
+	background-position: -828px -573px
+}
+
+.ico-newmail {
+	background-position: -751px -640px
+}
+
+.ico-readmail {
+	background-position: -719px -672px;
+	font-weight: normal
+}
+
+.ico-importantmail {
+	background-position: -687px -704px
+}
+
+.ico-readimptmail {
+	background-position: -687px -704px;
+	font-weight: normal
+}
+
+.ico-expand {
+	background-position: -44px -1351px
+}
+
+.ico-collapse {
+	background-position: -12px -1383px
+}
+
+#tickText {
+	background-position: -755px -1632px
+}
+
+.ico-phone {
+	display: inline-block;
+	padding: 9px 0 9px 40px;
+	background-repeat: no-repeat;
+	background-position: -640px -735px
+}
+
+.FooterPhone strong {
+	background-position: -645px -739px
+}
+
+.product .type .list .ico {
+	background-position: -30px 3px
+}
+
+.product .type .list .ico:hover {
+	background-position: 2px -29px
+}
+
+aside .ico-tool,
+aside .ico-tool:hover {
+	background-position: -440px -928px
+}
+
+aside .ico-calculator,
+aside .ico-calculator:hover {
+	background-position: -344px -1024px
+}
+
+.ico-calculator {
+	background-position: -352px -1024px
+}
+
+.ico-calculator:hover {
+	background-position: -288px -1088px
+}
+
+.ico-calendar,
+.ico-calendar1 {
+	background-position: -256px -1120px
+}
+
+.ico-calendar:hover,
+.ico-calendar1:hover {
+	background-position: -224px -1152px
+}
+
+.ico-error,
+.ico-error_triangle,
+font.error,
+.errorMessage li {
+	background-position: -928px -1436px
+}
+
+.ico-success {
+	background-position: -864px -1500px
+}
+
+.ico-warning,
+font.warning,
+.actionMessage li {
+	background-position: -800px -1564px
+}
+
+.message-error .ico,
+.ico-error_triangle,
+font.error {
+	color: #cc0000
+}
+
+img[alt="Error"],
+img[alt="Notification"] {
+	display: none
+}
+
+
+#secureLogo,
+.secure-msg {
+	background-position: -692px -1664px
+}
+
+#calcIcon,
+#infoIcon,
+#faqIcon,
+#demoIcon,
+#platinum,
+#visagold,
+#vertigo,
+#amplify,
+#nofee {
+	display: inline-block
+}
+
+#calcIcon {
+	background-position: -860px 0px
+}
+
+#infoIcon {
+	background-position: -764px -96px
+}
+
+#faqIcon {
+	background-position: -668px -192px
+}
+
+#demoIcon {
+	background-position: -572px -288px
+}
+
+#platinum {
+	background-position: -832px -448px
+}
+
+#visagold {
+	background-position: -704px -576px
+}
+
+#vertigo {
+	background-position: -576px -704px
+}
+
+#amplify {
+	background-position: -448px -832px
+}
+
+#nofee {
+	background-position: -320px -960px
+}
+
+/*=account icons with colour
+	----------------------------------------------------------------------------------*/
+.ico-bankcard {
+	background-image: url("../image/icon-account/ico-bankcard.png")
+}
+
+.ico-bills {
+	background-image: url("../image/icon-account/ico-bills.png")
+}
+
+.ico-books {
+	background-image: url("../image/icon-account/ico-books.png")
+}
+
+.ico-savings {
+	background-image: url("../image/icon-account/ico-savings1.png")
+}
+
+.ico-savings1 {
+	background-image: url("../image/icon-account/ico-savings.png")
+}
+
+.ico-btsaving {
+	background-image: url("../image/icon-account/ico-btsaving.png")
+}
+
+.ico-btretirement {
+	background-image: url("../image/icon-account/ico-btretirement.png")
+}
+
+.ico-building {
+	background-image: url("../image/icon-account/ico-building.png")
+}
+
+.ico-business {
+	background-image: url("../image/icon-account/ico-business.png")
+}
+
+.ico-car {
+	background-image: url("../image/icon-account/ico-car.png")
+}
+
+.ico-car1 {
+	background-image: url("../image/icon-account/ico-car1.png")
+}
+
+.ico-sportscar {
+	background-image: url("../image/icon-account/ico-sportscar.png")
+}
+
+.ico-cashregister {
+	background-image: url("../image/icon-account/ico-cashregister.png")
+}
+
+.ico-cheque {
+	background-image: url("../image/icon-account/ico-cheque.png")
+}
+
+.ico-cheque1 {
+	background-image: url("../image/icon-account/ico-cheque1.png")
+}
+
+.ico-comma {
+	background-image: url("../image/icon-account/ico-comma.png")
+}
+
+.ico-computer {
+	background-image: url("../image/icon-account/ico-computer.png")
+}
+
+.ico-default {
+	background-image: url("../image/icon-account/ico-default.png")
+}
+
+.ico-ecash,
+.ico-ecash_asgard {
+	background-image: url("../image/icon-account/ico-ecash_asgard.png")
+}
+
+.ico-electricity {
+	background-image: url("../image/icon-account/ico-electricity.png")
+}
+
+.ico-exclamation {
+	background-image: url("../image/icon-account/ico-exclamation.png")
+}
+
+.ico-expresssaver {
+	background-image: url("../image/icon-account/ico-expresssaver.png")
+}
+
+.ico-femalered {
+	background-image: url("../image/icon-account/ico-femalered.png")
+}
+
+.ico-femaleyellow {
+	background-image: url("../image/icon-account/ico-femaleyellow.png")
+}
+
+.ico-holiday {
+	background-image: url("../image/icon-account/ico-holiday.png")
+}
+
+.ico-homeloan {
+	background-image: url("../image/icon-account/ico-homeloan.png")
+}
+
+.ico-houselarge {
+	background-image: url("../image/icon-account/ico-houselarge.png")
+}
+
+.ico-housesmall {
+	background-image: url("../image/icon-account/ico-housesmall.png")
+}
+
+.ico-lineofcredit {
+	background-image: url("../image/icon-account/ico-lineofcredit.png")
+}
+
+.ico-maleblue {
+	background-image: url("../image/icon-account/ico-maleblue.png")
+}
+
+.ico-maledark {
+	background-image: url("../image/icon-account/ico-maledark.png")
+}
+
+.ico-obperson {
+	background-image: url("../image/onboarding_person.png")
+}
+
+.ico-clock {
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20aria-labelledby%3D%22title-clock%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%20%3Ctitle%20id%3D%22title-clock%22%20lang%3D%22en%22%3EClock%3C%2Ftitle%3E%20%3Cpath%20fill%3D%22%23757463%22%20class%3D%22icons-background%22%20d%3D%22M22%2017v2h-8v-10h2v8h6zM16%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016%2016-7.2%2016-16-7.2-16-16-16zM30%2016c0%207.7-6.3%2014-14%2014s-14-6.3-14-14%206.3-14%2014-14%2014%206.3%2014%2014z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.ico-marginlending {
+	background-image: url("../image/icon-account/ico-marginlending.png")
+}
+
+.ico-moneybags {
+	background-image: url("../image/icon-account/ico-moneybags.png")
+}
+
+.ico-mountains {
+	background-image: url("../image/icon-account/ico-mountains.png")
+}
+
+.ico-palmtree {
+	background-image: url("../image/icon-account/ico-palmtree.png")
+}
+
+.ico-pay {
+	background-image: url("../image/icon-account/ico-pay.png")
+}
+
+.ico-safe {
+	background-image: url("../image/icon-account/ico-safe.png")
+}
+
+.ico-dragon1 {
+	background-image: url("../image/icon-account/ico-dragon1.png")
+}
+
+.ico-stgeorge {
+	background-image: url("../image/icon-account/ico-stgeorge.png")
+}
+
+.ico-dragon {
+	background-image: url("../image/icon-account/ico-dragon.png")
+}
+
+.ico-star {
+	background-image: url("../image/icon-account/ico-star.png")
+}
+
+.ico-sturt {
+	background-image: url("../image/icon-account/ico-sturt.png")
+}
+
+.ico-sturt1 {
+	background-image: url("../image/icon-account/ico-sturt1.png")
+}
+
+.ico-super {
+	background-image: url("../image/icon-account/ico-super.png")
+}
+
+.ico-termdeposit {
+	background-image: url("../image/icon-account/ico-termdeposit.png")
+}
+
+.ico-umbrella {
+	background-image: url("../image/icon-account/ico-umbrella.png")
+}
+
+.ico-water {
+	background-image: url("../image/icon-account/ico-water.png")
+}
+
+.ico-mastercard {
+	background-image: url("../image/icon-account/ico-mastercard.png")
+}
+
+.ico-visa {
+	background-image: url("../image/icon-account/ico-visa.png")
+}
+
+.ico-shield {
+	background-image: url("../image/icon-account/ico-shield.png")
+}
+
+.ico-cashconnection {
+	background-image: url("../image/icon-account/ico-cashconnection.png")
+}
+
+.ico-cashconnect_asgard {
+	background-image: url("../image/icon-account/ico-cashconnect_asgard.png")
+}
+
+.ico-overdraft {
+	background-image: url("../image/icon-account/ico-overdraft.png")
+}
+
+.ico-news {
+	background-image: url("../image/icon-account/ico-news.png")
+}
+
+.ico-bpay {
+	background-image: url("../image/icon-account/ico-bpay.png")
+}
+
+.ico-phoneorange {
+	background-image: url("../image/icon-account/ico-phoneorange.png")
+}
+
+.ico-phonepurple {
+	background-image: url("../image/icon-account/ico-phonepurple.png")
+}
+
+.ico-warningJointAcc {
+	background-image: url("../../image/ico-jointAcc.png");
+	background-repeat: no-repeat;
+}
+
+.ico-bankcard,
+.ico-bills,
+.ico-books,
+.ico-savings,
+.ico-savings1,
+.ico-btretirement,
+.ico-btsaving,
+.ico-building,
+.ico-business,
+.ico-car,
+.ico-car1,
+.ico-sportscar,
+.ico-cashregister,
+.ico-cheque,
+.ico-cheque1,
+.ico-comma,
+.ico-computer,
+.ico-default,
+.ico-ecash,
+.ico-ecash_asgard,
+.ico-electricity,
+.ico-exclamation,
+.ico-expresssaver,
+.ico-femalered,
+.ico-femaleyellow,
+.ico-holiday,
+.ico-homeloan,
+.ico-houselarge,
+.ico-housesmall,
+.ico-lineofcredit,
+.ico-maleblue,
+.ico-maledark,
+.ico-marginlending,
+.ico-moneybags,
+.ico-mountains,
+.ico-palmtree,
+.ico-pay,
+.ico-safe,
+.ico-dragon1,
+.ico-stgeorge,
+.ico-dragon,
+.ico-star,
+.ico-sturt,
+.ico-sturt1,
+.ico-super,
+.ico-termdeposit,
+.ico-umbrella,
+.ico-water,
+.ico-mastercard,
+.ico-visa,
+.ico-shield,
+.ico-cashconnection,
+.ico-cashconnect_asgard,
+.ico-overdraft,
+.ico-news,
+.ico-bpay,
+.ico-phoneorange,
+.ico-phonepurple,
+.ico-obperson {
+	display: inline-block;
+	padding: 9px 0 9px 40px;
+	background-repeat: no-repeat;
+	background-position: 0px 0
+}
+
+/*=account icons with brand colour is defined in each brand css
+	----------------------------------------------------------------------------------*/
+.ico-directshares,
+.ico-marginloan,
+.ico-homecash,
+.ico-homecash1,
+.ico-homecash2,
+.ico-homecash3,
+.ico-cardauthorisations,
+.ico-cashconnect_asgard1,
+.ico-termdeposit1,
+.ico-third_party,
+.ico-thirdparty2,
+.ico-thirdparty,
+.ico-thirdparty1,
+.ico-transfer,
+.ico-transfer_my_acc,
+.ico-transfer_my_acc2,
+.ico-transfer_others_acc,
+.ico-payidtransfer,
+.ico-green,
+.ico-green1,
+.ico-transferoversea,
+.ico-transfer_overseas,
+.ico-interest,
+.ico-myprefferences,
+.ico-myprefferences1,
+.ico-paymenthistory,
+.ico-providetfn,
+.ico-transactionhistory,
+.ico-updatecontact1,
+.ico-updatecontact2,
+.ico-updateregistration,
+.ico-errorsmall,
+.ico-successsmall,
+.ico-warningsmall,
+.ico-financialplanning,
+.ico-lifetimeprotect,
+.ico-quickcover,
+.ico-estateplan,
+.ico-scheduledpayment,
+.ico-record,
+.ico-plus,
+.ico-minus,
+.ico-bpay1,
+.ico-bankcard1,
+.ico-homeloan1,
+.ico-overdraft1,
+.ico-btretirement1,
+.ico-btsupersearch,
+.ico-super1,
+.ico-marginlending1,
+.ico-holiday1,
+.ico-houselarge1,
+.ico-car2,
+.ico-news1,
+.ico-computer1,
+.ico-bills1,
+.ico-exclamation1,
+.ico-savings2,
+.ico-cheque2,
+.ico-pay1,
+.ico-visa1,
+.ico-bankcard1,
+.ico-mastercard1,
+.ico-moneybags1,
+.ico-marginloan1,
+.ico-housesmall1,
+.ico-file,
+.icon-md-email {
+	display: inline-block;
+	padding: 9px 0 9px 40px;
+	background-repeat: no-repeat;
+	background-position: -32px 0
+}
+
+
+.btn-option .ico:hover,
+.product .list .ico:hover,
+.table td[headers="thPayeeName"] span.ico:hover {
+	background-position: 0 -32px
+}
+
+.btn-call-to-action .ico-add:hover {
+	background-position: -363px -92px
+}
+
+.btn-call-to-action .ico-customise:hover {
+	background-position: -427px -28px
+}
+
+.btn-call-to-action .ico-print {
+	background-image: url(/InternetBankingResources/ibank2/image/print-icon.png);
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+/*--------------------------------------------------------------------------------------
+=css3Pie for IE6-9
+--------------------------------------------------------------------------------------*/
+/*round corner with gradient*/
+ul.btn-option li a {
+	-pie-background: linear-gradient(#fbfbfb, #eee)
+}
+
+.btn.btn-logout {
+	-pie-background: linear-gradient(#fff, #dfdfdf)
+}
+
+.btn.btn-logout:hover {
+	-pie-background: linear-gradient(#dfdfdf, #fff)
+}
+
+.btn.btn-schedule {
+	-pie-background: linear-gradient(#9c9c9c, #606060)
+}
+
+.btn.btn-schedule:hover {
+	-pie-background: linear-gradient(#606060, #9c9c9c)
+}
+
+.btn.btn-previous {
+	-pie-background: linear-gradient(#9c9c9c, #606060)
+}
+
+.btn.btn-previous:hover {
+	-pie-background: linear-gradient(#606060, #9c9c9c)
+}
+
+.btn {
+	-pie-background: linear-gradient(#9c9c9c, #606060)
+}
+
+.btn:hover {
+	-pie-background: linear-gradient(#606060, #9c9c9c)
+}
+
+.simplecalculator .output {
+	-pie-background: linear-gradient(#eee, #666)
+}
+
+.simplecalculator input[type="button"] {
+	-pie-background: linear-gradient(#cbcbcb, #b3b3b3)
+}
+
+.simplecalculator input.operator {
+	-pie-background: linear-gradient(#7e7e7e, #414141)
+}
+
+.simplecalculator input.clear,
+.simplecalculator input.equal {
+	-pie-background: linear-gradient(#333, #1a1a1a)
+}
+
+/*
+For Donot's
+*/
+.crossText {
+	background-image: url("../image/cross.gif");
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	background-position: 0 -3px;
+
+}
+
+.istructContainer #tickText {
+	margin: 0px;
+}
+
+.underline {
+	text-decoration: underline
+}
+
+/*14E1-IntRate*/
+.ico-show,
+.ico-hide {
+	display: block;
+	float: right;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+.dark-background {
+	background-color: #f5f5f5 !important;
+}
+
+.light-background {
+	background-color: white !important;
+}
+
+
+.incentive-acknowledge .fieldset {
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.obtile-symbol-tick {
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20aria-labelledby%3D%22title-tick%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%20%3Ctitle%20id%3D%22title-tick%22%20lang%3D%22en%22%3ETick%3C%2Ftitle%3E%20%3Cpath%20fill%3D%22%23757463%22%20class%3D%22icons-background%22%20d%3D%22M0%2016l13%2016c0%200%2011.9-23.5%2019-32-8.9%204.3-20%2020-20%2020l-8-7-4%203z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	display: table-cell;
+	vertical-align: middle;
+
+}
+
+/*18E1- E-Correspondance start*/
+
+.message-content .info-attachment {
+	display: inline-flex;
+}
+
+.message-content p.border-radius {
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 5px;
+	width: 30%;
+}
+
+.message-content .icon {
+	cursor: pointer;
+	float: left;
+	padding-right: 15px;
+}
+
+.message-content span.name {
+	position: relative;
+	top: 3px;
+}
+
+.icon-md-email {
+	background-image: url("../image/icon-md-email.png") !important;
+	background-repeat: no-repeat;
+	background-position: inherit;
+	margin-left: 45%;
+	padding-top: 0;
+	padding-bottom: 5%;
+	width: 32px;
+	display: inline-block;
+
+}
+
+.ret_table {
+	margin: 20px 0 20px 0;
+	width: 50%;
+	border: none;
+}
+
+.ret_table tr td {
+	border: none;
+	background: none;
+	padding: 5px 0 0 0;
+}
+
+/*18E1- E-Correspondance end*/

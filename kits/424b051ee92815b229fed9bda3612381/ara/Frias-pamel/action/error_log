@@ -1,0 +1,8 @@
+[22-Sep-2017 10:53:46 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 3
+[22-Sep-2017 10:53:46 Africa/Cairo] PHP Warning:  getimagesize(): Filename cannot be empty in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 39
+[22-Sep-2017 10:57:11 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 3
+[27-Apr-2018 03:20:11 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 3
+[27-Apr-2018 03:21:54 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_min_photo_check.php on line 3
+[27-Apr-2018 03:24:48 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 3
+[27-Apr-2018 03:24:52 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_img_check.php on line 3
+[27-Apr-2018 03:26:12 Africa/Cairo] PHP Warning:  ini_set() has been disabled for security reasons in /home/alfaidhali/public_html/ara/Frias-pamel/action/add_min_photo_check.php on line 3

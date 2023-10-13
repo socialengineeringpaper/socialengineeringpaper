@@ -1,0 +1,338 @@
+
+<!-- saved from url=(0117)https://cdn.iubenda.com/cs/bridge/iframe_bridge-1.3.1.html?origin=https%3A%2F%2Flogin.libero.it%2F&meth=%22compact%22 -->
+<html data-cbscriptallow="true"><script>(function () {
+  const toBlob = HTMLCanvasElement.prototype.toBlob;
+  const toDataURL = HTMLCanvasElement.prototype.toDataURL;
+  const getImageData = CanvasRenderingContext2D.prototype.getImageData;
+  //
+  var noisify = function (canvas, context) {
+    const shift = {
+      'r': Math.floor(Math.random() * 10) - 5,
+      'g': Math.floor(Math.random() * 10) - 5,
+      'b': Math.floor(Math.random() * 10) - 5,
+      'a': Math.floor(Math.random() * 10) - 5
+    };
+    //
+    const width = canvas.width, height = canvas.height;
+    const imageData = getImageData.apply(context, [0, 0, width, height]);
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
+        const n = ((i * (width * 4)) + (j * 4));
+        imageData.data[n + 0] = imageData.data[n + 0] + shift.r;
+        imageData.data[n + 1] = imageData.data[n + 1] + shift.g;
+        imageData.data[n + 2] = imageData.data[n + 2] + shift.b;
+        imageData.data[n + 3] = imageData.data[n + 3] + shift.a;
+      }
+    }
+    //
+    window.top.postMessage("canvas-fingerprint-defender-alert", '*');
+    context.putImageData(imageData, 0, 0);
+  };
+  //
+  Object.defineProperty(HTMLCanvasElement.prototype, "toBlob", {
+    "value": function () {
+      noisify(this, this.getContext("2d"));
+      return toBlob.apply(this, arguments);
+    }
+  });
+  //
+  Object.defineProperty(HTMLCanvasElement.prototype, "toDataURL", {
+    "value": function () {
+      noisify(this, this.getContext("2d"));
+      return toDataURL.apply(this, arguments);
+    }
+  });
+  //
+  Object.defineProperty(CanvasRenderingContext2D.prototype, "getImageData", {
+    "value": function () {
+      noisify(this.canvas, this);
+      return getImageData.apply(this, arguments);
+    }
+  });
+  //
+  document.documentElement.dataset.cbscriptallow = true;
+})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>cs bridge</title></head><body onload="startBridge()"><script type="text/javascript">window.VERSION="1.3.1";var cName=null,cDomain="."+location.hostname.split(".").slice(-2).join("."),cKeep=10,TCF_COOKIE_NAME="euconsent",TCF_V2_COOKIE_NAME="euconsent-v2",isProd="local.cdn"!==location.hostname;function isConsentCookie(e){return 0===e.indexOf("_iub_cs")}function isGoogleCookie(e){return e.match(/^_iub_cs-[0-9]+-granular$/)}function getParameterByName(e,o){o=o.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var t=new RegExp("[\\?&]"+o+"=([^&#]*)").exec(e);return null===t?null:decodeURIComponent(t[1].replace(/\+/g," "))}function resetCookieInternal(e){for(var o=e.isGoogle,t=e.cookiePolicyId,a=document.cookie.split(";"),i=[],n=0;n<a.length;n++){for(var r=a[n];" "===r.charAt(0);)r=r.substring(1);var s=r.split("=")[0],c="_iub_cs-";if(-1!==s.indexOf("-granular")===o)if(t)c+t===s&&i.push(s);else new RegExp("^"+c).test(s)&&i.push(s)}for(var l=0;l<i.length;l++){var g=i[l]+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/; domain="+cDomain+"; samesite=none; secure";document.cookie=g}}function resetCookie(e){resetCookieInternal({isGoogle:!1,cookiePolicyId:e})}function resetCookieGoogle(){resetCookieInternal({isGoogle:!0})}function setCMPCookie(e,o){var t=new Date;t.setTime(t.getTime()+33696e6);var a=e+"="+o+"; expires="+t.toUTCString()+";samesite=none; secure";a+=isProd?"; domain=.consensu.org; path=/":"; domain=.local.cdn; path=/",document.cookie=a}function getCMPCookie(e){var o=("; "+document.cookie).split("; "+e+"=");return 2===o.length?o.pop().split(";").shift():null}function setLocalCookieInternal(e,o,t){var a=(t=t||{}).expireAfter||365,i=t.path||"/",n=JSON.stringify(o),r=new Date;r.setTime(r.getTime()+24*a*60*60*1e3);var s=e+"="+encodeURIComponent(n)+"; expires="+r.toUTCString()+"; path="+i+"; domain="+cDomain+";samesite=none; secure";document.cookie=s}function setLocalCookie(e,o,t){isConsentCookie(e)&&setLocalCookieInternal(e,o,t)}function setLocalCookieGoogle(e,o,t){isGoogleCookie(e)&&setLocalCookieInternal(e,o,t)}function getLocalCookieInternal(e){e+="=";for(var o=document.cookie.split(";"),t=0;t<o.length;t++){for(var a=o[t];" "===a.charAt(0);)a=a.substring(1);var i=a.substring(e.length,a.length);if(0===a.indexOf(e))return compactCookies(),JSON.parse(decodeURIComponent(i))}return compactCookies(),null}function getLocalCookie(e){if(isConsentCookie(e))return getLocalCookieInternal(e)}function getLocalCookieGoogle(e){if(isGoogleCookie(e))return getLocalCookieInternal(e)}function compactCookies(){for(var e=document.cookie.split(";"),o=[],t={},a=0;a<e.length;a++){for(var i=e[a];" "===i.charAt(0);)i=i.substring(1);var n=i.split("="),r=n[0],s=r.match(/^_iub_cs-([0-9]+)/);if(s){var c;try{c=JSON.parse(decodeURIComponent(n[1]))}catch(e){c={timestamp:new Date(0).toJSON()}}var l=s[1];o.push({cName:r,cValue:c,cookiePolicyId:l}),void 0!==c.timestamp?t[l]=new Date(c.timestamp).getTime():t[l]=t[l]||0}}o.sort(function(e,o){return t[e.cookiePolicyId]-t[o.cookiePolicyId]}).reverse(),o.splice(0,cKeep);for(var g=0;g<o.length;g++){var m=o[g].cName+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/; domain="+cDomain+"; samesite=none; secure";document.cookie=m}}function startBridge(){var e=window.parent,o=decodeURIComponent(document.location),t=getParameterByName(o,"meth"),a=getParameterByName(o,"origin");if('"setCMP"'===t?(setCMPCookie(TCF_COOKIE_NAME,getParameterByName(o,"value").replace(/["]+/g,"")),e.postMessage(JSON.stringify({action:"cmpCookieSet"}),a)):'"getCMP"'===t&&e.postMessage(JSON.stringify({action:"cmpCookieFetched",value:getCMPCookie(TCF_COOKIE_NAME)}),a),'"setTcfv2"'===t)setCMPCookie(TCF_V2_COOKIE_NAME,getParameterByName(o,"value").replace(/["]+/g,"")),e.postMessage(JSON.stringify({action:"tcfv2CookieSet"}),a);else if('"getTcfv2"'===t)e.postMessage(JSON.stringify({action:"tcfv2CookieFetched",value:getCMPCookie(TCF_V2_COOKIE_NAME)}),a);else if('"compact"'===t)compactCookies(),e.postMessage(JSON.stringify({action:"remoteCookiesCompact"}),a);else if('"reset"'===t){var i=getParameterByName(o,"cookiePolicyId");resetCookie(i=i?i.replace(/"+/g,""):i)}else if('"set"'===t){if((c=(getParameterByName(o,"c_name")||"").replace(/["]+/g,""))&&""!==c){var n={id:parseInt(getParameterByName(o,"id").replace(/["]+/g,"")),timestamp:getParameterByName(o,"timestamp").replace(/["]+/g,""),version:getParameterByName(o,"version").replace(/["]+/g,"")},r=getParameterByName(o,"consent"),s=getParameterByName(o,"purposes");r?n.consent="true"===r.replace(/["]+/g,""):s&&(n.purposes=JSON.parse(s)),setLocalCookie(c,n)}e.postMessage(JSON.stringify({action:"remoteCookieSet"}),a)}else if('"setGoogle"'===t){var c;(c=(getParameterByName(o,"c_name")||"").replace(/["]+/g,""))&&""!==c&&setLocalCookieGoogle(c,{googleAdsPersonalized:"true"===getParameterByName(o,"googleAdsPersonalized").replace(/["]+/g,"")})}else'"getGoogle"'===t?(c=(getParameterByName(o,"c_name")||"").replace(/["]+/g,""))&&""!==c&&e.postMessage(JSON.stringify({action:"pickUpRemoteCookieGoogle",data:getLocalCookieGoogle(c)}),a):'"resetGoogle"'===t?resetCookieGoogle():(c=(getParameterByName(o,"c_name")||"").replace(/["]+/g,""))&&""!==c&&e.postMessage(JSON.stringify({action:"pickUpRemoteCookie",data:getLocalCookie(c)}),a)}</script></body><script type="text/javascript">(function(canvas, canvasfont, audioblock, battery, webgl, webrtcdevice, gamepad, webvr, timezone, clientrects, clipboard){
+		function processFunctions(scope) {
+			/* Canvas */
+			/*if (canvas != 'false') {
+				var fakecanvas = scope.document.createElement('canvas');
+				fakecanvas.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_canvas';
+				if (canvas == 'random') {
+					var fakewidth = fakecanvas.width = Math.floor(Math.random() * 999) + 1;
+					var fakeheight = fakecanvas.height = Math.floor(Math.random() * 999) + 1;
+				}
+				var canvas_a = scope.HTMLCanvasElement;
+				var origToDataURL = canvas_a.prototype.toDataURL;
+				var origToBlob = canvas_a.prototype.toBlob;
+				canvas_a.prototype.toDataURL = function() {
+					fakecanvas.title = 'toDataURL';
+					document.documentElement.appendChild(fakecanvas);
+					if (canvas == 'block') return false;
+					else if (canvas == 'blank') {
+						fakecanvas.width = this.width;
+						fakecanvas.height = this.height;
+						return origToDataURL.apply(fakecanvas, arguments);
+					} else if (canvas == 'random') {
+						return origToDataURL.apply(fakecanvas, arguments);
+					}
+				};
+				canvas_a.prototype.toBlob = function() {
+					fakecanvas.title = 'toBlob';
+					document.documentElement.appendChild(fakecanvas);
+					if (canvas == 'block') return false;
+					else if (canvas == 'blank') {
+						fakecanvas.width = this.width;
+						fakecanvas.height = this.height;
+						return origToBlob.apply(fakecanvas, arguments);
+					} else if (canvas == 'random') {
+						return origToBlob.apply(fakecanvas, arguments);
+					}
+				};
+				var canvas_b = scope.CanvasRenderingContext2D;
+				var origGetImageData = canvas_b.prototype.getImageData;
+				canvas_b.prototype.getImageData = function() {
+					fakecanvas.title = 'getImageData';
+					document.documentElement.appendChild(fakecanvas);
+					if (canvas == 'block') return false;
+					else if (canvas == 'blank') {
+						fakecanvas.width = this.width;
+						fakecanvas.height = this.height;
+						return origGetImageData.apply(fakecanvas.getContext('2d'), arguments);
+					} else if (canvas == 'random') {
+						return origGetImageData.apply(fakecanvas.getContext('2d'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1]);
+					}
+				}
+				var origGetLineDash = canvas_b.prototype.getLineDash;
+				canvas_b.prototype.getLineDash = function() {
+					fakecanvas.title = 'getLineDash';
+					document.documentElement.appendChild(fakecanvas);
+					if (canvas == 'block') return false;
+					else if (canvas == 'blank') {
+						fakecanvas.width = this.width;
+						fakecanvas.height = this.height;
+						return origGetLineDash.apply(fakecanvas.getContext('2d'), [0, 0]);
+					} else if (canvas == 'random') {
+						return origGetLineDash.apply(fakecanvas.getContext('2d'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1]);
+					}
+				}
+				var canvas_c = scope.WebGLRenderingContext;
+				var origReadPixels = canvas_c.prototype.readPixels;
+				canvas_c.prototype.readPixels = function() {
+					fakecanvas.title = 'readPixels';
+					document.documentElement.appendChild(fakecanvas);
+					if (canvas == 'block') return false;
+					else if (canvas == 'blank') {
+						fakecanvas.width = this.width;
+						fakecanvas.height = this.height;
+						return origReadPixels.apply(fakecanvas.getContext('webgl'), arguments);
+					} else if (canvas == 'random') {
+						return origReadPixels.apply(fakecanvas.getContext('webgl'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, arguments[4], arguments[5], arguments[6]]);
+					}
+				}
+			}*/
+			/* Audio Block */
+			console.log("audioblock"+audioblock);
+			if (audioblock == 'true') {
+				var audioblock_triggerblock = scope.document.createElement('div');
+				audioblock_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_audio';
+				var audioblock_a = scope.AudioBuffer;
+				audioblock_a.prototype.copyFromChannel = function() {
+					audioblock_triggerblock.title = 'copyFromChannel';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				audioblock_a.prototype.getChannelData = function() {
+					audioblock_triggerblock.title = 'getChannelData';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				var audioblock_b = scope.AnalyserNode;
+				audioblock_b.prototype.getFloatFrequencyData = function() {
+					audioblock_triggerblock.title = 'getFloatFrequencyData';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				audioblock_b.prototype.getByteFrequencyData = function() {
+					audioblock_triggerblock.title = 'getByteFrequencyData';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				audioblock_b.prototype.getFloatTimeDomainData = function() {
+					audioblock_triggerblock.title = 'getFloatTimeDomainData';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				audioblock_b.prototype.getByteTimeDomainData = function() {
+					audioblock_triggerblock.title = 'getByteTimeDomainData';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				var audioblock_c = scope;
+				audioblock_c.AudioContext = function() {
+					audioblock_triggerblock.title = 'AudioContext';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+				audioblock_c.webkitAudioContext = function() {
+					audioblock_triggerblock.title = 'webkitAudioContext';
+					document.documentElement.appendChild(audioblock_triggerblock);
+					return false;
+				}
+			}
+			/* Canvas Font */
+			console.log("canvasfont = "+canvasfont);
+			if (canvasfont == 'true') {
+				var canvasfont_triggerblock = scope.document.createElement('div');
+				canvasfont_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_canvasfont';
+				var canvasfont_a = scope.CanvasRenderingContext2D;
+				canvasfont_a.prototype.measureText = function() {
+					canvasfont_triggerblock.title = 'measureText';
+					document.documentElement.appendChild(canvasfont_triggerblock);
+					return false;
+				}
+			}
+			/* Battery */
+			if (battery == 'true') {
+				var battery_triggerblock = scope.document.createElement('div');
+				battery_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_battery';
+				var battery_a = scope.navigator;
+				battery_a.getBattery = function() {
+					battery_triggerblock.title = 'getBattery';
+					document.documentElement.appendChild(battery_triggerblock);
+					return void(0);
+				}
+			}
+			/* WebGL */
+			/*if (webgl == 'true') {
+				var webgl_triggerblock = scope.document.createElement('div');
+				webgl_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_webgl';
+				var webgl_a = scope.WebGLRenderingContext;
+				webgl_a.getSupportedExtensions = function() {
+					webgl_triggerblock.title = 'getSupportedExtensions';
+					document.documentElement.appendChild(webgl_triggerblock);
+					return false;
+				}
+				webgl_a.getParameter = function() {
+					webgl_triggerblock.title = 'getParameter';
+					document.documentElement.appendChild(webgl_triggerblock);
+					return false;
+				}
+				webgl_a.getContextAttributes = function() {
+					webgl_triggerblock.title = 'getContextAttributes';
+					document.documentElement.appendChild(webgl_triggerblock);
+					return false;
+				}
+				webgl_a.getShaderPrecisionFormat = function() {
+					webgl_triggerblock.title = 'getShaderPrecisionFormat';
+					document.documentElement.appendChild(webgl_triggerblock);
+					return false;
+				}
+				webgl_a.getExtension = function() {
+					webgl_triggerblock.title = 'getExtension';
+					document.documentElement.appendChild(webgl_triggerblock);
+					return false;
+				}
+			}
+			/* WebRTC */
+			/*if (webrtcdevice == 'true') {
+				var webrtc_triggerblock = scope.document.createElement('div');
+				webrtc_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_webrtc';
+				var webrtc_a = scope.MediaStreamTrack;
+				webrtc_a.getSources = function() {
+					webrtc_triggerblock.title = 'getSources';
+					document.documentElement.appendChild(webrtc_triggerblock);
+					return false;
+				}
+				webrtc_a.getMediaDevices = function() {
+					webrtc_triggerblock.title = 'getMediaDevices';
+					document.documentElement.appendChild(webrtc_triggerblock);
+					return false;
+				}
+				var webrtc_b = scope.navigator.mediaDevices;
+				webrtc_b.enumerateDevices = function() {
+					webrtc_triggerblock.title = 'enumerateDevices';
+					document.documentElement.appendChild(webrtc_triggerblock);
+					return false;
+				}
+			}
+			/* Gamepad */
+			/*if (gamepad == 'true') {
+				var gamepad_triggerblock = scope.document.createElement('div');
+				gamepad_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_gamepad';
+				var gamepad_a = scope.navigator;
+				gamepad_a.getGamepads = function() {
+					gamepad_triggerblock.title = 'getGamepads';
+					document.documentElement.appendChild(gamepad_triggerblock);
+					return false;
+				}
+			}
+			/* WebVR */
+			/*if (webvr == 'true') {
+				var webvr_triggerblock = scope.document.createElement('div');
+				webvr_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_webvr';
+				var webvr_a = scope.navigator;
+				webvr_a.getVRDisplays = function() {
+					webvr_triggerblock.title = 'getVRDisplays';
+					document.documentElement.appendChild(webvr_triggerblock);
+					return false;
+				}
+			}
+			/* Client Rectangles */
+			/*if (clientrects == 'true') {
+				var clientrects_triggerblock = scope.document.createElement('div');
+				clientrects_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_clientrects';
+				Element.prototype.getClientRects = function() {
+					clientrects_triggerblock.title = 'getClientRects';
+					document.documentElement.appendChild(clientrects_triggerblock);
+					return [{'top': 0, 'bottom': 0, 'left': 0, 'right': 0, 'height': 0, 'width': 0}];
+				}
+			}
+			/* Timezone */
+			/*if (timezone != 'false') {
+				var timezone_triggerblock = scope.document.createElement('div');
+				timezone_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_timezone';
+				var timezone_a = scope.Date;
+				timezone_a.prototype.getTimezoneOffset = function() {
+					timezone_triggerblock.title = 'getTimezoneOffset';
+					document.documentElement.appendChild(timezone_triggerblock);
+					if (timezone == 'random') return ['720','660','600','570','540','480','420','360','300','240','210','180','120','60','0','-60','-120','-180','-210','-240','-270','-300','-330','-345','-360','-390','-420','-480','-510','-525','-540','-570','-600','-630','-660','-720','-765','-780','-840'][Math.floor(Math.random() * 39)];
+					return timezone;
+				}
+			}
+			/* Clipboard */
+			/*if (clipboard == 'true') {
+				var clipboard_triggerblock = scope.document.createElement('div');
+				clipboard_triggerblock.className = 'browsesafe_heedlljjfegnjeijpnkbhpofeejflkea_clipboard';
+				var clipboard_a = document;
+				var origExecCommand = clipboard_a.execCommand;
+				clipboard_a.execCommand = function() {
+					clipboard_triggerblock.title = 'execCommand';
+					document.documentElement.appendChild(clipboard_triggerblock);
+					if (arguments[0] == 'cut' || arguments[0] == 'copy') return false;
+					return origExecCommand.apply(this, arguments);
+				};
+			}*/
+		}
+		processFunctions(window);
+		var iwin = HTMLIFrameElement.prototype.__lookupGetter__('contentWindow'), idoc = HTMLIFrameElement.prototype.__lookupGetter__('contentDocument');
+		Object.defineProperties(HTMLIFrameElement.prototype, {
+			contentWindow: {
+				get: function() {
+					var frame = iwin.apply(this);
+					if (this.src && this.src.indexOf('//') != -1 && location.host != this.src.split('/')[2]) return frame;
+					try { frame.HTMLCanvasElement } catch (err) { /* do nothing*/ }
+					processFunctions(frame);
+					return frame;
+				}
+			},
+			contentDocument: {
+				get: function() {
+					if (this.src && this.src.indexOf('//') != -1 && location.host != this.src.split('/')[2]) return idoc.apply(this);
+					var frame = iwin.apply(this);
+					try { frame.HTMLCanvasElement } catch (err) { /* do nothing*/ }
+					processFunctions(frame);
+					return idoc.apply(this);
+				}
+			}
+		});
+	})('undefined','true','true','true','undefined','undefined','undefined','undefined','undefined','undefined','undefined');</script></html>

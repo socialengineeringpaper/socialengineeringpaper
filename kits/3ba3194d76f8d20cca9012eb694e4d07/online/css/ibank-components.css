@@ -1,0 +1,4965 @@
+/*
+Internet Banking components CSS
+IMPORTANT:This master components css uses across all site, update changes with care.
+		- here to create components box module with properties dimension, spacing, font and positions only 
+		- apply any color, background, border, css3 effects in site specific skin css
+		- always modulise (module pattern) css code
+			- orangise css in objects
+			- start with the object name
+
+		- browser support 
+			- should be fine with most lastest update browsers
+			- support start from IE 8
+		- never use universal (*) seletor
+		- never !important
+		- never apply any hack properties
+		- never start selector with location dependency 
+		- never use empty html <tag></tag> for style ie. icon, border ect.
+		- use (#) ID selector only if have to
+*/
+
+/*--------------------------------------------------------------------------------------
+   =Components generic
+--------------------------------------------------------------------------------------*/
+section h1,
+section h2,
+section h3,
+section p {
+	padding-left: 20px
+}
+
+section h1 {
+	font-size: 1.75em
+}
+
+section h2 {
+	font-size: 1.333em
+}
+
+section h3 {
+	font-size: 1.167em
+}
+
+section h4,
+section h5,
+section h6 {
+	font-size: 1.083em
+}
+
+form,
+fieldset {
+	clear: both
+}
+
+table a {
+	font-weight: bold
+}
+
+.amount,
+.balance,
+.debit,
+.credit {
+	text-align: right
+}
+
+.security-msg {
+	overflow: hidden;
+	padding: 10px 20px
+}
+
+/*=small font-size*/
+body.font-size-S {
+	font-size: 75%
+}
+
+/*=medium font-size*/
+body.font-size-M {
+	font-size: 80%
+}
+
+/*= font-size*/
+body.font-size-L {
+	font-size: 90%
+}
+
+/* if large font, the landing page top buttons are not changed */
+body.font-size-L ul.btn-option a span,
+body.font-size-L ul.btn-option a:hover span {
+	font-style: inherit;
+	font-size: 82%
+}
+
+/* if medium font, the landing page top buttons are not changed */
+body.font-size-M ul.btn-option a span,
+body.font-size-M ul.btn-option a:hover span {
+	font-style: inherit;
+	font-size: 90%
+}
+
+.print-logo {
+	display: none
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =header
+--------------------------------------------------------------------------------------*/
+#header,
+#header .wrap {
+	height: 90px
+}
+
+#header {
+	margin-bottom: 10px
+}
+
+#header .wrap {
+	position: relative;
+	overflow: visible;
+	padding: 0 15px
+}
+
+#header .master-logo {
+	margin: 0;
+	position: relative;
+	left: 0;
+	top: 22px;
+	text-indent: -9999px
+}
+
+#header .master-logo,
+#header .master-logo a {
+	display: block;
+	width: 195px;
+	height: 48px;
+	font-size: 0;
+	padding: 0
+}
+
+#header .user-login-info {
+	position: absolute;
+	left: 244px;
+	bottom: 0;
+	overflow: hidden
+}
+
+#header .user-login-info q {
+	font-size: 1.167em
+}
+
+#header .top-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0px;
+	bottom: 3px
+}
+
+#header .top-nav li,
+#header .top-nav li a {
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 2
+}
+
+#header .top-nav>li {
+	margin-left: 5px
+}
+
+#header .top-nav>li>a {
+	padding: 5px 6px
+}
+
+#header .top-nav .has-dropdown:hover>a {
+	padding: 4px 5px 5px 5px
+}
+
+/*see =dropdown*/
+#header .top-nav .has-dropdown ul {
+	top: 24px
+}
+
+#header .top-nav .has-dropdown li,
+#header .top-nav .has-dropdown li a {
+	padding: 0;
+	margin: 0
+}
+
+#header .top-nav .msg-count {
+	float: none;
+	display: inline-block;
+	margin: 0 0 0 5px
+}
+
+#header .logout,
+#header .closewin {
+	overflow: hidden;
+	position: absolute;
+	right: 15px;
+	top: 8px
+}
+
+[class=logout] {
+	width: 85px
+}
+
+/* for IE8 */
+#header p {
+	padding: 0
+}
+
+#header .user-login-info,
+#header .top-nav,
+#header .search {
+	bottom: 6px
+}
+
+/*=search
+	----------------------------------------------------------------------------------*/
+/*-------- IE 8 fix --------*/
+#header .wrap {
+	position: relative;
+	z-index: 1
+}
+
+/*fix round corner*/
+
+
+/*=search
+	----------------------------------------------------------------------------------*/
+#headerSearch .search .ico-info {
+	margin-top: 5px
+}
+
+#headerSearch .search {
+	margin-right: 220px;
+}
+
+#headerSearch .search input {
+	margin: 0
+}
+
+#headerSearch .search .ui-autocomplete {
+	position: relative;
+	z-index: 100;
+	padding-right: calc(5% + 3px)
+}
+
+#headerSearch .search .ui-autocomplete ul {
+	list-style: none;
+	margin: 0;
+	padding: 8px 0;
+	overflow: auto;
+	font-size: 1em;
+	white-space: normal;
+	width: 100%
+}
+
+#headerSearch .search .ui-autocomplete a {
+	display: block;
+	padding: 6px 16px;
+	text-decoration: none
+}
+
+#headerSearch .search input[type=text]::-ms-clear {
+	display: none;
+}
+
+
+/*=occupationsearch
+	----------------------------------------------------------------------------------*/
+#headerSearchOccu .search .ico-info {
+	margin-top: 5px
+}
+
+#headerSearchOccu .search {
+	margin-right: 220px;
+}
+
+#headerSearchOccu .search input {
+	margin: 0
+}
+
+#headerSearchOccu .search .ui-autocomplete {
+	position: relative;
+	z-index: 100;
+	padding-right: calc(5% + 3px)
+}
+
+#headerSearchOccu .search .ui-autocomplete ul {
+	list-style: none;
+	margin: 0;
+	padding: 8px 0;
+	overflow: auto;
+	font-size: 1em;
+	white-space: normal;
+	width: 100%
+}
+
+#headerSearchOccu .search .ui-autocomplete a {
+	display: block;
+	padding: 6px 16px;
+	text-decoration: none
+}
+
+#headerSearchOccu .search input[type=text]::-ms-clear {
+	display: none;
+}
+
+/*--------------------------------------------------------------------------------------
+   =footer
+--------------------------------------------------------------------------------------*/
+#footer .wrap {
+	padding: 10px 15px 8px 15px
+}
+
+#footer .copyright {
+	clear: both;
+	padding-left: 1px;
+	font-size: .9em;
+	padding: 8px 0 0;
+	text-align: center;
+	margin: 0
+}
+
+#footer .ft-nav {
+	float: right;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style: none
+}
+
+#footer .ft-nav li,
+#footer .ft-nav a {
+	display: block;
+	float: left;
+	font-weight: bold
+}
+
+#footer p {
+	padding: 0
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =time
+--------------------------------------------------------------------------------------*/
+.login-time,
+.lastlogin-time {
+	overflow: hidden;
+	margin: 8px 0 5px 0;
+	font-size: .917em
+}
+
+.login-time dt,
+.login-time dd,
+.lastlogin-time dt,
+.lastlogin-time dd {
+	float: left;
+	margin: 0
+}
+
+.login-time dt,
+.lastlogin-time dt {
+	margin-right: 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =dropdown menu (generic style)
+--------------------------------------------------------------------------------------*/
+.has-dropdown ul {
+	left: -9999px;
+	z-index: 1;
+	overflow: hidden;
+	position: absolute;
+	margin: 0;
+	padding: 8px 0
+}
+
+.has-dropdown li,
+.has-dropdown li a {
+	width: 100%;
+	white-space: nowrap
+}
+
+.has-dropdown .goto>li {
+	margin: 0
+}
+
+.has-dropdown .goto>li>a {
+	padding: 0
+}
+
+.has-dropdown li a span {
+	display: block;
+	padding: 5px 20px
+}
+
+.has-dropdown>a span {
+	padding-right: 10px
+}
+
+.has-dropdown li a:hover {
+	text-decoration: none
+}
+
+.has-dropdown:hover ul {
+	left: 0
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =navigation
+--------------------------------------------------------------------------------------*/
+nav {
+	margin-bottom: 36px
+}
+
+nav>ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0
+}
+
+nav>li:first-child a {
+	margin-top: 0
+}
+
+nav>ul>li>a {
+	display: block;
+	margin: 2px 0;
+	padding: 10px;
+	font-size: 1.25em;
+	font-weight: bold;
+	line-height: 1.1
+}
+
+nav>ul .selected>a,
+nav>ul .selected>a:hover {
+	text-decoration: none
+}
+
+nav>ul .selected .ico-home {
+	margin-top: 0
+}
+
+.navigation .login-time,
+.navigation .lastlogin-time {
+	font-size: .917em;
+	margin: 25px 10px
+}
+
+.navigation p,
+.navigation h3 {
+	padding: 0
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =recommand-product
+--------------------------------------------------------------------------------------*/
+.recommand-product {
+	padding: 0 10px
+}
+
+.recommand-product h3 {
+	font-size: 1.083em
+}
+
+.recommand-product ul {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+.recommand-product li {
+	margin-bottom: 26px
+}
+
+/*=on aside
+	----------------------------------------------------------------------------------*/
+aside .recommand-product {
+	padding: 0
+}
+
+aside .recommand-product li {
+	padding: 10px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =tabs
+    - Do Not apply jqury UI tabs css here
+--------------------------------------------------------------------------------------*/
+.tabs {
+	border: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: arial
+}
+
+.tabs .ui-tabs-nav {
+	position: relative;
+	z-index: 2;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.tabs .ui-tabs-nav li,
+.tabs .ui-tabs-nav li a {
+	display: block;
+	float: left
+}
+
+div.ui-tabs .ui-tabs-nav li {
+	margin: 0;
+	border: 0;
+	top: auto
+}
+
+.tabs .ui-tabs-nav li a {
+	padding: 10px 20px;
+	font-size: 1.167em;
+	font-weight: bold
+}
+
+.tabs .ui-tabs-nav .ui-tabs-selected a,
+.tabs .ui-tabs-nav .ui-tabs-selected a:hover {
+	cursor: default;
+	text-decoration: none
+}
+
+.tabs .tab-content {
+	position: relative;
+	z-index: 1;
+	clear: both;
+	padding: 10px;
+	position: relative;
+	top: -1px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =pagination
+--------------------------------------------------------------------------------------*/
+.pagination {
+	overflow: hidden;
+	padding: 10px 16px
+}
+
+.pagination .record-count {
+	float: left;
+	margin: 0
+}
+
+.pagination .page-count {
+	float: right;
+	margin: 0
+}
+
+.pagination .page-count a {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 3px
+}
+
+.pagination .page-count a.selected {
+	padding: 2px 5px;
+	cursor: default
+}
+
+.pagination .page-count a.selected {
+	padding: 2px 5px;
+	cursor: default
+}
+
+.pagination .page-count a.selected:hover {
+	text-decoration: none
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =btn-call-to-action
+--------------------------------------------------------------------------------------*/
+.btn-call-to-action {
+	float: right;
+	margin: 0 20px 5px 0;
+	padding: 0;
+}
+
+.btn-call-to-action .rightbtn {
+	float: right;
+	margin-bottom: 5px;
+	padding-right: 0px
+}
+
+.btn-call-to-action li,
+.btn-call-to-action li a {
+	position: relative;
+	display: inline-block
+}
+
+.btn-call-to-action>li {
+	margin: 0 3px
+}
+
+.btn-call-to-action>li>a {
+	font-size: 0.917em;
+	font-weight: bold;
+	z-index: 2;
+	text-decoration: none;
+	position: relative
+}
+
+.btn-call-to-action>li>a:hover span {
+	text-decoration: underline
+}
+
+.btn-call-to-action .ico {
+	padding-left: 23px
+}
+
+.btn-call-to-action>li>a>span {
+	display: block;
+	padding: 5px 5px 4px 0;
+	position: relative
+}
+
+.btn-call-to-action .has-dropdown ul {
+	top: 15px
+}
+
+.btn-call-to-action .has-dropdown:hover>a {
+	z-index: 4
+}
+
+.btn-call-to-action .has-dropdown:hover ul {
+	z-index: 3
+}
+
+.btn-call-to-action>li.has-dropdown>a span {
+	padding-right: 15px;
+	margin-right: 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =header-with-action
+--------------------------------------------------------------------------------------*/
+.header-with-action {
+	padding: 9px 0;
+	position: relative;
+	float: left;
+	width: 100%
+}
+
+.header-with-action h1,
+.header-with-action h2 {
+	margin: 0;
+	float: left
+}
+
+.header-with-action h2 {
+	line-height: 1.6
+}
+
+.header-with-action .btn-call-to-action {
+	float: right;
+	margin: 0 0px 5px;
+}
+
+/*--------------------------------------------------------------------------------------
+   =form
+--------------------------------------------------------------------------------------*/
+fieldset ol,
+fieldset li {
+	overflow: hidden
+}
+
+form .fieldset {
+	padding: 20px
+}
+
+fieldset {
+	margin-bottom: 8px
+}
+
+fieldset ol {
+	margin: 0;
+	padding: 0
+}
+
+fieldset ol>li {
+	padding-left: 160px;
+	margin-bottom: 16px
+}
+
+fieldset ol>li>label,
+fieldset ol>li>.label {
+	margin: 9px 20px 0 -160px;
+	float: left;
+	text-align: right;
+	width: 140px
+}
+
+fieldset ol>li>input[type="text"],
+fieldset ol>li>input[type="password"] {
+	float: left
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =login
+--------------------------------------------------------------------------------------*/
+.login fieldset {
+	margin: 0
+}
+
+.login .fieldset {
+	clear: both;
+	padding: 20px 10px
+}
+
+.login #LabelWithITip {
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: text-bottom;
+	width: 160px;
+	margin-right: 20px;
+	padding: 0 20px 0 0;
+	position: relative
+}
+
+.login #access-number {
+	width: 145px
+}
+
+.login #internet-password {
+	width: 145px
+}
+
+.login #securityNumber {
+	width: 145px
+}
+
+.login .nonasgard #access-number {
+	width: 145px
+}
+
+.login .nonasgard #internet-password {
+	width: 145px
+}
+
+.login .nonasgard #securityNumber {
+	width: 75px;
+}
+
+.login .nonasgard #issueNumber {
+	width: 84px;
+	margin-left: 0px;
+}
+
+.login .nonasgard #rememberMe {
+	margin: 0px;
+	margin-right: 6px;
+	line-height: 6px;
+}
+
+.login li .goto {
+	margin: 4px 0 6px 16px;
+	float: left;
+	width: 170px
+}
+
+.login .has-btn {
+	overflow: hidden;
+	margin: 20px 0 0;
+	position: relative;
+	padding-left: 160px
+}
+
+.login .has-btn .btn,
+.login .has-btn .goto {
+	display: inline-block;
+	float: none;
+	vertical-align: middle
+}
+
+.login .has-btn .btn .logonButton {
+	width: 135px;
+	text-align: center;
+}
+
+.login .has-btn .goto {
+	font-size: .917em;
+	margin: 0;
+	padding: 0 16px;
+	width: 220px
+}
+
+.login .has-btn .goto a {
+	font-weight: bold
+}
+
+.login .registration {
+	padding: 16px 20px
+}
+
+.login .registration h2 {
+	font-size: 1em;
+	margin: 5px 0
+}
+
+.login .registration a {
+	font-weight: bold
+}
+
+.login .message {
+	padding-left: 10px
+}
+
+.login .message .ico {
+	margin-left: 10px
+}
+
+.login .message p {
+	margin-left: 35px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =logout
+--------------------------------------------------------------------------------------*/
+.logout h1 {
+	margin-left: 0;
+	padding: 0
+}
+
+.logout .goto a {
+	font-weight: bold
+}
+
+.logout p {
+	padding: 0;
+	margin-left: 0
+}
+
+/*--------------------------------------------------------------------------------------
+   =messages
+--------------------------------------------------------------------------------------*/
+.message {
+	padding: 0 10px 10px 0;
+	clear: both
+}
+
+.message a {
+	font-weight: bold
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =account-messages
+--------------------------------------------------------------------------------------*/
+/*=msg count*/
+.msg-count {
+	display: block;
+	float: left;
+	margin: 0 5px;
+	padding: 0 4px 0 5px;
+	line-height: 1.3
+}
+
+.account-messages {
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding-right: 200px;
+	clear: both;
+}
+
+.account-messages h2 {
+	font-size: 1em;
+	overflow: hidden
+}
+
+.account-messages h2 span {
+	float: none;
+	display: inline-block
+}
+
+.account-messages dl {
+	overflow: hidden;
+	margin: 0
+}
+
+.account-messages dt,
+.account-messages dd {
+	float: left;
+	margin: 0 0 4px 0
+}
+
+.account-messages dt {
+	clear: left;
+	margin-right: 5px
+}
+
+.account-messages .message-inbox {
+	float: left;
+	width: 100%;
+	position: relative
+}
+
+.account-messages .message-inbox h2 {
+	padding: 10px 20px;
+	margin: 0
+}
+
+.account-messages .message-inbox dl {
+	padding: 8px 110px 5px 20px;
+	overflow: hidden;
+	position: relative;
+	font-size: .917em
+}
+
+.account-messages .message-inbox dt {
+	clear: left
+}
+
+.account-messages .message-inbox dd {
+	padding: 2px 0 3px 0;
+	width: 75%
+}
+
+.account-messages .message-inbox p {
+	margin: 0 8px 0 0;
+	float: left;
+	padding: 0
+}
+
+.account-messages .message-inbox .summary {
+	overflow: hidden;
+	white-space: nowrap
+}
+
+.account-messages .message-inbox .goto-all-msg {
+	top: 12px
+}
+
+.account-messages .message-inbox .goto,
+.account-messages .message-inbox .goto-all-msg {
+	position: absolute;
+	right: 20px
+}
+
+.account-messages .message-inbox .ico {
+	padding: 2px 0 3px 24px
+}
+
+.account-messages .message-inbox+.last-transcation {
+	float: right;
+	margin-right: -201px;
+	width: 160px
+}
+
+.account-messages .message-inbox+.last-transcation dt {
+	margin-bottom: 3px
+}
+
+.account-messages .last-transcation {
+	padding: 8px 20px;
+	font-size: .917em
+}
+
+.account-messages .last-transcation dt,
+.account-messages .last-transcation dd {
+	margin-bottom: 0
+}
+
+
+
+/*--------------------------------------------------------------------------------------
+   =account
+--------------------------------------------------------------------------------------*/
+.account-details .account-info {
+	overflow: hidden;
+	padding: 12px 20px 12px 60px;
+	position: relative
+}
+
+.account-dashboard .list li {
+	overflow: hidden;
+	padding: 12px 20px 12px 60px;
+	position: relative
+}
+
+.account-dashboard .list h2,
+.account-dashboard .list h2 a,
+.account-details .account-info h2 {
+	display: block;
+	margin: 0 0 0 -46px;
+	overflow: hidden;
+	height: 50px;
+	padding: 0 0 0 46px
+}
+
+/*.account-dashboard .list .ico,.account-details .account-info .ico {float:left;display:block;padding:6px 0 9px 40px}*/
+.account-dashboard .balance-details,
+.account-details .balance-details {
+	position: absolute;
+	right: 18px;
+	top: 12px;
+	margin: 0
+}
+
+.account-dashboard .account-number-details,
+.account-details .account-number-details {
+	margin: -27px 0 0
+}
+
+/*=account-dashboard
+	----------------------------------------------------------------------------------*/
+.account-dashboard {
+	margin-bottom: 30px
+}
+
+.account-dashboard ul {
+	list-style-type: none
+}
+
+.account-dashboard .list {
+	clear: both;
+	padding: 0;
+	margin: 0 0 16px 0
+}
+
+.account-dashboard .goto {
+	clear: both;
+	margin: 8px 0 0 20px
+}
+
+.account-dashboard .list h2 a {
+	float: left;
+	min-width: 250px;
+	min-height: 40px;
+	position: relative
+}
+
+/*=account-details
+	----------------------------------------------------------------------------------*/
+.account-details .account-info .goto {
+	clear: both;
+	padding: 0;
+	margin: 8px 0 0
+}
+
+.account-details .body {
+	clear: both;
+	margin-bottom: 16px
+}
+
+.account-details .section {
+	position: relative
+}
+
+.account-details .section dl {
+	margin: 0;
+	padding: 0px 10px 0px 20px;
+}
+
+.account-details .section dt,
+.account-details .section dd {
+	width: 48%;
+	font-weight: normal;
+	margin: 0;
+	padding: 8px 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*14e1 IntRate start*/
+.account-details .section .row-errinfo dt {
+	width: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding: 8px 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-details .section .row-col dt,
+.account-details .section .row-col dd {
+	width: 48%;
+	padding: 6px 0;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-details .section .row-colcolp dt,
+.account-details .section .row-colcolp dd {
+	width: 48%;
+	padding: 6px 0;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-details .section .row-info dt {
+	width: 100%;
+	padding: 6px 0;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-details .section .row-infocolp dt {
+	width: 100%;
+	padding: 6px 0;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-details .section .row-anchor dt {
+	width: 100%;
+	padding: 6px 0;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*14e1 end*/
+.account-details .section dd,
+.account-details .section .row-col dd {
+	font-weight: bold
+}
+
+.account-details .section dd .col {
+	display: inline-block;
+	width: 39%;
+	vertical-align: middle
+}
+
+.account-details .section dd p.col {
+	width: 48%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3px
+}
+
+.account-details .section dd span.col {
+	width: 48%;
+	display: inline-block
+}
+
+.account-details .section dd span.col a.btn {
+	width: 100%;
+	display: inline-block;
+}
+
+.account-details .section dd span.col a.btn span {
+	float: none;
+	text-align: center
+}
+
+.account-details .section dd p {
+	margin: 0;
+	padding: 0
+}
+
+/* Large size - the button stay in the same font */
+body.font-size-L .account-details .section dd {
+	font-style: inherit;
+	font-size: 82%
+}
+
+/* Medium size - the button stay in the same font */
+body.font-size-M .account-details .section dd {
+	font-style: inherit;
+	font-size: 90%
+}
+
+/*--------------------------------------------------------------------------------------
+   =scheduled-payment
+--------------------------------------------------------------------------------------*/
+.scheduled-payment {
+	margin-bottom: 30px;
+	overflow: hidden
+}
+
+.scheduled-payment .list {
+	clear: both;
+	padding: 0;
+	margin: 0
+}
+
+.scheduled-payment .list li {
+	overflow: hidden;
+	padding: 12px 20px 12px 20px;
+	position: relative
+}
+
+.scheduled-payment h3 {
+	float: left;
+	margin: 0 0 2px;
+	padding-left: 0
+}
+
+.scheduled-payment .ico-scheduledpayment,
+.scheduled-payment .ico-scheduledpayment:hover {
+	clear: both;
+	position: absolute;
+	top: 3px;
+	left: 20px;
+	width: 45px;
+	text-align: center;
+	padding: 30px 0 0;
+	margin: 0;
+	font-size: .9em
+}
+
+.scheduled-payment .time-modify {
+	clear: both;
+	float: left;
+	margin-bottom: 0
+}
+
+.scheduled-payment .time-modify dt,
+.scheduled-payment .time-modify dd {
+	float: left;
+	margin: 0 16px 0 0
+}
+
+.scheduled-payment .time-modify dt {
+	text-indent: -9999px;
+	width: 0;
+	margin: 0
+}
+
+.scheduled-payment .balance-details {
+	float: right;
+	margin: -23px 0 0
+}
+
+.scheduled-payment .balance-details .amount+dd {
+	font-size: 1.333em;
+	margin-bottom: 3px
+}
+
+.scheduled-payment .header-with-action,
+.transfer-payment .header-with-action {
+	margin-top: 3px
+}
+
+.scheduled-payment .header-with-action h2 a {
+	text-decoration: none;
+	padding-left: 14px
+}
+
+.scheduled-payment .header-with-action .message {
+	position: absolute;
+	right: 15px;
+	top: 18%;
+	padding: 7px 0
+}
+
+.scheduled-payment .header-with-action .message strong {
+	font-weight: bold
+}
+
+/* Large size - schedule section to same font */
+body.font-size-L p.message {
+	font-style: inherit;
+	font-size: 82%
+}
+
+/* Medium size - schedule section to same font */
+body.font-size-M p.message {
+	font-style: inherit;
+	font-size: 90%
+}
+
+/*--------------------------------------------------------------------------------------
+   =account-number-details
+--------------------------------------------------------------------------------------*/
+.account-number-details {
+	overflow: hidden
+}
+
+.account-number-details dt,
+.account-number-details dd {
+	float: left;
+	font-weight: normal
+}
+
+.account-number-details dd {
+	margin: 0 8px 0 5px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =balance-details 
+--------------------------------------------------------------------------------------*/
+.balance-details {
+	overflow: hidden
+}
+
+.balance-details dt {
+	clear: both;
+	float: left
+}
+
+.balance-details dd {
+	float: left
+}
+
+.balance-details .account-balance,
+.balance-details .amount {
+	text-indent: -9999px
+}
+
+.balance-details .account-balance+dd,
+.balance-details .amount+dd {
+	float: right;
+	font-size: 1.333em;
+	font-weight: bold;
+	margin-bottom: 7px
+}
+
+.balance-details .available-balance,
+.balance-details .from-account {
+	font-weight: normal;
+	margin-left: 90px
+}
+
+.balance-details .available-balance+dd,
+.balance-details .from-account+dd {
+	float: right;
+	font-weight: bold;
+	margin-left: 5px
+}
+
+.balance-details .account-balance+dd.trnsfrd {
+	font-size: 1em
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =message-centre
+--------------------------------------------------------------------------------------*/
+.message-centre .header-with-action .btn-call-to-action {
+	position: static;
+	clear: both;
+	width: 100%;
+	padding: 15px 0 2px 12px;
+	margin: 0 -10px
+}
+
+.message-centre .btn-call-to-action li:first-child {
+	margin-right: 23px
+}
+
+.message-centre .message-inbox td {
+	font-weight: bold
+}
+
+.message-centre .message-inbox .subject a.ico {
+	float: left;
+	padding: 2px 0 3px 30px
+}
+
+.message-centre .message-inbox p {
+	padding: 0
+}
+
+.message-centre .go-back {
+	margin: 0 0 6px 20px
+}
+
+/*=message-details
+	----------------------------------------------------------------------------------*/
+.message-details .header-with-action {
+	float: left;
+	width: 100%
+}
+
+.message-details h1 {
+	float: left
+}
+
+.message-details .btn-call-to-action {
+	position: static;
+	float: right
+}
+
+.message-details .go-back {
+	margin: 0 0 6px 20px
+}
+
+.message-details .body {
+	clear: both;
+	margin-bottom: 16px
+}
+
+.message-details .body dl {
+	margin: 0;
+	overflow: hidden
+}
+
+.message-details .body dt,
+.message-details .body dd {
+	float: left;
+	margin: 0
+}
+
+.message-details .body dt {
+	margin-right: 8px
+}
+
+.message-details .body dt.last {
+	margin-left: 58%
+}
+
+.message-details .body dt.lastsecm {
+	margin-left: 50%
+}
+
+.message-details .body dl,
+.message-details .message-content {
+	padding: 16px 20px
+}
+
+/*=message-content
+	----------------------------------------------------------------------------------*/
+.message-content h1 {
+	float: none
+}
+
+.message-content h1,
+.message-content h2,
+.message-content h3,
+.message-content h4,
+.message-content p {
+	padding-left: 0
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =manage-account
+--------------------------------------------------------------------------------------*/
+.manage-account .type {
+	margin-bottom: 30px;
+	clear: both
+}
+
+.manage-account .type .container {
+	overflow: hidden
+}
+
+.manage-account .type ul,
+.manage-account .type .container {
+	padding-left: 60px
+}
+
+.manage-account .type li {
+	display: inline-block;
+	width: 46%;
+	vertical-align: top
+}
+
+.manage-account .type h3 {
+	font-size: 1em;
+	padding: 0
+}
+
+.manage-account .type .col {
+	float: left;
+	margin-right: 10px;
+	width: 47%
+}
+
+.manage-account .type .col ul {
+	padding: 0
+}
+
+.manage-account .type .col li {
+	margin-right: 0;
+	width: 100%
+}
+
+.main .manage-account .type h2 {
+	padding-bottom: 8px;
+	margin: 0 0 16px 0;
+	padding-left: 16px
+}
+
+.main .manage-account .type h2 span {
+	padding: 6px 4px 6px 40px;
+	display: inline-block
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =product
+--------------------------------------------------------------------------------------*/
+.product .type {
+	margin: 0 0 30px 0
+}
+
+.product .type .list {
+	margin: 10px 8px;
+	padding: 0
+}
+
+.product .list li {
+	padding: 16px 10px 10px 50px
+}
+
+.product .type .list p {
+	padding: 0
+}
+
+.product .list h3 {
+	padding: 0 40px;
+	margin-left: -40px;
+	margin-top: -5px
+}
+
+.product .list li:hover {
+	cursor: pointer
+}
+
+.product .list li:hover h3 a {
+	text-decoration: underline
+}
+
+/*=product-details
+	----------------------------------------------------------------------------------*/
+.product-details .list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden
+}
+
+.product-details .list h2 {
+	padding-left: 40px
+}
+
+.product-details .list p {
+	padding: 0
+}
+
+.product-details .list>li {
+	display: inline-block;
+	width: 42%;
+	margin: 0 5px 14px 0;
+	padding: 15px 15px 60px 15px;
+	position: relative;
+	vertical-align: top
+}
+
+.product-details .list>li li {
+	margin-bottom: 8px
+}
+
+.product-details .list .has-btn {
+	position: absolute;
+	bottom: 15px;
+	width: 90%;
+	padding-left: 0;
+}
+
+.product-details .list .has-btn .goto {
+	float: right
+}
+
+.product-details .list .has-btn .goto:first-child {
+	float: left;
+	margin-top: 10px
+}
+
+.product-details .list>li:nth-child(even) {
+	margin-right: 0px
+}
+
+/*-------- IE 8 fix --------*/
+.product-details .list>li.even {
+	margin-right: 0
+}
+
+
+/*=product-actopndetails-Oneclick Change
+	----------------------------------------------------------------------------------*/
+.product-actopndetails .list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden
+}
+
+.product-actopndetails .list h2 {
+	padding-left: 40px
+}
+
+.product-actopndetails .list p {
+	padding: 0
+}
+
+.product-actopndetails .list>li {
+	border: 1px solid #CCC;
+	margin: 0 5px 14px 0;
+	padding: 15px 15px 60px 15px;
+	position: relative;
+	vertical-align: top
+}
+
+.product-actopndetails .list>li li {
+	margin-bottom: 8px
+}
+
+.product-actopndetails .list .has-btn {
+	position: absolute;
+	bottom: 15px;
+	width: 90%;
+	padding-left: 0;
+}
+
+.product-actopndetails .list .has-btn .goto {
+	float: right
+}
+
+.product-actopndetails .list .has-btn .goto:first-child {
+	float: left;
+	margin-top: 10px
+}
+
+.product-actopndetails .list>li:nth-child(even) {
+	margin-right: 0px
+}
+
+/*-------- IE 8 fix --------*/
+.product-actopndetails .list>li.even {
+	margin-right: 0
+}
+
+/*=product-invitedetails invitation Change
+	----------------------------------------------------------------------------------*/
+.product-invitedetails .list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden
+}
+
+.product-invitedetails .list h2 {
+	padding-left: 40px;
+}
+
+.product-invitedetails .list p {
+	padding: 0
+}
+
+.product-invitedetails .list>li {
+	border: 1px solid #CCC;
+	margin: 0 0 14px 0;
+	padding: 15px 15px 60px 15px;
+	position: relative;
+	vertical-align: top;
+	-webkit-border-radius: 5px;
+}
+
+.product-invitedetails .list>li li {
+	margin-bottom: 8px
+}
+
+.product-invitedetails .list .has-btn {
+	position: absolute;
+	bottom: 15px;
+	width: 90%;
+	padding-left: 0;
+}
+
+.product-invitedetails .list .has-btn .goto {
+	float: right
+}
+
+.product-invitedetails .list .has-btn .goto:first-child {
+	float: left;
+	margin-top: 10px
+}
+
+.product-invitedetails .list>li:nth-child(even) {
+	margin-right: 0px
+}
+
+/*-------- IE 8 fix --------*/
+.product-invitedetails .list>li.even {
+	margin-right: 0
+}
+
+/*=super-fund
+	----------------------------------------------------------------------------------*/
+.super-fund hgroup {
+	position: relative;
+	padding-right: 250px;
+	min-height: 90px
+}
+
+.super-fund hgroup h1 {
+	padding-left: 0px
+}
+
+.super-fund hgroup h2 {
+	padding-left: 0px
+}
+
+.super-fund hgroup img {
+	position: absolute;
+	right: 0;
+	top: 0
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =view-estatement
+--------------------------------------------------------------------------------------*/
+.view-estatement .message,
+.view-estatement fieldset {
+	margin-bottom: 16px
+}
+
+.view-estatement .from-to input {
+	float: none
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =from-to
+--------------------------------------------------------------------------------------*/
+.from-to {
+	padding: 0;
+	margin: 0
+}
+
+.from-to li,
+.from-to label,
+.from-to li a,
+.from-to input {
+	float: none;
+	display: inline-block
+}
+
+.from-to li {
+	width: 160px;
+	padding: 3px 0
+}
+
+.from-to li label {
+	margin-right: 5px
+}
+
+.from-to li input {
+	width: 50%;
+	margin-left: 0;
+	margin-right: 0
+}
+
+
+/*=from-to-amount
+	----------------------------------------------------------------------------------*/
+.from-to-amount li input {
+	width: 55%
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =quick links
+--------------------------------------------------------------------------------------*/
+.quick-link {
+	margin: 16px 0
+}
+
+.quick-link h2+p {
+	margin-left: 10px
+}
+
+.quick-link ul {
+	margin: 0 0 0 20px;
+	padding: 0;
+	list-style: none
+}
+
+.quick-link li {
+	margin: 0 8px
+}
+
+.quick-link-inline {
+	margin: 16px 0;
+	padding-top: 20px
+}
+
+.quick-link-inline li,
+.quick-link-inline li a {
+	display: inline-block;
+	font-weight: bold
+}
+
+.main .quick-link h2 {
+	padding-bottom: 4px;
+	margin: 0 0 15px 0
+}
+
+/*=quick-link-calculator
+	----------------------------------------------------------------------------------*/
+.quick-link-calculator li p {
+	clear: both;
+	padding: 4px 0 4px 10px;
+	margin: 0
+}
+
+.quick-link-calculator .ico-calculator {
+	float: none;
+	top: 0
+}
+
+/*--------------------------------------------------------------------------------------
+   =foot-note
+--------------------------------------------------------------------------------------*/
+.foot-note {
+	font-size: .917em;
+	padding: 0px
+}
+
+.foot-note h2 {
+	font-size: .917em;
+	font-weight: bold;
+	margin-left: 0;
+	padding: 0
+}
+
+.foot-note li {
+	margin-bottom: 8px
+}
+
+.foot-note a {
+	font-weight: bold
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =aside
+--------------------------------------------------------------------------------------*/
+aside section {
+	margin-bottom: 16px
+}
+
+aside section header,
+aside section>h2 {
+	padding: 8px 12px;
+	margin: 0
+}
+
+aside section h2 {
+	font-size: 1.167em
+}
+
+aside section header>h2 {
+	display: inline-block;
+	margin: 0;
+	padding-left: 0;
+	vertical-align: middle
+}
+
+aside section .body,
+aside section h2+.goto {
+	padding: 16px 12px 10px 12px;
+	margin: 0
+}
+
+aside section h2+.goto li {
+	margin-right: 0;
+	float: none
+}
+
+aside section .body .goto {
+	padding: 16px 0 0
+}
+
+aside .quick-link {
+	margin-top: 0
+}
+
+aside p,
+aside h3 {
+	padding: 0
+}
+
+aside section h2.ico {
+	padding-left: 43px;
+	width: auto;
+	height: auto;
+	float: none;
+	position: static;
+	cursor: default
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =easy-pay
+--------------------------------------------------------------------------------------*/
+.easy-pay ul.goto>li>a {
+	font-weight: bold
+}
+
+.easy-pay .has-btn .btn {
+	float: left
+}
+
+.easy-pay .has-btn .goto-more {
+	margin: 10px 0 0 16px
+}
+
+/* 	.easy-pay header .ico-info {display:inline-block;vertical-align:middle}
+	.easy-pay .goto .ico-info {float:left;padding:0;vertical-align:middle} */
+
+/*=step 1*/
+.easy-pay fieldset {
+	padding: 0
+}
+
+.easy-pay ol {
+	margin: 0;
+	padding: 0
+}
+
+.easy-pay li {
+	padding: 0
+}
+
+.easy-pay li label {
+	float: none;
+	margin: 0;
+	text-align: left;
+	width: auto
+}
+
+.easy-pay label .optional {
+	font-weight: normal
+}
+
+.easy-pay li select {
+	width: 95%
+}
+
+.easy-pay .message {
+	padding: 0 0 16px 0
+}
+
+.easy-pay .message p {
+	margin: 0
+}
+
+/*=step 2*/
+.easy-pay dt,
+.easy-pay dd {
+	margin: 3px 0
+}
+
+.easy-pay dd {
+	margin-bottom: 16px
+}
+
+.easy-pay .ui-buttonset .ui-button {
+	display: inline-block;
+	vertical-align: top
+}
+
+.easy-pay .goto,
+.easy-pay .goto li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.easy-pay header {
+	overflow: hidden
+}
+
+.easy-pay header h2 {
+	font-size: 15px;
+	float: left
+}
+
+.easy-pay header .goto {
+	float: right
+}
+
+.easy-pay input[type="text"] {
+	width: 88%;
+	margin: 5px 0
+}
+
+#smplPayToAcctFld {
+	margin: 5px 0
+}
+
+#smplPayToAcctFld .ui-widget {
+	font-size: 0.917em;
+	font-family: arial
+}
+
+#smplPayCommand button {
+	width: 130px;
+	text-align: center;
+}
+
+.smplpayoverlay {
+	background-color: white;
+	float: left;
+	opacity: 0.8;
+	position: absolute;
+	z-index: 10000;
+}
+
+.smplpayspin {
+	background-image: url(/InternetBankingResources/ibank2/image/loading-l.gif);
+	width: 32px;
+	height: 32px;
+	margin: auto;
+}
+
+.smplpaycancel {
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 2px;
+	font-size: .917em
+}
+
+.smplpayedit {
+	padding-left: 7px;
+	cursor: pointer;
+}
+
+.smplpayerrmsg {
+	color: red;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px;
+	text-align: left;
+}
+
+.smplpaywarnmsg {
+	color: black;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px;
+	text-align: left;
+}
+
+
+.easy-pay-arrow {
+	background-repeat: no-repeat;
+	background-image: url(/InternetBankingResources/ibank2/image/easy-pay-arrow.png);
+	background-color: white;
+	width: 16px;
+	height: 17px;
+	cursor: pointer;
+	top: -13px;
+	left: 143px;
+	position: relative;
+}
+
+.smplpayellipsis {
+	width: 170px;
+}
+
+/*=autocomplete*/
+ul.ui-autocomplete {
+	width: 200px;
+	font-size: .917em;
+	white-space: normal;
+	padding: 0;
+	max-height: 270px;
+	overflow: auto
+}
+
+ul.ui-autocomplete .ui-menu-item a {
+	padding: 4px 8px;
+	display: block
+}
+
+ul.ui-autocomplete .ui-menu-item a.ui-state-hover {
+	padding: 4px 8px;
+	margin: 0
+}
+
+.smplPayTabs {
+	height: 35px;
+	cursor: pointer;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.smplPayTabs .smplPayTab {
+	background-color: #7E7E7E;
+	/*background-color: red;*/
+	height: 35px;
+	width: 49.1%;
+	float: left;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: medium solid #BBB;
+	/*border-width: 3px;*/
+
+}
+
+.smplPayTabs .smplPayTab:HOVER {
+	background-color: #333333;
+}
+
+.smplPayTabs .selected {
+	background-color: white;
+	color: #333333;
+	border-right: medium solid #BBB;
+	border-top: medium solid #CCC;
+	/*border-width: 3px;*/
+	border-bottom: none;
+	border-left: none;
+	/*border-right: medium solid #BBB;
+		border-top: medium solid #BBB;
+		border-bottom: medium solid white;
+		border-left: medium solid white;*/
+
+}
+
+.smplPayTabs .rightselected {
+	background-color: white;
+	color: #333333;
+	border-left: medium solid #BBB;
+	border-top: medium solid #CCC;
+	border-bottom: none;
+	border-right: none;
+	/*border-width: 3px;*/
+	/*border-left: medium solid #BBB;
+		border-top: medium solid #BBB;
+		border-bottom: medium solid white;
+		border-right: medium solid white;*/
+}
+
+.smplPayTabs .selected:HOVER {
+	background-color: white;
+}
+
+.smplPayTabs .rightselected:HOVER {
+	background-color: white;
+}
+
+.smplPayTabs .smplPayTab .tabLabel {
+	padding: 10px 18px;
+	margin: auto;
+}
+
+/*13E4 : PBI000000031207 TO WRAP TEXT NOT HAVING WHITE SPACE by adding a css class easypay-wrapword */
+.easypay-wrapword {
+	word-wrap: break-word;
+	/* Internet Explorer 5.5+ */
+	word-break: break-all;
+}
+
+/*--------------------------------------------------------------------------------------
+   =transfer-payment
+--------------------------------------------------------------------------------------*/
+.transfer-payment .fieldset {
+	margin-left: 0px;
+	clear: both
+}
+
+.transfer-payment .fieldset .fieldset {
+	margin-top: 10px;
+	float: left;
+	width: 92%
+}
+
+.transfer-payment .fieldset p,
+.transfer-payment dl p {
+	padding: 0
+}
+
+.transfer-payment fieldset ol>li>label {
+	text-align: left
+}
+
+.transfer-payment input[type=text] {
+	width: 50%
+}
+
+.transfer-payment .checkbox-radio label {
+	float: none;
+	margin: 4px 0 0 8px
+}
+
+.transfer-payment h2 {
+	margin: -20px -20px 10px;
+	padding: 10px 20px
+}
+
+.transfer-payment .has-btn {
+	overflow: hidden;
+	margin: 20px 0 0;
+	position: relative;
+	padding-left: 160px
+}
+
+.transfer-payment .has-btn .btn {
+	float: left;
+}
+
+.transfer-payment .has-btn .go-back {
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin: 5px 0 0 -160px
+}
+
+.transfer-payment .has-btn .go-back .go-cancel {
+	margin: 0
+}
+
+.transfer-payment .has-btn .goto-more .go-cancel {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0
+}
+
+.transfer-payment .payment-processing-times {
+	margin-top: 10px;
+}
+
+.transfer-payment .amount {
+	float: left;
+	width: 30%;
+	margin-left: -10px;
+	padding: 5px;
+	text-align: left
+}
+
+.transfer-payment .amount .dollar {
+	float: left;
+	margin-left: -15px;
+	padding: 4px 5px 5px 5px;
+	text-align: left
+}
+
+.transfer-payment .amount .Mandatory {
+	float: left;
+	margin-left: 5px
+}
+
+.transfer-payment .amount input {
+	margin: 0 0 0 4px;
+	float: left
+}
+
+.transfer-payment .linkTo {
+	display: block
+}
+
+.transfer-payment .sideLink {
+	float: none;
+	width: 30%;
+	position: absolute;
+	margin-top: 1px;
+}
+
+.transfer-payment .other-amount label {
+	float: left;
+	width: auto
+}
+
+.transfer-payment .other-amount .amount {
+	float: left;
+	margin-left: 8px;
+	padding: 0;
+	text-align: left
+}
+
+.transfer-payment .other-amount .amount .Mandatory {
+	float: left;
+	margin-left: 5px
+}
+
+.transfer-payment .security-msg h2 {
+	border: 0;
+	background: none;
+	margin: 0
+}
+
+span.Mandatory {
+	float: right;
+	margin-left: 5px
+}
+
+/*=add-new-payee
+	----------------------------------------------------------------------------------*/
+.transfer-payment .add-new-payee {
+	padding-bottom: 5px
+}
+
+.transfer-payment legend {
+	margin-bottom: 8px
+}
+
+.transfer-payment .add-new-payee li {
+	margin-bottom: 12px
+}
+
+.transfer-payment .add-new-payee input[type=text] {
+	padding: 3px 5px;
+	width: 70%
+}
+
+/* Added by Archana */
+/*=add-new-biller
+	----------------------------------------------------------------------------------*/
+.transfer-payment .add-new-biller {}
+
+.transfer-payment legend {
+	margin-bottom: 8px
+}
+
+.transfer-payment .add-new-biller li {
+	margin-bottom: 12px
+}
+
+.transfer-payment .add-new-biller input[type=text] {
+	padding: 3px 5px;
+	width: 60%
+}
+
+/* Added by Archana */
+
+/*=copy-receipt
+	----------------------------------------------------------------------------------*/
+.transfer-payment .copy-receipt legend {
+	font-weight: normal;
+	font-size: 1em
+}
+
+.transfer-payment .copy-receipt a {
+	font-weight: bold
+}
+
+.transfer-payment .copy-receipt fieldset {
+	margin: 0 0 8px 0
+}
+
+.transfer-payment .copy-receipt fieldset ul {
+	margin: 0
+}
+
+.transfer-payment .copy-receipt fieldset li {
+	position: relative
+}
+
+.transfer-payment .copy-receipt label {
+	position: absolute;
+	top: 10px;
+	left: 6px;
+	font-weight: normal
+}
+
+/*=schedule-transfer-payment
+	----------------------------------------------------------------------------------*/
+.schedule-transfer-payment legend span {
+	font-size: .917em
+}
+
+.schedule-transfer-payment li {
+	margin-bottom: 5px;
+	padding: 0
+}
+
+.schedule-transfer-payment li li {
+	padding-left: 188px
+}
+
+.schedule-transfer-payment li .transfer-from {
+	padding-left: 26px
+}
+
+.schedule-transfer-payment .checkbox-radio {
+	padding: 0
+}
+
+.schedule-transfer-payment .other {
+	margin: 8px 0 30px
+}
+
+.schedule-transfer-payment .other span {
+	display: block;
+	margin: 0 20px -8px;
+	text-align: center;
+	width: 30px
+}
+
+.schedule-transfer-payment input[type="text"] {
+	width: 25%
+}
+
+.transfer-payment .schedule-transfer-payment .fieldset {
+	width: auto;
+	float: none;
+	margin-left: 0px
+}
+
+.schedule-transfer-payment .from-to-calendar {
+	margin-left: 30px
+}
+
+.schedule-transfer-payment .from-to-calendar li {
+	display: inline-block;
+	padding: 0;
+	width: auto
+}
+
+.schedule-transfer-payment .from-to-calendar label {
+	margin: 0;
+	float: none;
+	display: inline-block
+}
+
+.schedule-transfer-payment .from-to-calendar input {
+	display: inline-block;
+	float: none
+}
+
+.schedule-transfer-payment .from-to-calendar button {
+	display: inline-block
+}
+
+/*=review-confirm-details
+	----------------------------------------------------------------------------------*/
+.transfer-payment .review-confirm-details {
+	padding: 20px;
+	clear: both;
+	margin-left: 0px
+}
+
+.transfer-payment .review-confirm-details dl {
+	overflow: hidden;
+	padding: 8px 0 20px;
+	margin: 0
+}
+
+.transfer-payment .review-confirm-details dt,
+.transfer-payment .review-confirm-details dd {
+	float: left;
+	margin-bottom: 14px;
+	width: 77%;
+	word-wrap: break-word;
+}
+
+.transfer-payment .review-confirm-details dt {
+	clear: both;
+	width: 142px
+}
+
+.transfer-payment .review-confirm-details .foot-note-receipt {
+	margin: -16px 0 0 160px;
+	padding: 0
+}
+
+.transfer-payment .review-confirm-details .foot-note-receipt-paymentinstr {
+	margin: 10px 0 0 160px;
+	padding: 0
+}
+
+.transfer-payment .review-confirm-details .foot-note {
+	margin: -16px 0 0 16px;
+	padding: 0;
+	width: 70%;
+}
+
+.transfer-payment .review-confirm-details .ico {
+	margin-top: -20px
+}
+
+.transfer-payment .review-confirm-details .ico-osko {
+	float: left;
+	width: 56px;
+	height: 18px;
+	background-image: url("../image/STG/icon-account/ico-osko.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.transfer-payment .review-confirm-details .ico-payid-osko {
+	float: left;
+	width: 56px;
+	height: 18px;
+	background-image: url("../image/STG/icon-account/ico-osko.png");
+	background-position: center;
+	background-size: cover;
+	margin-left: 1px;
+}
+
+.transfer-payment .review-confirm-details .oskoProcTimeChk {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.transfer-payment .review-confirm-details .oskoProcTimeMsg {
+	display: inline-block;
+	width: 55%;
+	margin-left: 10px;
+}
+
+/*=other amount
+	----------------------------------------------------------------------------------*/
+.transfer-payment .other-amount label {
+	float: left;
+	width: auto
+}
+
+.transfer-payment .other-amount .amount {
+	float: left;
+	margin-left: 8px;
+	padding: 0;
+	text-align: left
+}
+
+.transfer-payment .other-amount .amount input {
+	margin: 0 0 0 4px;
+	float: left
+}
+
+.ttbeneficiary ol>li>label {
+	width: 170px;
+	margin-top: 4px;
+}
+
+.ttbeneficiary ol>li>nobr>input[type="text"],
+.ttbeneficiary ol>li>input[type="text"] {
+	min-width: 200px;
+	width: 250px;
+	max-width: 250px;
+}
+
+.ttbeneficiary ol>li>select {
+	min-width: 200px;
+	width: 250px;
+	max-width: 250px;
+}
+
+.ttbeneficiary ol>li>span {
+	max-width: 250px;
+	margin-top: 4px;
+}
+
+/*--------------------------------------------------------------------------------------
+   =transaction
+--------------------------------------------------------------------------------------*/
+.transaction {
+	margin: 16px 0 25px 0
+}
+
+.transaction h2 {
+	margin-bottom: 10px;
+	padding-left: 20px
+}
+
+.transaction table .total td {
+	font-weight: bold
+}
+
+.transaction table .total td:first-child {
+	text-align: right
+}
+
+.transaction table .no-transaction {
+	font-weight: bold;
+	text-align: center
+}
+
+/*=transaction-history-balance
+	----------------------------------------------------------------------------------*/
+.transaction-history-balance .balance-frame {
+	clear: both;
+	background: none;
+}
+
+.transaction-history-balance table {
+	margin: 0
+}
+
+/*=transaction-history
+	----------------------------------------------------------------------------------*/
+.transaction-history .tabs {
+	clear: both;
+	background: none;
+}
+
+.transaction-history .tab-content {
+	padding: 10px 0
+}
+
+.transaction-history table {
+	margin: 0
+}
+
+.transaction-history .from-to li input {
+	width: 60%;
+}
+
+.transaction-history .spin {
+	background: url("/InternetBankingResources/ibank2/image/loading-l.gif") no-repeat scroll 0 10px transparent;
+	height: 42px;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 32px;
+}
+
+/*=search-transaction
+	----------------------------------------------------------------------------------*/
+form .search-transaction {
+	overflow: hidden;
+	padding: 0 18px 0 18px
+}
+
+.search-transaction li {
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 0
+}
+
+.search-transaction ol>li>label {
+	margin: 0;
+	width: auto
+}
+
+.search-transaction li select {
+	width: 90%
+}
+
+.search-transaction .has-btn {
+	width: auto;
+	margin: 0 0 0 8px
+}
+
+.search-transaction .has-btn .btn {
+	margin-top: 16px
+}
+
+.search-transaction .from-to {
+	clear: both;
+	text-align: left;
+}
+
+#transaction-date-range .from-to li {
+	width: 114px
+}
+
+#transaction-date-range .from-to label {
+	display: block;
+	text-align: left
+}
+
+#transaction-date-range .from-to-amount input {
+	clear: both;
+	width: 80%;
+	display: block
+}
+
+#transaction-date-range .search-transaction select {
+	margin-top: 22px
+}
+
+#transaction-date-range .search-transaction .has-btn .btn {
+	margin-top: 30px;
+	padding-left: 0px
+}
+
+/*=search-transaction*/
+.search-transaction .refine-by-select-account {
+	width: 170px
+}
+
+#transaction-all .from-to {
+	margin-right: 20px
+}
+
+
+/*=export-transaction
+	----------------------------------------------------------------------------------*/
+.export-transaction .fieldset {
+	padding: 10px 20px
+}
+
+.export-transaction .inline li {
+	display: inline-block;
+	padding: 0;
+	margin: 0
+}
+
+.export-transaction .inline li label {
+	margin-left: 0;
+	float: none
+}
+
+.export-transaction .inline li select {
+	width: 90%;
+	margin: 8px 0 3px;
+	padding: 2px 3px
+}
+
+.export-transaction .inline li .btn-call-to-action {
+	margin: 0;
+	padding: 0px 3px
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =receipt
+--------------------------------------------------------------------------------------*/
+.receipt hr,
+.receipt br {
+	display: none
+}
+
+/*remove any clip border format on screen*/
+.receipt .data br {
+	display: block
+}
+
+.receipt .section {
+	padding: 5px 0 24px 0
+}
+
+.receipt .data {
+	margin: 0 0 14px 0;
+	overflow: hidden;
+	padding: 5px 0 0
+}
+
+.receipt .data .title {
+	float: left;
+	width: 142px;
+	margin-right: 18px
+}
+
+.receipt .data .description {
+	display: block;
+	float: left;
+	width: 76%;
+	word-wrap: break-word;
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =loading
+--------------------------------------------------------------------------------------*/
+.loading {
+	padding: 20px 0 0;
+	text-align: center;
+	font-weight: bold
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =button, =goto links
+--------------------------------------------------------------------------------------*/
+.btn {
+	display: block;
+	margin: 3px 10px 3px 0;
+	float: left;
+	font-weight: bold;
+	position: relative
+}
+
+.btn input,
+.btn span,
+.btn button {
+	padding: 6px 12px;
+	display: block;
+	font-size: 1.083em;
+	float: right;
+	position: relative
+}
+
+.btn-logout span {
+	font-size: 1.167em;
+	font-weight: bold
+}
+
+.btn-go input {
+	padding: 5px 12px;
+	font-size: 1em
+}
+
+.btn:hover {
+	text-decoration: none
+}
+
+/*=button option
+	----------------------------------------------------------------------------------*/
+ul.btn-option {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0
+}
+
+ul.btn-option li {
+	float: left;
+	display: block;
+	vertical-align: top;
+	margin: 0 5px 20px 10px;
+	padding: 0;
+	width: 46.5%;
+	position: relative
+}
+
+ul.btn-option a {
+	position: relative;
+	display: block;
+	padding: 4px 0;
+	text-decoration: none;
+	height: 32px
+}
+
+ul.btn-option a span,
+ul.btn-option a:hover span {
+	font-weight: bold;
+	padding: 9px 5px 8px 35px;
+	margin-left: 13px;
+	display: block
+}
+
+ul.btn-option li:nth-child(even) {
+	margin-right: 0
+}
+
+/*-------- IE 8 fix --------*/
+ul.btn-option li.even {
+	margin-right: 0;
+	width: 48%
+}
+
+/*=button container
+	----------------------------------------------------------------------------------*/
+.has-btn {
+	overflow: hidden;
+	margin: 20px 0 0 20px;
+	position: relative;
+	padding-left: 250px
+}
+
+.has-btn .go-back {
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin: 5px 0 0 -250px
+}
+
+.has-btn .go-back .ico-info {
+	margin-top: 0
+}
+
+
+/*=goto link
+	----------------------------------------------------------------------------------*/
+.goto,
+ul.goto>li {
+	overflow: hidden;
+	padding: 0 0 1px 0;
+	margin: 0
+}
+
+.goto {
+	padding-top: 5px
+}
+
+ul.goto>li {
+	margin: 0 20px 9px 0
+}
+
+.goto-more,
+ul.goto>li>a,
+.smplpaycancel {
+	display: block;
+	float: left;
+	padding-left: 10px;
+	line-height: 1.2
+}
+
+.goto-more {
+	font-weight: bold
+}
+
+/*=servicetation
+----------------------------------------------------------------------------------*/
+.servicetation {
+	margin: 16px 0 25px 0;
+}
+
+.servicetationWid {
+	width: 100%;
+}
+
+.servicetationFyi {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-left: -20px;
+}
+
+.servicetation .fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px 20px;
+	line-height: 2;
+	font-weight: bold;
+}
+
+.cross_ss {
+	float: right;
+	margin: 0 -10px 0 0;
+	width: 16px;
+	visibility: hidden;
+}
+
+/*=servicetationDashboard
+----------------------------------------------------------------------------------*/
+.servicetationDashboard {
+	margin: 16px 0 25px 0;
+}
+
+.stdb {
+	background-position: -860px -536px !important;
+	line-height: 1.7 !important;
+	padding-left: 0px;
+}
+
+.servicetationDashboard .fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px 20px;
+	line-height: 1.7;
+	font-weight: bold;
+}
+
+.cross_ss {
+	float: right;
+	margin: 0 -10px 0 0;
+	width: 16px;
+	visibility: hidden;
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =icon
+--------------------------------------------------------------------------------------*/
+/*=header-with-action
+	----------------------------------------------------------------------------------*/
+.ico-info {
+	width: 14px;
+	height: 14px;
+	text-indent: -9999px;
+	font-size: 0;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px
+}
+
+span .ico-info {
+	vertical-align: middle
+}
+
+.ico-warning,
+.ico-success,
+.ico-error,
+.actionMessage li,
+.errorMessage li,
+.ico-error_triangle,
+font.error,
+.ico-warning,
+font.warning {
+	font-weight: bold;
+	line-height: 1.8;
+	padding: 8px 0 10px 40px;
+	display: block;
+	margin: 0 0 10px 5px;
+	text-align: left
+}
+
+a.ico-calculator {
+	text-indent: -9999px;
+	width: 32px;
+	height: 32px;
+	display: inline-block
+}
+
+a.ico-calendar1,
+a.ico-calendar1:hover {
+	text-indent: -9999px;
+	width: 32px;
+	height: 32px;
+	font-size: 0;
+	vertical-align: middle;
+	margin-left: 3px;
+	padding: 0
+}
+
+#secureLogo {
+	padding-left: 44px;
+	min-height: 56px;
+	margin: -8px 10px 16px 0;
+	min-height: 56px;
+	float: left
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =tipsy
+--------------------------------------------------------------------------------------*/
+/* .tipsy {padding:9px;position:absolute;z-index:100000}
+	.tipsy-inner {padding:8px 10px;max-width:400px;position:relative;z-index:100001;background-color:#fffada;border:1px solid #ffda93;border-radius:5px;box-shadow:0 1px 3px rgba(0, 0, 0, 0.3)}
+	.tipsy-arrow {position:absolute;width:17px;height:10px;z-index:100002}
+	.tipsy-n .tipsy-arrow {top:1px;left:50%;margin-left:-4px;background-position:0 -224px}
+	.tipsy-s .tipsy-arrow {bottom:0;left:50%;margin-left:-4px;background-position:0 -233px} */
+
+/* 	.tipsy-nw .tipsy-arrow {top:0;left:10px}
+	.tipsy-ne .tipsy-arrow {top:0;right:10px}
+	.tipsy-sw .tipsy-arrow {bottom:0;left:10px;background-position:bottom left}
+	.tipsy-se .tipsy-arrow {bottom:0;right:10px;background-position:bottom left}
+	.tipsy-e .tipsy-arrow {top:50%;margin-top:-4px;right:0;width:5px;height:9px;background-position:top right}
+	.tipsy-w .tipsy-arrow {top:50%;margin-top:-4px;left:0;width:5px;height:9px} */
+
+
+/*--------------------------------------------------------------------------------------
+   =calendar
+--------------------------------------------------------------------------------------*/
+.ui-datepicker-trigger {
+	background-color: transparent;
+	border: 0 none;
+	margin: -3px 0 0 1px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	text-indent: -9999px;
+	vertical-align: top
+}
+
+.ui-datepicker {
+	padding: 0
+}
+
+.ui-datepicker table {
+	margin: 0
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+	text-align: center;
+	height: 18px;
+	line-height: 1.6;
+	text-align: center;
+	width: 28px
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+	margin: 0 0 4px 0;
+	overflow: hidden
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =calculator
+--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------
+   =calculator
+--------------------------------------------------------------------------------------*/
+.ico-calculator {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	float: left;
+	top: -4px;
+	position: relative
+}
+
+body.font-size-L .calcFrame,
+body.font-size-L .simplecalculator,
+body.font-size-M .calcFrame,
+body.font-size-M .simplecalculator,
+body.font-size-S .calcFrame,
+body.font-size-S .simplecalculator {
+	font-style: inherit;
+	font-size: 82%
+}
+
+body.font-size-L .calcFrame,
+body.font-size-M .calcFrame,
+body.font-size-S .calcFrame,
+.calcFrame {
+	width: 200px;
+	height: 295px;
+	top: 187px;
+	left: 632px;
+}
+
+.calcFrame {
+	z-index: 99;
+	display: none;
+	padding-left: 5px
+}
+
+.cal-arrow {
+	z-index: 999;
+	background-position: 0 -383px;
+	width: 10px;
+	height: 17px;
+	position: absolute;
+	top: 27%;
+	left: -4px
+}
+
+.cal-close {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: -10px;
+	width: 21px;
+	height: 21px;
+	text-indent: -999px;
+	background-position: 0 -416px
+}
+
+.cal-close:hover {
+	background-position: 0 -437px
+}
+
+.simplecalculator {
+	width: 200px;
+	height: 291px;
+	position: relative
+}
+
+.simplecalculator .container {
+	padding: 8px;
+	background: #e2e2e2;
+	border: 1px solid #ccc;
+	margin: 16px 16px 5px 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+}
+
+.simplecalculator .output {
+	width: 91%;
+	text-align: right;
+	margin-bottom: 10px;
+	height: 32px;
+	background-color: #899d9b;
+	font-size: 2em;
+	box-shadow: 0 1px 0 #fff, 0 1px 3px #333 inset, 0 -15px 10px #666 inset, 0 0 0 #fff;
+	-webkit-box-shadow: 0 1px 0 #fff, 0 1px 3px #333 inset, 0 -15px 10px #666 inset, 0 0 0 #fff;
+	-moz-box-shadow: 0 1px 0 #fff, 0 1px 3px #333 inset, 0 -15px 10px #666 inset, 0 0 0 #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.simplecalculator input[type="button"] {
+	border: 1px solid #b6b6b6;
+	border-bottom: 1px solid #7a7a7a;
+	width: 30px;
+	height: 24px;
+	padding-bottom: 2px;
+	margin: 4px;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 #000;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: #cbcbcb;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #cbcbcb 0%, #b3b3b3 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cbcbcb), color-stop(100%, #b3b3b3));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #cbcbcb 0%, #b3b3b3 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #cbcbcb 0%, #b3b3b3 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #cbcbcb 0%, #b3b3b3 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #cbcbcb 0%, #b3b3b3 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbcbcb', endColorstr='#b3b3b3', GradientType=0);
+	/* IE6-9 */
+}
+
+.simplecalculator input[disabled="disabled"] {
+	background: #e2e2e2;
+}
+
+.simplecalculator input.operator {
+	color: #fff;
+	background: #7e7e7e;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #7e7e7e 0%, #414141 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7e7e7e), color-stop(100%, #414141));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7e7e7e 0%, #414141 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7e7e7e 0%, #414141 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7e7e7e 0%, #414141 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #7e7e7e 0%, #414141 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e7e7e', endColorstr='#414141', GradientType=0);
+	/* IE6-9 */
+}
+
+.simplecalculator input.clear,
+.simplecalculator input.equal {
+	color: #fff;
+	background: #333333;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #333333 0%, #1a1a1a 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1a1a1a));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #333333 0%, #1a1a1a 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #333333 0%, #1a1a1a 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #333333 0%, #1a1a1a 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #333333 0%, #1a1a1a 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1a1a1a', GradientType=0);
+	/* IE6-9 */
+}
+
+.simplecalculator input.zero {
+	width: 71px
+}
+
+.simplecalculator input.equal {
+	height: 56px;
+	position: absolute;
+	right: 25px;
+	bottom: 60px
+}
+
+.simplecalculator input.number {
+	text-shadow: 0 1px 0 #fff
+}
+
+
+/*--------------------------------------------------------------------------------------
+   =Existing style modification
+	- this is transitional fix for apply new style to existing html
+--------------------------------------------------------------------------------------*/
+/*=Master layout*/
+#TopNav,
+#TopNavLeft,
+#TopNav>a:first-child {
+	height: 90px;
+	position: relative
+}
+
+#TopNavLeft,
+#TopNav>a:first-child {
+	height: 48px;
+	position: relative;
+	left: 10px;
+	top: 22px;
+	display: block
+}
+
+#TopNavBar {
+	color: #fff;
+	margin: 0 auto;
+	padding-left: 230px;
+	position: relative;
+	top: -30px;
+	width: 710px
+}
+
+#TopNavLeft,
+#TopNav>a:first-child,
+#Container,
+#container #content>center {
+	margin: 0 5%;
+	clear: both;
+	overflow: hidden;
+	min-width: 900px
+}
+
+.clear {
+	clear: both
+}
+
+#PrintLogo {
+	display: none
+}
+
+#Footer {
+	overflow: hidden;
+	padding: 16px 8px;
+	margin-top: 32px
+}
+
+#Footer .FooterPhone {
+	display: block
+}
+
+#footer .FooterPhone {
+	float: left;
+	margin-top: -8px
+}
+
+/*Footer phone*/
+.FooterPhone {
+	vertical-align: middle;
+	padding: 5px 25px;
+	display: block
+}
+
+.FooterPhone strong {
+	padding-left: 25px;
+	display: inline-block;
+	line-height: 2
+}
+
+
+/* secure-msg */
+.secure-msg {
+	overflow: hidden
+}
+
+.secure-msg .ico,
+.secure-msg h2 {
+	display: inline-block;
+	vertical-align: middle
+}
+
+/*=content*/
+/* h1,h2,h3 {padding-left:10px} */
+h2 {
+	font-size: 1.083em
+}
+
+h3 {
+	font-size: 1em
+}
+
+center {
+	overflow: hidden;
+	clear: both
+}
+
+br {
+	height: 0
+}
+
+img[alt="Error"],
+img[alt="Notification"] {
+	position: relative;
+	top: -5px
+}
+
+hr {
+	margin: 0
+}
+
+#Row hr {
+	margin: 5px 0
+}
+
+.currency {
+	text-align: right;
+	display: inline-block;
+	width: 100%
+}
+
+/* .table .currency {display:block} */
+
+/*=icons*/
+#UserOptions a,
+.FooterContact a,
+.FooterFeedback a,
+.FooterTop a,
+#rightnav .rightlist a {
+	display: inline-block;
+	padding-left: 10px;
+	line-height: 1
+}
+
+/*=14E1 : Overlap of Button */
+h3.h3tda {
+	margin-top: 10px !important;
+}
+
+/*=form*/
+#FormBorder {
+	overflow: hidden;
+	clear: both;
+	padding: 10px 0px 16px 0px;
+	width: 100%;
+	margin: 8px 0px 16px -20px;
+}
+
+.table {
+	margin-left: -20px
+}
+
+#FormBorder table {
+	margin-left: 0;
+	width: 100%
+}
+
+#RowWithIcon {
+	overflow: hidden
+}
+
+#Row,
+#FormBorder ul,
+#Row li {
+	margin: 8px 8px 0px 20px
+}
+
+#RowWithIcon {
+	margin-bottom: 6px;
+	margin-top: -7px
+}
+
+#RowWithIcon a {
+	line-height: 1.2
+}
+
+#FormBorder input.radio {
+	margin: 2px 8px 0px 0px
+}
+
+#FormBorder h2,
+#FormBorder h3,
+#ActionArea,
+#OfficeUseOnly {
+	padding-left: 20px
+}
+
+#FormBorder p {
+	margin: 8px 8px 0px 20px
+}
+
+#Row p {
+	margin: 8px 8px 0px 0px
+}
+
+#FormBorder h3 {
+	margin: -10px 0 0;
+	padding: 15px 0 10px 20px;
+}
+
+#FormBorder input {
+	position: relative
+}
+
+/* 	#FormBorder label {line-height:2} */
+#FormBorder label #Data {
+	font-weight: normal
+}
+
+#FormBorder textarea {
+	font-family: arial;
+	font-size: 1em;
+	height: 100px
+}
+
+/* h1 ~ br,h2 ~ br,h3 ~ br,font ~ br,#Row ~ br ,.table ~ br,form > br:first-child {display:none} */
+
+#FormBorder #DataDescription {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+}
+
+/*=UserOptions*/
+#UserOptions {
+	float: left;
+	overflow: hidden;
+	margin: 0;
+	padding-top: 8px
+}
+
+#UserOptions a,
+.FooterContact a,
+.FooterFeedback a,
+.FooterTop a {
+	margin: 0 8px;
+	font-weight: bold
+}
+
+/*=rightnav*/
+#rightnav .right-header {
+	padding: 8px 10px;
+	margin: 0;
+	font-size: 1.167em;
+	font-weight: bold
+}
+
+#rightnav .right-header-background {
+	padding: 16px 10px 10px;
+	margin-bottom: 16px
+}
+
+#rightnav .rightlist {
+	overflow: hidden;
+	margin-bottom: 8px
+}
+
+/*=table*/
+.table {
+	margin-top: 8px;
+	clear: both;
+	padding-left: -20px;
+	width: 100%
+}
+
+.table th,
+.table td,
+.table caption {
+	padding: 8px 20px;
+	vertical-align: middle;
+	text-align: left
+}
+
+.table td[headers="thOrder"] input {
+	width: 29%;
+	font-size: .9em
+}
+
+.table select {
+	margin: 0
+}
+
+.table .tableheading,
+.table .TotalRow {
+	font-weight: bold
+}
+
+.table caption {
+	display: none
+}
+
+.table th[align="right"],
+.table td[align="right"] {
+	text-align: right
+}
+
+.table th[align="center"],
+.table td[align="center"] {
+	text-align: center
+}
+
+.table #RowWithIcon {
+	margin-top: 0
+}
+
+/*.table td[headers="thChqDate"] {position:relative;padding-right:20px}
+		.table td[headers="thChqDate"] img {position:absolute}*/
+
+/*=schedule list table*/
+
+.table td[headers="thScheduleID"],
+.table .tableheading #thScheduleID {
+	padding-right: 5px
+}
+
+.table td[headers="thNextPaymentDate"],
+.table .tableheading #thNextPaymentDate {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thLastPaymentDate"],
+.table .tableheading #thLastPaymentDate {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thSchFrom"],
+.table .tableheading #thSchFrom {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thSchTo"],
+.table .tableheading #thSchTo {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thAmount"],
+.table .tableheading #thAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thCustomerReference"],
+.table .tableheading #thCustomerReference {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thFrequency"],
+.table .tableheading #thFrequency {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thStatus"],
+.table .tableheading #thStatus {
+	padding-left: 2px;
+	text-align: right
+}
+
+.table td[headers="thExpPaymentDate"],
+.table .tableheading #thExpPaymentDate {
+	padding-right: 5px
+}
+
+.table td[headers="thExpScheduleID"],
+.table .tableheading #thExpScheduleID {
+	padding-left: 2px;
+	text-align: right
+}
+
+/*=payment history table*/
+.table td[headers="thView"],
+.table .tableheading #thView {
+	padding-right: 5px;
+	width: 5%
+}
+
+.table td[headers="thDate"],
+.table .tableheading #thDate {
+	padding-left: 2px;
+	padding-right: 5px;
+	width: 5%
+}
+
+.table td[headers="thFrom"],
+.table .tableheading #thFrom {
+	padding-left: 2px;
+	padding-right: 5px;
+	width: 20%
+}
+
+.table td[headers="thTo"],
+.table .tableheading #thTo {
+	padding-left: 2px;
+	padding-right: 5px;
+	width: 20%
+}
+
+.table td[headers="thRef"],
+.table .tableheading #thRef {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right;
+	width: 20%
+}
+
+.table td[headers="thAmount"],
+.table .tableheading #thAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right;
+	width: 10%
+}
+
+.table td[headers="thType"],
+.table .tableheading #thType {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right;
+	width: 10%
+}
+
+.table td[headers="thPStatus"],
+.table .tableheading #thPStatus {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right;
+	width: 5%
+}
+
+.table td[headers="thReceipt"],
+.table .tableheading #thReceipt {
+	text-align: right;
+	width: 5%
+}
+
+#paymentHistTable td[headers="thRef"] {
+	max-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*=cheq deposit table*/
+.table td[headers="thChqCount"],
+.table .tableheading #thChqCount {
+	padding-right: 5px
+}
+
+.table td[headers="thChequeNumber"],
+.table .tableheading #thChequeNumber {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thBSB"],
+.table .tableheading #thBSB {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thAcctName"],
+.table .tableheading #thAcctName {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thAcctNumber"],
+.table .tableheading #thAcctNumber {
+	width: 10%;
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers=thChqDate],
+.table .tableheading #thChqDate {
+	width: 20%;
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thAmount"],
+.table .tableheading #thAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+/*=sms bill summary table*/
+.table td[headers="thMonth"],
+.table .tableheading #thMonth {
+	padding-right: 2px
+}
+
+.table td[headers="thAlert"],
+.table .tableheading #thAlert {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thChannel"],
+.table .tableheading #thChannel {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thDbtAccount"],
+.table .tableheading #thDbtAccount {
+	padding-left: 2px;
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
+.table td[headers="thBalAlert"],
+.table .tableheading #thBalAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers=thHighBalAlert],
+.table .tableheading #thHighBalAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thLowBalanceAlert"],
+.table .tableheading #thLowBalanceAlert {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thDepositAlert"],
+.table .tableheading #thDepositAlert {
+	padding-left: 5px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thWithDrawlAlert"],
+.table .tableheading #thWithDrawlAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thAuthorisationAlert"],
+.table .tableheading #thAuthorisationAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thDishonourAlert"],
+.table .tableheading #thDishonourAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thReminderAlert"],
+.table .tableheading #thReminderAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thSentAlert"],
+.table .tableheading #thSentAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thChargableAlert"],
+.table .tableheading #thChargableAlert {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thAmountCharged"],
+.table .tableheading #thAmountCharged {
+	padding-left: 2px;
+	text-align: right
+}
+
+body.font-size-L .table .tableheading #thMonth,
+body.font-size-L .table .tableheading #thChannel,
+body.font-size-L .table .tableheading #thAlert,
+body.font-size-L .table .tableheading #thDbtAccount,
+body.font-size-L .table .tableheading #thBalAlert,
+body.font-size-L .table .tableheading #thHighBalAlert,
+body.font-size-L .table .tableheading #thLowBalanceAlert,
+body.font-size-L .table .tableheading #thDepositAlert,
+body.font-size-L .table .tableheading #thWithDrawlAlert,
+body.font-size-L .table .tableheading #thAuthorisationAlert,
+body.font-size-L .table .tableheading #thDishonourAlert,
+body.font-size-L .table .tableheading #thSentAlert,
+body.font-size-L .table .tableheading #thChargableAlert,
+body.font-size-L .table .tableheading #thAmountCharged {
+	font-style: inherit;
+	font-size: 82%
+}
+
+body.font-size-M .table .tableheading #thMonth,
+body.font-size-M .table .tableheading #thChannel,
+body.font-size-M .table .tableheading #thAlert,
+body.font-size-M .table .tableheading #thDbtAccount,
+body.font-size-M .table .tableheading #thBalAlert,
+body.font-size-M .table .tableheading #thHighBalAlert,
+body.font-size-M .table .tableheading #thLowBalanceAlert,
+body.font-size-M .table .tableheading #thDepositAlert,
+body.font-size-M .table .tableheading #thWithDrawlAlert,
+body.font-size-M .table .tableheading #thAuthorisationAlert,
+body.font-size-M .table .tableheading #thDishonourAlert,
+body.font-size-M .table .tableheading #thSentAlert,
+body.font-size-M .table .tableheading #thChargableAlert,
+body.font-size-M .table .tableheading #thAmountCharged {
+	font-style: inherit;
+	font-size: 90%
+}
+
+/*=periodical Payment table*/
+.table td[headers="thPPNo"],
+.table .tableheading #thPPNo {
+	padding-right: 2px
+}
+
+.table td[headers="thPPLastPayDate"],
+.table .tableheading #thPPLastPayDate {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thPPFreq"],
+.table .tableheading #thPPFreq {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thPPFromAcNo"],
+.table .tableheading #thPPFromAcNo {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thPPBsb"],
+.table .tableheading #thPPBsb {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thPPAmount"],
+.table .tableheading #thPPAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thPPPayee"],
+.table .tableheading #thPPPayee {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thPPEndDate"],
+.table .tableheading #thPPEndDate {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thPPEdit"],
+.table .tableheading #thPPEdit {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thPPDelete"],
+.table .tableheading #thPPDelete {
+	padding-left: 2px;
+	text-align: right
+}
+
+/*=sms Alerts History*/
+.table td[headers="thHisStatus"],
+.table .tableheading #thHisStatus {
+	padding-right: 2px
+}
+
+.table td[headers="thHisAccount"],
+.table .tableheading #thHisAccount {
+	padding-left: 5px;
+	padding-right: 2px
+}
+
+.table .tableheading #thHisAccount {
+	text-align: center;
+}
+
+.table td[headers="thHisType"],
+.table .tableheading #thHisType {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thHisFreq"],
+.table .tableheading #thHisFreq {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thHisDate"],
+.table .tableheading #thHisDate {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thHisAmount"],
+.table .tableheading #thHisAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thHisChannel"],
+.table .tableheading #thHisChannel {
+	padding-left: 2px;
+	text-align: right
+}
+
+/*=sms Alerts summary*/
+.table td[headers="thAlUpdate"],
+.table .tableheading #thAlUpdate {
+	padding-right: 2px
+}
+
+.table td[headers="thAlDelete"],
+.table .tableheading #thAlDelete {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thAlAccount"],
+.table .tableheading #thAlAccount {
+	padding-left: 5px;
+	padding-right: 2px
+}
+
+.table .tableheading #thAlAccount {
+	text-align: center;
+}
+
+.table td[headers="thAlType"],
+.table .tableheading #thAlType {
+	padding-left: 2px;
+	padding-right: 5px
+}
+
+.table td[headers="thAlFrequency"],
+.table .tableheading #thAlFrequency {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thAlDate"],
+.table .tableheading #thAlDate {
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.table td[headers="thAlAmount"],
+.table .tableheading #thAlAmount {
+	padding-left: 2px;
+	padding-right: 5px;
+	text-align: right
+}
+
+.table td[headers="thAlChannel"],
+.table .tableheading #thAlChannel {
+	padding-left: 25px;
+	padding-right: 2px;
+	width: 80px
+}
+
+/*EBP register biller*/
+.table td[headers="thBillerId"],
+.table .tableheading #thBillerId {
+	padding-right: 2px
+}
+
+.table td[headers="thBillerName"],
+.table .tableheading #thBillerName {
+	padding-left: 20px;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+.table td[headers="thRegNo"],
+.table .tableheading #thRegNo {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.table td[headers="thRegDate"],
+.table .tableheading #thRegDate {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.table td[headers="thBStatus"],
+.table .tableheading #thBStatus {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.table td[headers="thUnregister"],
+.table .tableheading #thUnregister {
+	padding-left: 2px;
+	text-align: right
+}
+
+/*EBP bill summary*/
+.table td[headers="thBillerId"],
+.table .tableheading #thSBillerId {
+	padding-right: 2px
+}
+
+.table td[headers="thBillerName"],
+.table .tableheading #thSumName {
+	padding-left: 20px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSAcctNo"],
+.table .tableheading #thSAcctNo {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSBillDate"],
+.table .tableheading #thSBillDate {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSDueDate"],
+.table .tableheading #thSDueDate {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSPayMin"],
+.table .tableheading #thSPayMin {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSPayFull"],
+.table .tableheading #thSPayFull {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.table td[headers="thSStatus"],
+.table .tableheading #thSStatus {
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: right
+}
+
+.table td[headers="thSMark"],
+.table .tableheading #thSMark {
+	padding-left: 2px;
+	text-align: right
+}
+
+/*order statement*/
+.table td[headers="thAccount"],
+.table .tableheading #thAccount {
+	padding-right: 2px;
+	white-space: nowrap;
+}
+
+.table td[headers="thbsb"],
+.table .tableheading #thbsb {
+	padding-left: 20px;
+	padding-right: 10px
+}
+
+.table td[headers="thAccNo"],
+.table .tableheading #thAccNo {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.table td[headers="thBal"],
+.table .tableheading #thBal {
+	padding-left: 20px;
+	padding-right: 10px;
+	text-align: right
+}
+
+.table td[headers="thAvlBal"],
+.table .tableheading #thAvlBal {
+	padding-left: 20px;
+	padding-right: 10px;
+	text-align: right
+}
+
+
+#IconTableLeft,
+#IconTableRight {
+	float: left
+}
+
+#IconTableLeft {
+	float: left;
+	width: 60%;
+	margin-right: 8px
+}
+
+#IconTableLeft .table td {
+	padding-right: 0px
+}
+
+#IconTableRight {
+	float: left;
+	padding-left: 5px;
+	width: 30%
+}
+
+#IconTableRight .table {
+	margin-left: 9px
+}
+
+#IconTableRight td {
+	padding: 5px 0px;
+	font-size: .8em;
+	vertical-align: bottom
+}
+
+#IconTableRight td br {
+	display: block
+}
+
+#IconTableRight .ico {
+	padding: 32px 0 0 2px;
+	width: 63px;
+	font-size: .9em
+}
+
+/*=ButtonArea*/
+#ButtonArea input,
+#ButtonArea img {
+	float: none
+}
+
+#ButtonArea,
+#FullButtonArea,
+#SchButtonArea {
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+	text-align: center
+}
+
+#ButtonArea .ico-info {
+	vertical-align: middle
+}
+
+/*=Button*/
+.Button {
+	margin: 16px 8px
+}
+
+.Button[align="right"] {
+	float: right
+}
+
+.Button,
+.Buttonl {
+	padding: 8px 16px;
+	font-size: .9em;
+	font-weight: bold
+}
+
+
+/*=error message*/
+.actionMessage,
+.errorMessage {
+	margin: 0 0 0 20px;
+	padding: 0;
+	list-style: none;
+	clear: both;
+}
+
+/*=Label */
+#TransferLabelWithDollar,
+#TransferLabel,
+#LabelWithITip,
+.labelnobold,
+#LongLabelWithIcon {
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: text-bottom;
+	width: 210px;
+	margin-right: 20px;
+	padding: 0 20px 0 0;
+	position: relative
+}
+
+#LongLabelWithIcon {
+	width: 310px;
+}
+
+#Label,
+#LabelWithDollar {
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: text-bottom;
+	width: 220px;
+	margin-right: 20px;
+	padding: 0 20px 0 0;
+	position: relative
+}
+
+#Label .ico-info,
+#TransferLabelWithDollar .ico-info,
+#TransferLabel .ico-info,
+#LabelWithDollar .ico-info,
+#LabelWithITip .ico-info,
+.labelnobold .ico-info,
+#LongLabelWithIcon .ico-info {
+	position: left;
+	right: 0;
+	top: 2px
+}
+
+
+.labelnobold {
+	padding: 5px 10px 5px 10px
+}
+
+#TransferLabel {
+	padding-bottom: 1px
+}
+
+#Data,
+#FromData {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#DataDescription {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+}
+
+#Data input,
+#FromData select,
+#Data select {
+	margin: 0
+}
+
+#Data .amount {
+	float: left;
+	margin-left: -16px;
+	margin-left: -16px;
+	padding: 3px 4px 5px 2px;
+	text-align: left
+}
+
+
+#Data br,
+#FromData br {
+	display: block
+}
+
+#SchDateLabel {
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: text-bottom;
+	margin-right: 20px;
+	padding: 5px 20px 0 0;
+	position: relative
+}
+
+/*I would like to do list*/
+/*#FormBorder h2 + ul,#FormBorder h2 + ul li {overflow:hidden;padding:0;margin:0}
+	#FormBorder h2 + ul {margin:0 16px 8px 0}
+		#FormBorder h2 + ul li {margin-bottom:5px}
+		#FormBorder h2 + ul li  a {display:block;float:left;padding-left:10px;line-height:1.1}
+*/
+/* accountTransferLevel */
+#accountTransferLevel #FormBorder {
+	margin: 8px 0;
+	padding: 10px 10px 0 10px
+}
+
+/* openAcctNoBorderRightArea */
+#openAcctNoBorderRightArea {
+	margin-left: 40%
+}
+
+#openAcctLeftArea,
+#openAcctRightArea {
+	padding: 10px
+}
+
+#openAcctLeftArea {
+	width: 30%;
+	float: left
+}
+
+/* tickText */
+#tickText {
+	padding-left: 20px;
+	margin: 8px 8px 15px 20px
+}
+
+#openAcctNoBorderLeftArea {
+	float: left
+}
+
+/* buttonlink */
+.buttonlink {
+	font-weight: bold
+}
+
+.ButtonLink {
+	font-weight: bold;
+	display: block;
+	margin: 5px 0
+}
+
+#calcIcon,
+#infoIcon,
+#faqIcon,
+#demoIcon {
+	width: 96px;
+	height: 96px;
+	display: inline-block;
+	vertical-align: middle
+}
+
+#toolsColumn {
+	display: inline-block;
+	vertical-align: middle
+}
+
+#platinum,
+#visagold,
+#vertigo,
+#amplify,
+#nofee {
+	width: 128px;
+	height: 128px;
+	text-align: center;
+	font-weight: bold
+}
+
+.errorMsg {
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: 20px
+}
+
+
+/* Added by Archana - start*/
+
+/*start for compass refresh*/
+.errorBorder {
+	border: solid #cc0000
+}
+
+.highlight a {
+	color: red
+}
+
+.highlighttext {
+	color: red
+}
+
+/*end for compass refresh*/
+/* Added by Archana - end*/
+
+
+
+/*--------------------------------------------------------------------------------------
+   =master layout
+	- prefix with 't' for template
+--------------------------------------------------------------------------------------*/
+/*=for 960px fixed width page */
+.wrap {
+	margin: 0 auto;
+	clear: both;
+	overflow: hidden;
+	min-width: 960px;
+	max-width: 85%;
+	padding: 15px 15px 20px 15px
+}
+
+.navigation,
+aside {
+	width: 190px
+}
+
+.navigation {
+	float: left;
+	margin-right: 20px;
+}
+
+aside {
+	float: right
+}
+
+#content {
+	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 2px
+}
+
+/*=login template
+	-----------------------------------------------------------------------------------*/
+#content.t-login {
+	margin: 0 auto;
+	width: 590px
+}
+
+#content.t-login .main {
+	float: left;
+	width: 100%
+}
+
+#content.t-login aside {
+	margin-right: -370px;
+	width: 340px;
+	height: 380px;
+	overflow: hidden;
+	padding-top: 43px
+}
+
+/*=my-account template
+	----------------------------------------------------------------------------------*/
+#content.t-my-account .content-wrap {
+	overflow: hidden;
+	padding-right: 220px
+}
+
+#content.t-my-account .main {
+	float: left;
+	width: 100%
+}
+
+#content.t-my-account aside {
+	margin: 44px -220px 0 0;
+	width: 200px
+}
+
+/*-------- IE 8 fix --------*/
+.wrap {
+	position: relative;
+	z-index: 0
+}
+
+/*fix round corner*/
+
+
+.account-messages,
+.message-centre,
+.message-details,
+.transaction,
+#content.t-my-account .content-wrap,
+.transfer-payment,
+.overseas-travel {
+	margin-left: -20px
+}
+
+#receiptRow {
+	margin: -10px 0px 10px;
+	padding: 10px 20px
+}
+
+#receiptSubRow {
+	margin: 10px 0px 10px;
+	padding: 10px 20px
+}
+
+#receiptRow,
+#receiptRow .receiptMainHeader {
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.24;
+	width: 100%;
+	font-size: 16px;
+}
+
+#receiptSubRow,
+#receiptSubRow .receiptSubHeader {
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.24;
+	width: 100%;
+	font-size: 14px;
+}
+
+/*added this for the date picker style set in date picker.js*/
+.ibankDatePicker {}
+
+/*Styling for Promotional Links*/
+.promLink {
+	font-size: 1.01em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+/* Styling for acct sel button for transaction history*/
+.acctSelButLeft {
+	float: left;
+	height: 23px;
+	font-size: 0.9em;
+	padding-left: 5px;
+}
+
+.acctSelButRight {
+	float: right;
+	height: 23px;
+	font-size: 0.9em;
+	padding-left: 5px;
+}
+
+.acctSel-mt {
+	margin-top: -3px;
+	margin-left: -5px;
+}
+
+.acctSel-lable {
+	font-size: 100%;
+	font-weight: bold;
+	float: left;
+	padding: 8px 10px 0 20px;
+}
+
+.leftDos {
+	float: left;
+	margin: 8px 8px 0 20px;
+
+}
+
+.rightDonot {
+	float: right;
+	margin-right: 60px;
+}
+
+.istructContainer {
+
+	border: 1px solid #CCCCCC;
+	clear: both;
+	display: block;
+	height: 130px;
+	margin: 5px 20px;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px;
+
+}
+
+.secNumContainer {
+
+	border: 1px solid #CCCCCC;
+	clear: both;
+	display: block;
+	height: auto;
+	margin: 10px 20px;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px;
+}
+
+.passContainer {
+
+	border: 1px solid #CCCCCC;
+	clear: both;
+	display: block;
+	height: auto;
+	margin: 10px 20px;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px;
+}
+
+.accesNoContainer {
+	border: 1px solid #CCCCCC;
+	clear: both;
+	display: block;
+	height: auto;
+	margin: 10px 20px;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px;
+
+}
+
+.passResetCancel {
+	float: left;
+	margin-left: 10px;
+}
+
+
+.passSecImpInfo {
+	font-style: italic;
+	margin: 5px 20px;
+	padding: 5px 5px 5px 5px;
+}
+
+.travel-details {
+	text-align: left;
+	padding-left: 20px;
+}
+
+.travel-content {
+	padding-right: 0px;
+	padding-top: 8px;
+	overflow: hidden;
+}
+
+.travel-confirm {
+	padding-top: 8px;
+	padding-left: 100px;
+}
+
+ul.as-selections li.as-original input {
+	box-shadow: none;
+}
+
+.additionalInfoContainer {
+	float: left;
+	width: 52%;
+}
+
+.additionalInfoTextArea {
+	width: 100%;
+	resize: none;
+}
+
+.destMandateLabel {
+	float: right;
+	margin-top: 16px;
+	padding-right: 31%;
+}
+
+.addInfoLblContainer {
+	float: left;
+	padding-left: 20px;
+}
+
+.addInfoLbl {
+	float: left;
+	margin-top: 16px;
+}
+
+.pl20 {
+	padding-left: 20px;
+}
+
+ul.as-list {
+	margin: 0px !important;
+	height: 300px;
+	overflow-y: auto;
+}
+
+.destinationLabel {
+	margin-top: 1px;
+}
+
+.bankSearchResultsTable {
+	max-width: 540px;
+}
+
+.bankSearchResultsTable tbody tr td {
+	padding: 10px 5px 30px;
+	font-size: 11px;
+	cursor: pointer;
+}
+
+.bankSearchResultsTable thead tr th {
+	padding: 10px 5px 10px 5px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.bankSearchResultsTable .darkrow {
+	background-color: #f7f7f7;
+}
+
+/*
+.newBeneficiaryDetails, .newBeneficiaryDetails div {
+	max-width:98%;
+}
+
+.newBeneficiaryDetails div fieldset {
+	max-width:95%;
+}
+
+*/
+
+.transfer-payment .reportLost fieldset ol>li>label {
+	width: 220px;
+
+}
+
+.transfer-payment .reportLost .radio label {
+	font-weight: normal;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+/*= 14E3 Home Loan
+	----------------------------------------------------------------------------------*/
+.btn_hlsvr_apply {
+	margin: 3px 3px 3px 0px !important;
+}
+
+.learn_more {
+	position: absolute;
+	bottom: 47px;
+	margin-left: 7px !important;
+}
+
+.has-btn-homeloan {
+	margin: 20px 0px 0px 0px;
+	position: absolute;
+	bottom: 0 !important;
+}
+
+.product-details .list .has-btn .goto-homeloan {
+	float: right
+}
+
+.product-details .list .has-btn .goto-homeloan:first-child {
+	float: left
+}
+
+.btn span.span-homeloan {
+	padding: 6px;
+}
+
+
+.reportContLeft {
+	left: 72px;
+}
+
+.reportLostRadio {
+	margin-top: 10px;
+}
+
+.reportForm .errorMessage li {
+	margin-left: -15px;
+}
+
+.ccDisputeForm .errorMessage li {
+	margin-left: -15px;
+}
+
+.incCreditForm .errorMessage li {
+	margin-left: -15px;
+}
+
+/*15E1: alerts new flow changes*/
+.alertsRadio label {
+	font-weight: normal;
+}
+
+.incentive-acknowledge {
+	padding-bottom: 115px
+}
+
+.incentive-acknowledge .fieldset {
+	margin-left: 20px;
+	clear: both;
+	margin-top: 10px;
+	float: left;
+	width: 92%
+}
+
+.incentive-acknowledge .fieldset {
+	padding: 10px 10px 5px 20px
+}
+
+#IncentiveAck p {
+	margin: 8px 8px 0px 8px;
+}
+
+/*17E3: remember CAN Login flow changes*/
+.rememberMeDiv {
+	width: 100%;
+	float: left;
+}
+
+.rememberMeLabel {
+	font-weight: normal;
+	font-size: .917em;
+}
+
+.rememberMeTxt {
+	display: inline-block;
+	transform: translateY(-2.5px);
+	-webkit-transform: translateY(-2.5px);
+	-ms-transform: translateY(-2.5px);
+}
+
+.rememberMeNote {
+	display: none;
+	padding-left: 0px;
+	font-size: .917em;
+	width: 230px;
+	margin-top: 9px;
+	margin-bottom: 3px;
+}
+
+.issueNumberLi {
+	display: none
+}
+
+.hrLineSeparator {
+	width: 40%;
+	float: left;
+	margin-top: 2px;
+}
+
+
+.container-content-box {
+	width: 96% !important;
+	height: auto;
+	padding-left: 20px !important;
+}
+
+li.container-content-box {
+	padding-bottom: 5px !important;
+}
+
+.container-content-box .has-btn {
+	position: relative !important;
+	width: 93% !important;
+	float: left;
+	padding-top: 10px;
+}
+
+.container-content-box h2 {
+	padding-left: 0px !important;
+}
+
+/* 19E1 : Pay to PayID 
+----------------------------------------------------------------------------------*/
+.transfer-payment .add-new-payid {
+	padding-bottom: 5px
+}
+
+.transfer-payment .add-new-payid li {
+	margin-bottom: 12px
+}
+
+.transfer-payment .add-new-payid .payIdTypeSelect {
+	width: 250px
+}
+
+.transfer-payment .add-new-payid .payIdMobileTxt {
+	width: 244px
+}

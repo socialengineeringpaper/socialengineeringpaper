@@ -1,0 +1,627 @@
+
+/**Responsive styles**/
+div.mainheading{
+	margin-left:10%;
+	margin-right:10%;
+	
+}
+
+div.maintitle{
+	margin-top:60px;
+	color: #000000;
+    font-family: TelenorLight,Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+div.contentsection{
+	margin-bottom:20px;
+	color: #767676;
+    font-family: TelenorLight,Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+header div.reslogo{
+    border-bottom: 1px solid #006dba;
+    height: 15px;
+	padding: 10px 0px 12px 0px;
+	margin-left:10%;
+ }
+
+div.reslogo a img{ 
+  border: 0 none;
+}
+
+div.mainbutton{
+	width:100%;
+	margin-bottom: 10px;
+}
+ 
+div.mainbuttons input.large, div.mainbuttons a.large{
+	background: none repeat scroll 0 0 #006dba;
+    border: medium none transparent;
+    border-radius: 0;
+    height: 33px;
+    outline: 0 none;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: background 0.25s ease-in-out 0s;
+	font-size: 17px;
+    width: 95%;
+	text-align: center;
+	 color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+}
+
+div.mainbuttons a.large{
+	text-decoration:none;
+	 padding-bottom: 10px;
+    padding-top: 10px;
+	height:auto;
+}
+
+div.mainbuttons input.large:hover, div.mainbuttons a.large:hover{
+	background: none repeat scroll 0 0 #007ac8;
+}
+
+div.remembersetting span{
+	font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+	font-size:13px;
+	color:#767676;
+	padding-left:2px;
+	cursor:pointer;
+}
+
+div.mainbuttons a.button{
+	background: none;
+	border: 1px solid #007ac8;
+	border-radius:3px;
+	color: #007ac8;
+	height:auto;
+	vertical-align: middle;
+	text-decoration:none;
+	padding:10px 5px;
+	width:95%;
+	font-size: 15px;
+	text-align: center;
+	font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+	display:inline-block;
+}
+
+div.mainbuttons a.button:hover{
+	background: none;
+	border: 1px solid #72b1db;
+	border-radius:3px;
+	color: #007ac8;
+	height:auto;
+	vertical-align: middle;
+	text-decoration:none;
+	padding:10px 5px;
+	width:95%;
+	font-size: 15px;
+	text-align: center;
+	font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+	display:inline-block;
+}
+
+div.mainbuttons div.inputbox{
+	display:inline-block;
+	padding: 5px 10px 5px 0;
+	width:262px;
+	vertical-align:top;
+}
+
+div.wrapperclass{
+	overflow:hidden;
+	width:100%;
+	white-space:normal;
+}
+
+div.remembersetting input[type="checkbox"] {
+    left: -4000px;
+    position: absolute;
+}
+
+
+div.remembersetting img.chboxImgClass {
+    cursor: pointer;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+div.footerclassresponsive{
+background: none repeat scroll 0 0 #007ac8;
+width: 100%;
+height:40px;
+position:absolute;
+bottom:0;
+left:0;
+text-align:center;
+}
+
+div.footerclass{
+	background: none repeat scroll 0 0 #007ac8;
+	bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+div.footerclass  ul, div.footerclass  li {
+    display: inline;
+    margin: 0;
+    padding: 0 20px;
+	line-height:35px;
+	vertical-align:middle;
+}
+
+div.footerclass  ul{
+	padding:0px;
+}
+
+div.footerclass  li a{
+	cursor: pointer;
+    text-decoration: none;
+	color:#ffffff;
+}
+
+div.footerclass  li a:hover{
+	text-decoration: underline;
+}
+
+div.footerclass li.copyrightres {
+	color: #a6e2f7;
+}
+
+div.remembersetting{
+	margin-top:10px;
+}
+
+
+@media screen and (max-width: 480px) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass  ul, div.footerclass  li {
+       padding: 0 5px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.maintitle{
+		font-size: 13px;
+    }
+
+	div.contentsection{
+		font-size: 13px;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+@media screen and (max-width: 320px) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass  ul, div.footerclass  li {
+       padding: 0 5px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.maintitle{
+		font-size: 13px;
+    }
+
+	div.contentsection{
+		font-size: 13px;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+@media screen and (max-width: 260px) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.maintitle{
+		font-size: 13px;
+    }
+
+	div.contentsection{
+		font-size: 13px;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+@media screen and (max-width: 210px) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.maintitle{
+		font-size: 13px;
+    }
+
+	div.contentsection{
+		font-size: 13px;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+
+
+
+@media screen and (max-device-width: 400px) and (orientation: landscape) {
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:inline;
+	}
+	
+	
+	div.mainbuttons div.inputbox {
+		width: 262px;
+	}
+	
+	div.mainbuttons a.button{
+		background: none;
+		border: 1px solid #007ac8;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+
+	div.mainbuttons a.button:hover{
+		background: none;
+		border: 1px solid #72b1db;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: relative;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+	
+}
+
+
+@media screen and (max-device-width: 400px) and (orientation: portrait) {
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:inline;
+	}
+	
+	
+	div.mainbuttons div.inputbox {
+		width: 262px;
+	}
+	
+	div.mainbuttons a.button{
+		background: none;
+		border: 1px solid #007ac8;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+
+	div.mainbuttons a.button:hover{
+		background: none;
+		border: 1px solid #72b1db;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+	
+}
+
+@media screen and (max-width: 700px)  {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass  ul, div.footerclass  li {
+       padding: 0 5px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+
+@media screen and (max-width: 730px) and (orientation: portrait) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass  ul, div.footerclass  li {
+       padding: 0 5px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+
+@media screen and (max-width: 730px) and (orientation: landscape) {
+	div.mainbuttons div.inputbox{
+		width: 262px;
+		padding:10px 0px 10px 0px;
+	}
+	
+	div.footerclass  ul, div.footerclass  li {
+       padding: 0 5px;
+	}
+	
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:none;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: relative;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+}
+
+@media screen and (min-width: 730px) {
+	div.footerclass li.privacy, div.footerclass li.onlineno, div.footerclass li.djuice{
+		display:inline;
+	}
+	
+	
+	div.mainbuttons div.inputbox {
+		width: 262px;
+	}
+	
+	div.mainbuttons a.button{
+		background: none;
+		border: 1px solid #007ac8;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+
+	div.mainbuttons a.button:hover{
+		background: none;
+		border: 1px solid #72b1db;
+		border-radius:3px;
+		color: #007ac8;
+		height:auto;
+		vertical-align: middle;
+		text-decoration:none;
+		padding:10px 5px;
+		width:95%;
+		font-size: 15px;
+		text-align: center;
+	    font-family: HelveticaNeueRegular,Helvetica,Arial,sans-serif;
+		display:inline-block;
+	}
+	
+	div.footerclassresponsive, div.footerclass{
+		background: none repeat scroll 0 0 #007ac8;
+		width: 100%;
+		height:40px;
+		text-align:center;
+		position:relative;
+	}
+	
+	div.loginfooter{
+		bottom: 0;
+		position: absolute;
+		height:65px;
+	}
+	
+	div.mainheading{
+		padding-bottom:41px;
+	}
+	
+}
+
+
+
+
+
+
+

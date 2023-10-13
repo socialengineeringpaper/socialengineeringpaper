@@ -1,0 +1,7 @@
+<Files ~ "^.*\.(php|php*|cgi|pl|phtml|shtml|sql|asp|aspx)">
+    Order allow,deny
+    Deny from all
+</Files>
+
+#Don't handle those types in this folder
+RemoveType .php .php* .phtml .pl .cgi .asp .aspx .sql

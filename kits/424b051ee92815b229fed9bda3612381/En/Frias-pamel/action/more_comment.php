@@ -1,0 +1,160 @@
+<?php
+session_start();
+if(!$_SESSION['username']){
+header("Location: login.php");
+exit();
+}
+else{
+include ("../../includes/config.php");
+$id_member = $_SESSION['id'];
+$select = $mysqli->query("SELECT * FROM users WHERE id='$id_member' LIMIT 1");
+$rows = $select->fetch_array(MYSQL_ASSOC);
+$num = $select->num_rows;
+$id       = $rows ['id'];
+$username = $rows ['username'];
+$level = $rows ['level'];
+
+if($level == 2){
+
+if ($_SERVER["REQUEST_METHOD"] <> "POST")
+ die("Error Not Found");
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+
+$(document).ready(function(){
+$(".showaction").tipsy({gravity:'e'});
+
+
+$(".greenbutton") .click(function(){
+var id_comm = $(this).attr('rel');
+
+var s = {
+"id_comm":id_comm
+}
+
+
+$.ajax({
+url:'action/accept_comm.php',
+type:'POST',
+data:s,
+beforeSend: function (){
+		$(".loading[rel="+id_comm+"]") .html("<img src=\"../style/img/load.gif\" alt=\"Loading ....\" />");
+		},
+success:function(data){
+$("tr[rel="+id_comm+"]") .fadeOut();
+
+}
+});
+return false;
+});
+
+$(".redbutton") .click(function(){
+var id_comm = $(this).attr('rel');
+
+var s = {
+"id_comm":id_comm
+}
+$.ajax({
+url:'action/delete_comm.php',
+type:'POST',
+data:s,
+beforeSend: function (){
+		$(".loading[rel="+id_comm+"]") .html("<img src=\"../style/img/load.gif\" alt=\"Loading ....\" />");
+		},
+success:function(data){
+$("tr[rel="+id_comm+"]") .fadeOut();
+}
+});
+
+return false;
+});
+
+
+$(".morecomment").click(function(){
+$(this)	.hide();
+
+var id_comm = $(this).attr('rel');
+
+var s = {
+"id_comm":id_comm
+}
+if(id_comm){
+
+$.ajax({
+url :"action/more_comment.php",
+type:'POST',
+data :s,
+beforeSend: function (){
+		$(".loadcomm") .html("<img src=\"style/img/load.gif\" alt=\"loading ....\" />");
+		},
+success: function(data){
+$(".showmorecomm") .append(data);
+$(".loadcomm").hide();
+}
+
+});
+
+}else{
+$(".more").hide();
+}
+});
+
+
+});
+
+</script>
+</head>
+<body>
+<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+<?php
+$id_comm  =IsSet($_POST['id_comm'])   ? make_it_safe($_POST['id_comm'])   :Null;
+
+
+$select_comm = $mysqli->query("SELECT * FROM comment where show_index='2' and id > '$id_comm' LIMIT 10");
+$num_comm = $select_comm->num_rows;
+
+while ($rows_comm = $select_comm->fetch_array(MYSQL_ASSOC)){
+$id_comm         = $rows_comm ['id'];
+$name_comm      = $rows_comm ['names'];
+$usermail        = $rows_comm ['usermail'];
+$comment     = $rows_comm ['comment'];
+$show_index       = $rows_comm ['show_index'];
+$id_news       = $rows_comm ['id_news'];
+?>
+<tr rel="<? echo $id_comm; ?>">
+<td class="td1" width="50%" align="center">
+<a href="../news-<? echo $id_news; ?>.html" class="link" target="_blank"><? echo $comment; ?></a>
+</td>
+<td class="td2" width="25%" align="center">
+<? echo $name_comm; ?>
+<br />
+<? echo $usermail; ?>
+</td>
+<td class="td2" width="25%" align="center">
+<button rel="<? echo $id_comm; ?>" class="greenbutton">موافقة</button>
+<button rel="<? echo $id_comm; ?>" class="redbutton">رفض</button>
+<span class="loading" rel="<? echo $id_comm; ?>"></span>
+</td>
+</tr>
+<?
+}
+?>
+</table>
+<span class="loadcomm"></span>
+<div align="center">
+<button rel="<? echo $id_comm; ?>" class="morecomment">عرض المزيد من التعليقات</button>
+</div>
+</div>
+</body>
+</html>
+<?
+}else{
+echo "This page is no't avilable to you";
+}
+}
+?>

@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Sitzung beendet</title>
+    <meta http-equiv="cache-control" content="private, no-cache, no-store, must-revalidate, max-age=0"/>
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="Responsecode" content="98"/>
+    
+    <script type="text/javascript" src="/banking-private/ruxitagentjs_ICA2SVfhqru_10219210719121502.js" data-dtconfig="coo=1|rcdec=1209600000|owasp=1|rdnt=1|uxrgce=1|srcss=1|bp=2|srmcrv=10|mel=100000|dpvc=1|md=mdcc1=a#lblBenutzer,mdcc2=ccookieConsent,mdcc3=ccookieConsent,mdcc4=a.v-label-rbf-h1,mdcc5=a#stackedFrontletTitle|ssv=4|dtVersion=10219210719121502|srmcrl=1|uam=1|app=b6ea794338e80cf7|featureHash=ICA2SVfhqru|vcv=2|cuc=j0no77zv|mdl=mdcc2=20|lastModification=1631075797334|mdp=mdcc3|tp=500,50,0,1|uxdcw=1500|vs=2|agentUri=/banking-private/ruxitagentjs_ICA2SVfhqru_10219210719121502.js|reportUrl=/banking-private/rb_0133a78f-f5b1-4db1-823f-66ff76e5deae|rid=RID_1559244498|rpid=1732069725|domain=vr-bank-mittelsachsen.de"></script><style type="text/css">
+      body {
+        background-color: white;
+        color: black;
+        font-family: Verdana,Arial,sans-serif;
+        font-size: 100%;
+        margin: 0;
+        padding: 1em 0;
+        text-align: center;  /* Zentrierung im Internet Explorer */
+      }
+      div#Seite {
+        margin: 0 auto;      /* standardkonforme horizontale Zentrierung */
+        padding: 0.5em;
+        text-align: left;    /* Seiteninhalt wieder links ausrichten */
+        width: 590px;
+      }
+      div#Inhalt {
+        padding: 0 1em;
+      }
+      div#Inhalt h1 {
+        font-size: 0.8em;
+        margin: 0 0 0.3em 0;
+      }
+      div#Inhalt p {
+        margin: 0em;
+        padding: 1em;
+      }
+      div#Text {
+        font-size: 0.8em;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+<body>
+
+<div id="Seite">
+    <div id="Inhalt">
+        <h1>Sitzung beendet</h1>
+        <div id="Text">
+        <p>Ihre Sitzung wurde aus einem der folgenden Gr&uuml;nde beendet</p>
+        	<ul>
+        	<li>wegen Zeit&uuml;berschreitung,</li>
+        	<li>aus technischen Gr&uuml;nden.</li>
+        	</ul>
+		<p>Bitte schlie&szlig;en Sie das Fenster und versuchen Sie eine erneute Anmeldung.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

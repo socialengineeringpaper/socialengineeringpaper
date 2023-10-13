@@ -1,0 +1,96 @@
+#featured{ 
+	width:450px; 
+	padding-right:250px; 
+	position:relative; 
+	border:1px solid #ccc; 
+	height:250px; 
+	overflow:hidden;
+}
+#featured ul.ui-tabs-nav{ 
+	position:absolute; 
+	top:0; left:450px; 
+	list-style:none; 
+	padding:0; margin:0; 
+	width:250px; height:250px;
+	overflow:auto;
+	overflow-x:hidden;
+}
+#featured ul.ui-tabs-nav li{
+	padding:1px 0;
+	font-size:12px;
+}
+#featured ul.ui-tabs-nav li img{ 
+	float:left; 
+	margin:2px 5px; 
+	background:#fff; 
+	padding: 2px;
+	border-radius: 7px;
+}
+#featured ul.ui-tabs-nav li span{
+	line-height:18px;
+	font-family: newo;
+	font-size: 14px;
+}
+#featured li.ui-tabs-nav-item a{
+	display:block;
+	height:59px;
+	text-decoration:none;
+	line-height:20px;
+	outline:none;
+	border-bottom: solid 1px #ccc;
+	color: #990000;
+	padding-right: 5px;
+}
+#featured li.ui-tabs-nav-item a:hover{ 
+	background:#f2f2f2;
+}
+#featured li.ui-tabs-selected, #featured li.ui-tabs-active{
+	background-image: url(../img/selected-item.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	z-index: 1500;
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a, #featured ul.ui-tabs-nav li.ui-tabs-active a{
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(223,0,1,1)), color-stop(1, rgba(170,0,1,1)));
+	background: -moz-linear-gradient(center top, rgba(223,0,1,1), rgba(170,0,1,1));
+	color: #CCCC00;
+}
+#featured .ui-tabs-panel{ 
+	width:450px; height:250px; 
+	position:relative;
+	z-index: 500;
+}
+#featured .ui-tabs-panel .info{ 
+	position:absolute; 
+	bottom:0; left:0; 
+	height:70px; 
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	float:right;
+}
+#featured .ui-tabs-panel .info a.hideshow{
+	position:absolute; font-size:11px; font-family:Verdana; color:#f0f0f0; right:10px; top:-20px; line-height:20px; margin:0; outline:none; background:#333;
+}
+#featured .info h2{ 
+	font-family:newb; 
+	color:#fff; 
+	padding:5px; 
+	margin:0; 
+	overflow:hidden; 
+	text-shadow: 1px 1px 3px #000;
+}
+#featured .info p{ 
+	margin:0 5px; 
+	font-family:Verdana; font-size:11px; 
+	line-height:15px; color:#f0f0f0;
+}
+#featured .info a{ 
+	text-decoration:none; 
+	color:#fff; 
+}
+#featured .info a:hover{ 
+	text-decoration:underline; 
+}
+#featured .ui-tabs-hide{ 
+	display:none; 
+}

@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule ^news-([0-9]+).html$ show_news.php?id=$1
+RewriteRule ^cat-([0-9]+).html$ show_cat.php?id=$1
+RewriteRule ^page-([0-9]+).html$ show_page.php?id=$1
+RewriteRule ^comic-([0-9]+).html$ show_comic.php?id=$1
+RewriteRule ^minpage-([0-9]+).html$ minpage.php?id=$1
+RewriteRule ^minnews-([0-9]+).html$ show_min_news.php?id=$1
+
+

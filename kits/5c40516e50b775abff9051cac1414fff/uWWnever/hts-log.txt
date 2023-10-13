@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 16 Oct 2022 01:53:25 at https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "it, en, *" https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa -O1 "C:\Mie pagine Web\uWWnever" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:53:30	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.fontawesomemin.css (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:30	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.latomin.css (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.jquerymin.js (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/{0} (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.jqueryui.js (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.jquerycookie.js (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.bootstrapmin.js (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+01:53:31	Error: 	"Not Found" (404) at link https://sso.univ-pau.fr/cas/webjars.storemin.js (from https://sso.univ-pau.fr/cas/login?service=https%3A%2F%2Fidp.univ-pau.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fuppa)
+
+HTTrack Website Copier/3.49-2 mirror complete in 6 seconds : 21 links scanned, 12 files written (1637668 bytes overall) [1012534 bytes received at 168755 bytes/sec], 1100391 bytes transferred using HTTP compression in 4 files, ratio 39%, 7.0 requests per connection
+(8 errors, 0 warnings, 0 messages)

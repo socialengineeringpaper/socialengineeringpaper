@@ -1,0 +1,96 @@
+TABLE.keyboard
+{
+	
+    
+}
+TABLE.bg_button
+{
+    COLOR: black;
+ 
+    FONT-SIZE:8pt;
+    FONT-WEIGHT: bold;
+    
+    MARGIN: 0px;
+    PADDING: 2px;
+    TEXT-ALIGN: center;
+}
+TD.bg_button
+{
+    WIDTH: 24px;
+    HEIGHT: 22px;
+    
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: top left;
+    CURSOR: default;
+}
+TD.bg_buttonSmall
+{
+    WIDTH: 32px;
+    HEIGHT: 30px;
+    
+    BACKGROUND-REPEAT: no-repeat;
+    CURSOR: default;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-align: left;
+vertical-align: top;
+
+}
+TD.brr_button
+{
+    WIDTH: 52px;
+    HEIGHT: 22px;
+    
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: top left;
+    CURSOR: default;
+    vertical-align: top;
+
+}
+.lockedColorText
+{
+    COLOR: #999999;
+}
+.textoInfo
+{
+    FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif, Verdana ;
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: black 0px solid;
+    BORDER-LEFT: black 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: justify ;
+}
+.cursorContrast
+{
+cursor: pointer;
+cursor: hand;
+}
+.colorContrast1 {
+    color: #000000;
+margin-left: 10px;
+margin-top: 5px;
+TEXT-ALIGN: left;
+
+
+}
+.colorContrast2 {
+    color: #999999;
+margin-left: 10px;
+margin-top: 5px;
+TEXT-ALIGN: left;
+
+
+}
+.colorContrast3 {
+    color: #cccccc;
+margin-left: 10px;
+margin-top: 5px;
+TEXT-ALIGN: left;
+
+
+}

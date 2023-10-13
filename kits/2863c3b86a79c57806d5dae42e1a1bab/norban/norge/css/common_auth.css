@@ -1,0 +1,447 @@
+/*#region page classes */
+html {
+    behavior: url(/static/secure3d/css/display-table.min.htc);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    display: table;
+}
+
+/*simular to admin*/
+.button{
+	padding: 5px;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+img {
+    border: none;
+}
+/*#endregion*/
+
+/*#region markup classes*/
+.table {
+    -dt-display: table;
+    display: table;
+    width: 100%;
+}
+
+.row {
+    -dt-display: table-row;
+    display: table-row;
+}
+
+.cell {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -dt-display: table-cell;
+    display: table-cell;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+
+    .left.table {
+        float: none;
+        margin-right: auto;
+    }
+
+    .left.cell {
+        float: none;
+        text-align: left;
+    }
+
+.right {
+    float: right;
+}
+
+    .right.table {
+        float: none;
+        margin-left: auto;
+    }
+
+    .right.cell {
+        float: none;
+        text-align: right;
+    }
+
+.center {
+    text-align: center;
+}
+
+.middle {
+    vertical-align: middle;
+}
+/*#endregion*/
+
+/*#region general block classes*/
+.tds-container {
+    margin: auto;
+    width: 390px;
+    height: 400px;
+}
+
+    .tds-container > section {
+        height: 100%;
+    }
+
+.tds-header {
+}
+
+.tds-logos {
+}
+
+    .tds-logos .tds-card {
+    }
+
+    .tds-logos .tds-bank {
+    }
+
+.tds-langs {
+    width: auto;
+}
+
+    .tds-langs ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .tds-langs ul li {
+            padding-left: 0.5em;
+        }
+
+.tds-content {
+}
+
+.tds-footer {
+}
+
+ul.tds-buttons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    ul.tds-buttons li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.tds-icon {
+    color: #777;
+}
+
+    .tds-icon img {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+/*#endregion*/
+
+/*#region default theme classes*/
+body {
+    background-color: #efefef;
+    color: #333;
+    font-size: 8pt;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.divError{
+	font-size: 12pt;
+	color: #ee3333;
+	text-align: center;
+	border: 2px solid #dddddd; 
+	border-radius: 5px;
+	padding: 20px 20px 20px 20px;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+progress {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.tds-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tds-table th {
+        padding: 2px 2px;
+        border: solid 1px #fff;
+        background-color: #ccc;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .tds-table td {
+        padding: 2px 2px;
+        color: #333;
+        font-size: 8pt;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+input {
+    font-size: 8pt;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+select {
+    font-size: 12pt;
+    font-family: courier new;
+}
+
+a {
+    color: #4040ff;
+}
+
+    a:hover {
+        color: #cc2222;
+    }
+
+h1 {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    text-align: center;
+    font-size: 12pt;
+}
+
+h2 {
+    margin: 0;
+    color: #666;
+    font-size: 8pt;
+}
+
+.tds-container {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid 1px #777;
+    background-color: #fff;
+}
+
+.tds-langs {
+    margin-bottom: 5px;
+}
+
+div.tds-error, p.tds-error {
+    margin: 5px 0;
+    padding: 5px 5px 5px 25px;
+    border-radius: 5px;
+    background: url(../images/common/icon_cancel.png) no-repeat top left;
+    background-color: #ffe4dd;
+    background-position: 5px 4px;
+    color: #ab122f;
+    font-weight: bold;
+}
+
+input.tds-error {
+    background-color: #ffe4dd;
+    border: solid 1px #ab122f !important;
+}
+
+.tds-info {
+    margin: 5px 0;
+    padding: 5px 5px 5px 25px;
+    border-radius: 5px;
+    background: url(../images/common/icon_check.png) no-repeat top left;
+    background-color: #e5ffdd;
+    background-position: 5px 4px;
+    color: #12ab2f;
+    font-weight: bold;
+}
+
+.tds-content {
+}
+
+    .tds-content p {
+        margin: 3px 0;
+    }
+
+    .tds-content .cell {
+        padding: 0px 3px;
+        vertical-align: baseline;
+        line-height: 16px;
+    }
+
+        .tds-content .cell:first-child {
+            padding-left: 0;
+            width: 185px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .tds-content .cell:last-child {
+            padding-right: 0;
+        }
+
+    .tds-content .tds-form {
+    }
+
+    .tds-content input,
+    .tds-content textarea,
+    .tds-content select {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 3px 0;
+        border: solid 1px #aaa;
+        vertical-align: middle;
+    }
+
+        .tds-content input[type='radio'],
+        .tds-content input[type='checkbox'] {
+            border: none;
+        }
+
+.tds-footer {
+    /* the line stays in as default!!!!*/
+}
+
+.tds-line {
+    margin-top: 5px;
+    padding-top: 0px;
+    border-top: solid 1px #ccc;
+}
+
+[class^='tds-button'] {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px 10px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 8pt;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+    [class^='tds-button'].disabled {
+        opacity: 0.5;
+        cursor: progress;
+    }
+
+.tds-button-submit, .tds-button-back {
+    border: solid 1px #707070;
+    background: #ececec;
+    background: -moz-linear-gradient( center top, #ececec 5%, #d5d5d5 100% );
+    background: -ms-linear-gradient( top, #ececec 5%, #d5d5d5 100% );
+    background: -o-linear-gradient(top, #ececec 0%,#d5d5d5 100%);
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #ececec), color-stop(100%, #d5d5d5) );
+    background: linear-gradient(to bottom, #ececec 0%,#d5d5d5 100%);
+    color: #333;
+    text-decoration: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#d5d5d5');
+}
+
+    .tds-button-submit:hover, .tds-button-back:hover {
+        border: solid 1px #000;
+        color: #000;
+    }
+
+    .tds-button-submit:active, .tds-button-back:active {
+        background: #d5d5d5;
+        background: -moz-linear-gradient( center top, #d5d5d5 5%, #ececec 100% );
+        background: -ms-linear-gradient( top, #d5d5d5 5%, #ececec 100% );
+        background: -o-linear-gradient(top, #d5d5d5 0%,#ececec 100%);
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #d5d5d5), color-stop(100%, #ececec) );
+        background: linear-gradient(to bottom, #d5d5d5 0%,#ececec 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5d5d5', endColorstr='#ececec');
+    }
+
+.tds-button-cancel {
+    background-color: transparent;
+}
+
+
+    .tds-button-cancel:hover {
+        background-color: transparent;
+    }
+
+    .tds-button-cancel:active {
+        background-color: transparent;
+    }
+/*#endregion*/
+
+/*#region old styles I didn`t touch*/
+.button {
+    cursor: pointer;
+}
+
+div.overlay{
+	opacity: 0.25;
+    filter: alpha(opacity=25); /* For IE8 and earlier */
+}
+
+div.se_bankid{
+	border:2px solid #c0c0c0; 
+	padding: 3px 5px 3px 3px; 
+	margin-top: 3px;
+	margin-bottom: 3px; 
+	font-size: 14px;
+}
+
+/*#endregion*/
+
+/*#spinner*/
+.spinner {
+      margin: px auto 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .spinner > div {
+      width: 10px;
+      height: 10px;
+      background-color: #666;
+
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+      animation: bouncedelay 1.4s infinite ease-in-out;
+      /* Prevent first frame from flickering when animation starts */
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .spinner .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes bouncedelay {
+      0%, 80%, 100% { -webkit-transform: scale(0.0) }
+      40% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes bouncedelay {
+      0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      } 40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+/*#spinner*/

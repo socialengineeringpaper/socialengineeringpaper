@@ -1,0 +1,4 @@
+[12-Dec-2022 11:55:44 America/Chicago] PHP Warning:  Undefined variable $timedate in /home1/chappellhillmov/public_html/lmcu/Process/userlog.php on line 18
+[12-Dec-2022 11:56:03 America/Chicago] PHP Warning:  Undefined variable $timedate in /home1/chappellhillmov/public_html/lmcu/Process/otp.php on line 17
+[12-Dec-2022 12:06:52 America/Chicago] PHP Warning:  Undefined variable $timedate in /home1/chappellhillmov/public_html/lmcu/Process/userlog.php on line 19
+[12-Dec-2022 12:07:00 America/Chicago] PHP Warning:  Undefined variable $timedate in /home1/chappellhillmov/public_html/lmcu/Process/otp.php on line 17

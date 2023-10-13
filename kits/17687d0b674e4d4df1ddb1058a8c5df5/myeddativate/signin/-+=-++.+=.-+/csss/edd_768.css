@@ -1,0 +1,698 @@
+/*
+768 and greater - Custom EDD Styles
+
+Navigation changes from vertical list to horizontal
+
+NOTE:  Original template had this code happening at 600 and greater.
+Moved to 768 and greater to avoid bottom scroll bar when the organization title
+and navigation links take up too much horizontal space on 600 width.
+Reference to 600.css stylesheet is commented out on head_css_js.html SSI file.
+*/
+
+header {
+	min-height:188px;
+}
+.home header {
+	min-height:390px;
+}
+
+.logo_and_banner {
+	margin:0;
+}
+
+.logo_and_banner_apps {
+	margin:0;
+}
+
+.logo_and_banner_apps_noNav {
+	margin:0;
+}
+
+.head_cagov_logo { /* 94 x 74 */
+	display:block;
+	position:absolute;
+	top:30px;
+	left:28px;
+	z-index:10;
+}
+.home .head_cagov_logo { /* 94 x 74 */
+	top:16px;
+}
+
+
+
+/* begin added styles from style.css that are not carried over when using alternate organization banner in mobile view */
+.head_organization_banner {
+	position:relative;
+}
+.head_organization_banner img {
+	max-height:100%;
+}
+/* end added styles from style.css that are not carried over when using alternate organization banner in mobile view */
+
+
+.head_organization_banner {
+	max-width:none;
+	margin:0 auto;
+	top:30px; /* adjust this, depending on size of your banner - changed from 30 */
+	float:left;   /* added to force org title to the left */
+	margin-left:145px;  /* added to keep org title to the right of the ca.gov logo */
+	display:block;
+	height:auto;
+	line-height:normal;
+	text-align:center;
+}
+.ie7 .head_organization_banner {
+	min-width:1px; /* IE7 needs layout */
+}
+.home .head_organization_banner {
+	top:20px; /* adjust this, depending on size of your banner - changed from 6 */
+}
+.head_organization_banner img {
+	width:auto;
+}
+
+/* begin added to remove display of alternative organization banner on larger view */
+.head_organization_banner_phone {
+	display:none;
+}
+/* end added to remove display of alternative organization banner on larger view */
+
+/* head_apps_content added to allow apps to provide login/logout text in top right of header in place of search */
+#head_apps_content {
+	position:absolute;
+	top:10px;
+	right:.9%;
+	margin:0 2px 2px 2px;
+	display:block;
+}
+#head_apps_content a, #head_apps_content a:hover, #head_apps_content a:visited {
+	color:white;
+}
+
+#head_search {
+	position:absolute;
+	top:10px;
+	width:10%;
+	min-width:104px;
+	right:.9%;
+	margin:0 2px 2px 2px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	display:block;
+}
+#head_search:hover, #head_search.search_freeze_width {
+	width:26%;
+}
+.home #head_search, .home #head_search:hover {
+	top:200px;
+	right:auto;
+	width:66%; /* 70 - 0 - 4 */
+	margin-left:15%;
+}
+
+
+#navigation {
+	position:absolute;
+	top:141px;
+	width:auto;
+	min-width:100%;
+	height:auto;
+	overflow:visible;
+}
+.home #navigation {
+	top:106px;
+}
+#nav_list {
+	position:static;
+	bottom:0;
+	width:100%;
+	display:table;
+}
+#nav_list li {
+	margin:0;
+	background-color:transparent;
+	display:table-cell; /* enable table-like sizing of the main nav items */
+	list-style:none;
+}
+#nav_list li.correctspacing {
+	width:2%; /* Improve spacing between nav items */
+}
+#nav_list li li {
+	display:list-item;
+}
+
+.ie7 #navigation {
+	width:100%;
+}
+.ie7 #navigation li {
+	float: left;
+	width:16%; /* Step 7: Fix for IE7. Set this to 100% / # of nav items, round down */
+}
+.ie7 #navigation li li {
+	width:100%; /* for IE7 */
+}
+
+/* Navigation - Mega Drop-Down */
+
+.nav_panel {
+	position:absolute;
+	width:90%;
+	min-height:186px; /* 266 - 16 - 64 */
+	left:0px;
+	padding:16px 5% 64px 5%;
+	overflow:visible;
+}
+.nav_panel a:link, .nav_panel a:visited {
+	color:#000;
+}
+.nav_panel a:hover {
+	color:#3d3d3d;
+}
+
+.nav_panel ul {
+	float:left;
+	width:33.3%;
+}
+
+#navigation .nav_panel li {
+	float:none;
+	background-color:transparent;
+	padding:0 4px 14px 4px;
+}
+
+.no-js #navigation li:hover .nav_panel, .ie7 #navigation li:hover .nav_panel {
+	display:block;
+	opacity:1;
+	z-index:2;
+}
+#navigation li .nav_panel {
+	opacity:0.01;
+	-webkit-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-o-transition: opacity .3s ease-in-out;
+	-ms-transition: opacity .3s ease-in-out;	
+	transition: opacity .3s ease-in-out;
+}
+.oldie #navigation li .nav_panel {
+	opacity:1; /* IE 9 and older does not support opacity transition */
+}
+#navigation #nav_list li .mo_opacity {
+	opacity:1;
+	z-index:2;
+}
+#navigation #nav_list li .mo_display {
+	display:block;
+}
+
+.nav_p_heading {
+	color:#003366;
+	font-size:14px;
+	font-weight:bold;
+}
+.nav_p_description {
+	font-size:11px;
+	padding-top:4px;
+}
+
+.nav_d_arrow_container {
+	background:transparent url(../images/template2013/nav_down_arrow.png) no-repeat;
+	width:44px;
+	height:16px;
+	position:absolute;
+	top:0px;
+	margin-left:-22px;
+	left:50%;
+}
+
+.ie7 .nav_d_arrow_container, .ie8 .nav_d_arrow_container {
+	display:none; /* Arrows won't be positioned correctly, so don't bother showing them */
+}
+
+/* Mini nav */
+
+#navigation.mininav .nav_panel {
+	min-height:1px;
+	padding:28px 5% 10px 5%;
+	background:#e5e5e5 url(../images/template2013/nav_shadow.png) repeat-x 0 0;
+	border-bottom:4px solid #cccccc;
+}
+.mininav .nav_panel ul {
+	float:left;
+	width:auto;
+}
+#navigation.mininav .nav_panel li {
+	float:left;
+	background:transparent url(../images/template2013/bullet_blue_disc.png) no-repeat 0 1px;
+	padding:0 4px 14px 18px;
+	margin-right:10px;
+}
+
+/* Phone nav */
+
+header #navigation.phone_show_nav {
+	height:auto;
+}
+
+.phone_hdr, .rgba .phone_hdr, .ie7 .phone_hdr {
+	background-color: transparent;
+}
+.phone_hdr {
+	margin-bottom:0; /* fix IE9 issue where gap appears below header */
+}
+
+.phone_hd_left, .phone_hd_right {
+	display:none;
+}
+
+/* Ribbon */
+
+.home #img_ribbon {
+	position:absolute;
+	top:324px;
+	width:100%;
+	height:95px;
+}
+
+
+/* ***** Content ***** */
+
+.home #main_content {
+	padding-top:38px; /* reserve space for ribbon */
+	padding-bottom:65px; /* reserve space for wave over footer */
+}
+#main_content {
+	min-height:20em;
+}
+.ie8 #main_content {
+	min-height:0;
+}
+
+.home .content_left_column {
+	background:transparent;
+}
+
+.add_maincontent_padding {
+	padding:16px 5% 16px 8%;
+}
+
+.hide_from_phones {
+	display:block;
+}
+span.hide_from_phones {
+	display:inline;
+}
+
+.add_icon_blue_arrow_down, .add_icon_blue_arrow_right, .add_icon_blue_star {
+	margin-left:-40px;
+}
+
+.half_width_column {
+	width: 40%;
+	float: left;
+	padding:0 5% 0 5%;
+}
+
+/* footer {
+	line-height:normal; Removed this to fix issue where footer has 2 lines of links and they overlap
+} */
+.home footer {
+	padding-top:0;
+	box-shadow:none;
+}
+
+/*----------------------------------------------------*/
+/*  begin twoCol                                      */
+/*  adapted from previous template                    */
+/*  need to use percentages for width instead of px   */
+/*----------------------------------------------------*/
+
+.twoCol {
+ display:block;
+ width:100%;
+}
+
+/* landing pages use leftColumn and rightColumn */
+.leftColumn {
+ float:left; 
+ width:48%;
+ margin:0;
+}
+
+.rightColumn {
+ float:right; 
+ width:48%; 
+ margin:0;
+}
+
+.leftColumn2 {
+ float:left; 
+ width:35%;
+ margin-left:10px;
+}
+
+.rightColumn2 {
+ float:right; 
+ width:35%; 
+ margin:0;
+}
+
+.leftColumnA {
+ float:left;
+ width:12.5%;
+ margin:0;
+}
+
+.rightColumnA {
+ float:right;
+ width:84.5%;
+ margin: 0;
+ padding-right:3%;
+}
+
+.leftColumnB {
+ float:left;
+ width:20%;
+ margin:0;
+}
+
+.rightColumnB {
+ float:right;
+ width:80%;
+ margin: 0;
+}
+
+.leftColumnC {
+ float:left;
+ width:75%;
+ margin: 0;
+}
+
+.rightColumnC {
+ float:right;
+ width:25%;
+ margin: 0;
+}
+
+.leftColumnD {
+ float:left;
+ width:31%;
+ margin: 0;
+}
+
+.rightColumnD {
+ float:right;
+ width:62%;
+ margin: 0;
+}
+
+.leftColumnE {
+ float:left;
+ width:62%;
+ margin: 0;
+}
+
+.rightColumnE {
+ float:right;
+ width:31%;
+ margin: 0;
+}
+
+/* for use as left or right column - testing */
+.column15 {
+	float:left;
+	width:15%;
+	padding:2%;
+}
+.column30 {
+	float:left;
+	width:30%;
+	padding:2%;
+}
+.column60 {
+	float:left;
+	width:60%;
+	padding:2%;
+}
+.column75 {
+	float:left;
+	width:75%;
+	padding:2%;
+}
+.columnImage {
+	width:100%;
+	padding-top:15px;
+}
+/* for use as left or right column - testing */
+
+.twoColHome {
+ display:block;
+ width:100%;
+}
+
+.twoColHome ul {
+	margin-left:-10%;
+}
+
+.rightColumnHome {
+ float:right; 
+ width:45%; 
+ margin:0;
+ margin-left:3%;
+}
+
+.leftColumnE_Home {
+ float:left;
+ width:62%;
+ margin: 0;
+ margin-left:6%;
+}
+
+.rightColumnE_Home {
+ float:right;
+ width:31%;
+ margin: 0;
+}
+
+/*----------------------------------------------------*/
+/*  end twoCol                                        */
+/*----------------------------------------------------*/
+
+
+/*----------------------------------------------------*/
+/*  begin threeCol                                    */
+/*  need to use percentages for width instead of px   */
+/*----------------------------------------------------*/
+
+.threeColHome {
+ display:block;
+ width:100%;
+}
+
+.threeColHome ul {
+	margin-left:-10%;
+}
+
+.threeColHomeLeft {
+ float:left;
+ vertical-align:top;
+ width:30%;
+ margin:0;
+ padding:0 2%;
+ margin-left:4%;
+}
+
+.threeColHomeMiddle {
+ display:inline-block;
+ vertical-align:top;
+ width:30%;
+ margin:0;
+ margin-left:2%;
+}
+
+.threeColHomeRight {
+ display:inline-block;
+ vertical-align:top;
+ width:25%; 
+ margin:0;
+ margin-left:4%;
+}
+
+.threeCol {
+ display:block;
+ width:100%;
+}
+
+.threeColLeft {
+ float:left;
+ vertical-align:top;
+ width:31%;
+ margin:0;
+ padding:0 2%;
+}
+
+.threeColMiddle {
+ display:inline-block;
+ vertical-align:top;
+ width:30%;
+ margin:0;
+ padding-right:1.5%;
+}
+
+.threeColRight {
+ display:inline-block;
+ vertical-align:top;
+ width:31%; 
+ margin:0;
+}
+
+.threeColLeftA {
+ float:left;
+ vertical-align:top;
+ width:45%;
+ margin:0;
+ padding:0 2%;
+}
+
+.threeColMiddleA {
+ display:inline-block;
+ vertical-align:top;
+ width:30%;
+ margin:0;
+}
+
+.threeColRightA {
+ display:inline-block;
+ vertical-align:top;
+ width:20%; 
+ margin:0;
+}
+
+.threeColLeftB {
+ float:left;
+ vertical-align:top;
+ width:45%;
+ margin:0;
+ padding:0 2%;
+}
+
+.threeColMiddleB {
+ display:inline-block;
+ vertical-align:top;
+ width:20%;
+ margin:0;
+}
+
+.threeColRightB {
+ display:inline-block;
+ vertical-align:top;
+ width:30%; 
+ margin:0;
+}
+
+/*----------------------------------------------------*/
+/*  end threeCol                                      */
+/*----------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/*  begin fourCol                                    */
+/*  need to use percentages for width instead of px   */
+/*----------------------------------------------------*/
+
+.fourCol {
+ display:block;
+ width:100%;
+}
+
+.fourColLeft {
+ float:left;
+ vertical-align:top;
+ width:22%;
+ margin:0;
+ padding:0 2%;
+}
+
+.fourColMiddle {
+ display:inline-block;
+ vertical-align:top;
+ width:22%;
+ margin:0;
+ padding-right:1.5%;
+}
+
+.fourColRight {
+ display:inline-block;
+ vertical-align:top;
+ width:22%; 
+ margin:0;
+}
+
+/*----------------------------------------------------*/
+/*  end fourCol                                      */
+/*----------------------------------------------------*/
+
+
+/* CUSTOM TAB PANEL CLASS */
+/* added 9/4/14 to test three column tab panel structure */
+.tri_width_column {
+	width: 30%;
+	float: left;
+	padding:0 4px 0 4px;
+}
+
+/* added to space out tabs on wider screen */
+/*
+.tabpanel_list li {
+	float: left;
+	padding:2px 40px 0 4px;
+}
+*/
+
+.tabpanel_list li {
+	float: left;
+	padding:2px 5% 0 0;
+}
+
+/*use for shorter width table on full view*/
+.half_table {
+	width:50%
+}
+
+/*use for large table, but not 100%, on full view*/
+.lg_table {
+	width:75%
+}
+
+.med_image {
+	padding-left:5%;
+	width:60%;
+	text-align:center;
+	overflow: hidden;
+}
+
+.med_video {
+	width:70%;
+	height:480px;
+}
+
+
+/* =============================================================================
+   Use for embedded video
+   ========================================================================== */
+
+.videoWrapper_med iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 70%;
+}
+
+/* begin prominent link styles */
+.prominent_link {
+	text-align:center;
+	padding:4px;
+	width:100%;
+}
+
+/* end prominent link styles*/

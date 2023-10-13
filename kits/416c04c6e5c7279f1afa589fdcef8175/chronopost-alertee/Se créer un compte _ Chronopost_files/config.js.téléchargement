@@ -1,0 +1,7 @@
+window['BOT_WEB_INTERFACE_SETTINGS'] = {
+    botEnvironment: 'prod',
+    botName: '',
+    botLabel: 'Léonard',
+    chatEndpoint: '/JavaHookServer/api/v1/webhook/chat/',
+    availableEndpoint: '/JavaHookServer/api/v1/info/maintenance'
+};

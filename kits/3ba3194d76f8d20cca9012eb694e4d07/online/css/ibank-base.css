@@ -1,0 +1,117 @@
+/*
+                                                                          
+Internet Banking base CSS
+
+IMPORTANT: This css apply tag uses across all site, pluse some generic class,update changes with care.
+			- browser support 
+				- should be fine with most lastest update browsers
+				- support start from IE 8
+			- never use universal (*) seletor
+			- never !important
+			- never apply any hack properties
+			- never start selector with location dependency 
+			- never use empty html <tag></tag> for style ie. icon, border ect.
+			- use (#) ID selector only if have to
+			- css3 browser specific/prefix with auto handle by prefixfree.js
+
+*/
+
+/*--------------------------------------------------------------------------------------
+   =Reset
+--------------------------------------------------------------------------------------*/
+/*	see http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */
+html,body,div,span,dd,dl,dt,li,ol,ul,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,applet,object,
+iframe,article,aside,dialog,figure,footer,header,hgroup,nav,section 
+{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;
+font-family:inherit;line-height:inherit}
+
+article,aside,dialog,figure,footer,header,hgroup,nav,section {display:block}
+
+table {border-collapse:separate;border-spacing:0}
+	caption, th, td {text-align:left;font-weight:normal}
+ol,ul {list-style:none}
+
+/* Remove possible quote marks (") from <q>, <blockquote>.*/
+blockquote:before, blockquote:after, q:before, q:after {content:''}
+blockquote, q {quotes:"" ""}
+
+
+/*--------------------------------------------------------------------------------------
+   =Typography
+--------------------------------------------------------------------------------------*/
+/* Specify the font once in % here and in 'em' elsewhere to resize it easily.
+   Browser default:16px => 75%=12px => 1em=12px*/
+html {font-size:100.01%}
+body {font:normal 80%/1.25 arial,helvetica,sans-serif;color:#333}
+
+/* Headings
+----------------------------------*/
+h1,h2,h3,h4,h5,h6 {font-family:arial,helvetica,sans-serif;font-weight:bold}
+	h1 {font-size:1.75em;margin-bottom:18px;line-height:1.25} /* 21px*/
+	h2 {font-size:1.333em;margin-bottom:0.46em;line-height:1.24} /* 16px*/
+	h3 {font-size:1.167em;margin-bottom:0.43em;line-height:1.22} /* 14px*/
+	h4,h5,h6 {font-size:1.083em;margin-bottom:0.34em;line-height:1.16} /* 13px*/
+
+/* Text
+----------------------------------*/
+p {margin:0 0 8px 0}
+
+a:focus,a:hover {text-decoration:underline}
+a {text-decoration:none}
+
+blockquote {margin:1.5em;color:#666;font-style:italic}
+strong,dfn {font-weight:bold}
+em,dfn {font-style:italic}
+big {font-size:1.333em}
+small,sup,sub {font-size:0.85em}
+	sup {line-height:0;position: relative;top:3px}
+abbr,acronym {border-bottom:1px dotted #666}
+address {margin:0 0 1.5em;font-style:italic}
+del {color:#666}
+pre {margin:1.5em 0;white-space:pre}
+pre,code,tt {font:1em 'andale mono','lucida console',monospace;line-height:1.5}
+
+/* Lists
+----------------------------------*/
+li ul,li ol {margin:4px 0 8px 0}
+ul,ol {margin:0 1.5em 1.5em 0;padding-left:1.5em}
+ul {list-style-type:disc}
+ol {list-style-type:decimal;margin-left:0.3em}
+dl {margin:0 0 1.5em 0}
+	dl dt {font-weight:bold}
+	dd {margin:0 0 8px 1.5em}
+
+/* Tables
+-----------------------------------*/
+table {margin-bottom:1.4em;width:100%;border:1px solid #ccc}
+	th {font-weight:bold;background:#dbdbdb}
+	th,td,caption {padding:12px 16px}
+	td {border-top:1px solid #ccc}
+	tfoot {font-style:italic}
+	
+
+/*--------------------------------------------------------------------------------------
+   =Form
+--------------------------------------------------------------------------------------*/
+fieldset ol {padding:10px 0 0;list-style:none}	
+	fieldset li ul {list-style:none;padding:0}
+	
+	legend {overflow:hidden;width:100%;font-weight:bold;margin-bottom:0.77em;font-size:1.2em;line-height:1.2}
+		legend span {white-space:normal}
+		legend.hide {text-indent:-9000px;font-size:0;line-height:0;position:absolute}/*to hide legend*/
+
+	label,span.label {font-weight:bold}
+	input[type=text],input[type=password],input[type=url],input[type=email],textarea {font-family:Arial;#fff;margin:3px 0;padding:4px 5px;font-size:0.917em;border:1px solid #ccc;vertical-align:middle;border-radius:3px;box-shadow:0 1px 2px #ccc inset;position:relative}
+		input[type=text]:focus,input[type=password]:focus,input[type=url]:focus,input[type=email]:focus,textarea:focus {border-color:#666}
+		textarea {height:250px;padding:5px}
+		select {vertical-align:middle;margin:6px 3px}
+		
+		input[type="submit"],input[type="button"] {cursor:pointer}
+		
+		/*checkbox or radio set*/
+		.checkbox-radio {list-style:none;overflow:hidden}
+			.checkbox-radio > li {padding-left:20px;margin-bottom:4px}
+				.checkbox-radio > li input {float:left;margin-left:-20px;position:relative;top:0px}

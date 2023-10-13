@@ -1,0 +1,1 @@
+testchatbot(["fr.json"],{FiWC:function(e,o){e.exports={bot:{header:{closed:"Besoin d'aide ?",open:"{{ botLabel }} est en ligne"},helper:{footer:"Démarrer une discussion",header:"Besoin d'aide ?"},input:{placeholder:"Tapez votre message..."},mobile:{help:"De l'aide ?"}}}}});
